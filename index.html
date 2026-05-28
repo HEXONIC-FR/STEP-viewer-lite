@@ -2662,10 +2662,10 @@ function applyFaisceauTexture(iv) {
             `#include <tonemapping_fragment>
             {
               float _p = ${p};
-              float _ph = mod(vPHEPos.x, _p) / max(_p, 0.001);
+              float _ph = mod(vPHEPos.z, _p) / max(_p, 0.001);
               float _ridge = pow(max(0.0, sin(_ph * 3.14159265)), 6.0);
-              float _hb = sin((vPHEPos.y + vPHEPos.x * 0.5) * 6.28318 / _p) * 0.04
-                        + sin((vPHEPos.z + vPHEPos.x * 0.5) * 6.28318 / _p) * 0.03;
+              float _hb = sin((vPHEPos.x + vPHEPos.z * 0.5) * 6.28318 / _p) * 0.04
+                        + sin((vPHEPos.y + vPHEPos.z * 0.5) * 6.28318 / _p) * 0.03;
               float _b = clamp(0.08 + _ridge * 0.65 + _hb * 2.0, 0.05, 0.75);
               gl_FragColor = vec4(_b, _b, _b, gl_FragColor.a);
             }`
