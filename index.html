@@ -2642,7 +2642,7 @@ function applyFaisceauTexture(iv) {
     const mesh = om.mesh;
     if (mesh.userData._faisceauPatternApplied) return;
     const dims = pjMeshBBox(mesh.geometry);
-    const pitch = dims ? Math.max(2, dims[1] / 40) : 8;
+    const pitch = dims ? Math.max(1, dims[1] / 80) : 4;
     if (!mesh.userData._matCloned) {
       mesh.material = Array.isArray(mesh.material)
         ? mesh.material.map(m => m.clone()) : mesh.material.clone();
