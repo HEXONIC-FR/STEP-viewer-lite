@@ -1,0 +1,4 @@
+_verify.cjs
+_v2.cjs
+*.log
+.DS_Store

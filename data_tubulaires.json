@@ -1,0 +1,3922 @@
+[
+  {
+    "modele": "JAD X 2.11 FF.STA.CS",
+    "code": "0101-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0001.zip"
+  },
+  {
+    "modele": "JAD X 2.11 FF.STA.SS",
+    "code": "0101-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0003.zip"
+  },
+  {
+    "modele": "JAD X 2.11 FF.PRO.SS",
+    "code": "0101-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0005.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 FF.STA.CS",
+    "code": "0101-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0015.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 FF.STA.SS",
+    "code": "0101-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0017.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 FF.PRO.SS",
+    "code": "0101-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0019.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 FF.STA.CS",
+    "code": "0101-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0029.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 FF.STA.SS",
+    "code": "0101-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0031.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 FF.PRO.SS",
+    "code": "0101-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0033.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 FF.STA.CS",
+    "code": "0101-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0043.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 FF.STA.SS",
+    "code": "0101-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0045.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 FF.PRO.SS",
+    "code": "0101-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0047.zip"
+  },
+  {
+    "modele": "JAD X 2.11 FF.PRO.CS",
+    "code": "0101-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0057.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 FF.PRO.CS",
+    "code": "0101-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0059.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 FF.PRO.CS",
+    "code": "0101-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0061.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 FF.PRO.CS",
+    "code": "0101-0063",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0101-0063.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0101-0063-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0101-0063.zip"
+  },
+  {
+    "modele": "JAD X 3.18 FF.STA.CS",
+    "code": "0102-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0001.zip"
+  },
+  {
+    "modele": "JAD X 3.18 FF.STA.SS",
+    "code": "0102-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0003.zip"
+  },
+  {
+    "modele": "JAD X 3.18 FF.PRO.SS",
+    "code": "0102-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0005.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 FF.STA.CS",
+    "code": "0102-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0015.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 FF.STA.SS",
+    "code": "0102-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0017.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 FF.PRO.SS",
+    "code": "0102-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0019.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 FF.STA.CS",
+    "code": "0102-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0029.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 FF.STA.SS",
+    "code": "0102-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0031.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 FF.PRO.SS",
+    "code": "0102-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0033.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 FF.STA.CS",
+    "code": "0102-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0043.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 FF.STA.SS",
+    "code": "0102-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0045.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 FF.PRO.SS",
+    "code": "0102-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0047.zip"
+  },
+  {
+    "modele": "JAD X 3.18 FF.PRO.CS",
+    "code": "0102-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0057.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 FF.PRO.CS",
+    "code": "0102-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0059.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 FF.PRO.CS",
+    "code": "0102-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0061.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 FF.PRO.CS",
+    "code": "0102-0063",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0102-0063.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0102-0063-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0102-0063.zip"
+  },
+  {
+    "modele": "JAD X 5.38 FF.STA.CS",
+    "code": "0103-0067",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0067.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0067-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0067.zip"
+  },
+  {
+    "modele": "JAD X 5.38 FF.STA.SS",
+    "code": "0103-0069",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0069.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0069-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0069.zip"
+  },
+  {
+    "modele": "JAD X 5.38 FF.PRO.SS",
+    "code": "0103-0071",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0071.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0071-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0071.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 FF.STA.CS",
+    "code": "0103-0077",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0077.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0077-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0077.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 FF.STA.SS",
+    "code": "0103-0079",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0079.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0079-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0079.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 FF.PRO.SS",
+    "code": "0103-0081",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0081.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0081-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0081.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 FF.STA.CS",
+    "code": "0103-0087",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0087.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0087-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0087.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 FF.STA.SS",
+    "code": "0103-0089",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0089.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0089-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0089.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 FF.PRO.SS",
+    "code": "0103-0091",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0091.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0091-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0091.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 FF.STA.CS",
+    "code": "0103-0097",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0097.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0097-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0097.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 FF.STA.SS",
+    "code": "0103-0099",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0099.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0099-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0099.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 FF.PRO.SS",
+    "code": "0103-0101",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0101.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0101-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0101.zip"
+  },
+  {
+    "modele": "JAD X 5.38 FF.PRO.CS",
+    "code": "0103-0107",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0107.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0107-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0107.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 FF.PRO.CS",
+    "code": "0103-0109",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0109.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0109-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0109.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 FF.PRO.CS",
+    "code": "0103-0111",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0111.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0111-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0111.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 FF.PRO.CS",
+    "code": "0103-0113",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0103-0113.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0103-0113-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0103-0113.zip"
+  },
+  {
+    "modele": "JAD X 6.50 FF.STA.CS",
+    "code": "0104-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0001.zip"
+  },
+  {
+    "modele": "JAD X 6.50 FF.STA.SS",
+    "code": "0104-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0003.zip"
+  },
+  {
+    "modele": "JAD X 6.50 FF.PRO.SS",
+    "code": "0104-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0005.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 FF.STA.CS",
+    "code": "0104-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0015.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 FF.STA.SS",
+    "code": "0104-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0017.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 FF.PRO.SS",
+    "code": "0104-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0019.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 FF.STA.CS",
+    "code": "0104-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0029.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 FF.STA.SS",
+    "code": "0104-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0031.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 FF.PRO.SS",
+    "code": "0104-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0033.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 FF.STA.CS",
+    "code": "0104-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0043.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 FF.STA.SS",
+    "code": "0104-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0045.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 FF.PRO.SS",
+    "code": "0104-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0047.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 FF.STA.CS",
+    "code": "0104-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0057.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 FF.STA.SS",
+    "code": "0104-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0059.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 FF.PRO.SS",
+    "code": "0104-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0061.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 FF.STA.CS",
+    "code": "0104-0071",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0071.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0071-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0071.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 FF.STA.SS",
+    "code": "0104-0073",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0073.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0073-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0073.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 FF.PRO.SS",
+    "code": "0104-0075",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0075.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0075-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0075.zip"
+  },
+  {
+    "modele": "JAD X 6.50 FF.PRO.CS",
+    "code": "0104-0085",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0085.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0085-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0085.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 FF.PRO.CS",
+    "code": "0104-0087",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0087.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0087-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0087.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 FF.PRO.CS",
+    "code": "0104-0089",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0089.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0089-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0089.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 FF.PRO.CS",
+    "code": "0104-0091",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0091.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0091-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0091.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 FF.PRO.CS",
+    "code": "0104-0093",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0093.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0093-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0093.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 FF.PRO.CS",
+    "code": "0104-0095",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0104-0095.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0104-0095-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0104-0095.zip"
+  },
+  {
+    "modele": "JAD X 9.88 FF.STA.CS",
+    "code": "0105-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0001.zip"
+  },
+  {
+    "modele": "JAD X 9.88 FF.STA.SS",
+    "code": "0105-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0003.zip"
+  },
+  {
+    "modele": "JAD X 9.88 FF.PRO.SS",
+    "code": "0105-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0005.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 FF.STA.CS",
+    "code": "0105-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0015.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 FF.STA.SS",
+    "code": "0105-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0017.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 FF.PRO.SS",
+    "code": "0105-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0019.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 FF.STA.CS",
+    "code": "0105-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0029.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 FF.STA.SS",
+    "code": "0105-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0031.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 FF.PRO.SS",
+    "code": "0105-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0033.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 FF.STA.CS",
+    "code": "0105-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0043.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 FF.STA.SS",
+    "code": "0105-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0045.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 FF.PRO.SS",
+    "code": "0105-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0047.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 FF.STA.CS",
+    "code": "0105-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0057.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 FF.STA.SS",
+    "code": "0105-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0059.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 FF.PRO.SS",
+    "code": "0105-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0061.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 FF.STA.CS",
+    "code": "0105-0071",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0071.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0071-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0071.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 FF.STA.SS",
+    "code": "0105-0073",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0073.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0073-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0073.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 FF.PRO.SS",
+    "code": "0105-0075",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0075.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0075-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0075.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 FF.STA.CS",
+    "code": "0105-0085",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0085.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0085-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0085.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 FF.STA.SS",
+    "code": "0105-0087",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0087.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0087-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0087.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 FF.PRO.SS",
+    "code": "0105-0089",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0089.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0089-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0089.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 FF.STA.CS",
+    "code": "0105-0099",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0099.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0099-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0099.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 FF.STA.SS",
+    "code": "0105-0101",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0101.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0101-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0101.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 FF.PRO.SS",
+    "code": "0105-0103",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0103.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0103-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0103.zip"
+  },
+  {
+    "modele": "JAD X 9.88 FF.PRO.CS",
+    "code": "0105-0113",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0113.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0113-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0113.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 FF.PRO.CS",
+    "code": "0105-0115",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0115.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0115-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0115.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 FF.PRO.CS",
+    "code": "0105-0117",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0117.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0117-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0117.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 FF.PRO.CS",
+    "code": "0105-0119",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0119.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0119-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0119.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 FF.PRO.CS",
+    "code": "0105-0121",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0121.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0121-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0121.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 FF.PRO.CS",
+    "code": "0105-0123",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0123.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0123-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0123.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 FF.PRO.CS",
+    "code": "0105-0125",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0125.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0125-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0125.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 FF.PRO.CS",
+    "code": "0105-0127",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0105-0127.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0105-0127-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0105-0127.zip"
+  },
+  {
+    "modele": "JAD X 12.114 FF.STA.CS",
+    "code": "0107-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0001.zip"
+  },
+  {
+    "modele": "JAD X 12.114 FF.STA.SS",
+    "code": "0107-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0003.zip"
+  },
+  {
+    "modele": "JAD X 12.114 FF.PRO.SS",
+    "code": "0107-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0005.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 FF.STA.CS",
+    "code": "0107-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0011.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 FF.STA.SS",
+    "code": "0107-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0013.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 FF.PRO.SS",
+    "code": "0107-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0015.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 FF.STA.CS",
+    "code": "0107-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0021.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 FF.STA.SS",
+    "code": "0107-0023",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0023.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0023-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0023.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 FF.PRO.SS",
+    "code": "0107-0025",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0025.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0025-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0025.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 FF.STA.CS",
+    "code": "0107-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0031.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 FF.STA.SS",
+    "code": "0107-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0033.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 FF.PRO.SS",
+    "code": "0107-0035",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0035.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0035-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0035.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 FF.STA.CS",
+    "code": "0107-0041",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0041.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0041-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0041.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 FF.STA.SS",
+    "code": "0107-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0043.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 FF.PRO.SS",
+    "code": "0107-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0045.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 FF.STA.CS",
+    "code": "0107-0051",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0051.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0051-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0051.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 FF.STA.SS",
+    "code": "0107-0053",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0053.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0053-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0053.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 FF.PRO.SS",
+    "code": "0107-0055",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0055.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0055-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0055.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 FF.STA.CS",
+    "code": "0107-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0061.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 FF.STA.SS",
+    "code": "0107-0063",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0063.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0063-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0063.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 FF.PRO.SS",
+    "code": "0107-0065",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0065.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0065-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0065.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 FF.STA.CS",
+    "code": "0107-0071",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0071.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0071-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0071.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 FF.STA.SS",
+    "code": "0107-0073",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0073.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0073-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0073.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 FF.PRO.SS",
+    "code": "0107-0075",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0075.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0075-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0075.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 FF.STA.CS",
+    "code": "0107-0081",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0081.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0081-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0081.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 FF.STA.SS",
+    "code": "0107-0083",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0083.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0083-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0083.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 FF.PRO.SS",
+    "code": "0107-0085",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0085.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0085-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0085.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 FF.STA.CS",
+    "code": "0107-0091",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0091.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0091-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0091.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 FF.STA.SS",
+    "code": "0107-0093",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0093.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0093-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0093.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 FF.PRO.SS",
+    "code": "0107-0095",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0095.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0095-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0095.zip"
+  },
+  {
+    "modele": "JAD X 12.114 FF.PRO.CS",
+    "code": "0107-0101",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0101.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0101-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0101.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 FF.PRO.CS",
+    "code": "0107-0103",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0103.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0103-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0103.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 FF.PRO.CS",
+    "code": "0107-0105",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0105.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0105-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0105.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 FF.PRO.CS",
+    "code": "0107-0107",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0107.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0107-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0107.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 FF.PRO.CS",
+    "code": "0107-0109",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0109.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0109-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0109.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 FF.PRO.CS",
+    "code": "0107-0111",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0111.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0111-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0111.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 FF.PRO.CS",
+    "code": "0107-0113",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0113.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0113-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0113.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 FF.PRO.CS",
+    "code": "0107-0115",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0115.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0115-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0115.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 FF.PRO.CS",
+    "code": "0107-0117",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0117.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0117-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0117.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 FF.PRO.CS",
+    "code": "0107-0119",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0107-0119.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0107-0119-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0107-0119.zip"
+  },
+  {
+    "modele": "H0 K FF.PRO.SS",
+    "code": "0108-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0108-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0108-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0108-0003.zip"
+  },
+  {
+    "modele": "H0 K FF.PRO.TH",
+    "code": "0108-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0108-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0108-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0108-0005.zip"
+  },
+  {
+    "modele": "H1 K FF.PRO.SS",
+    "code": "0109-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0109-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0109-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0109-0003.zip"
+  },
+  {
+    "modele": "H1 K FF.PRO.TH",
+    "code": "0109-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0109-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0109-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0109-0005.zip"
+  },
+  {
+    "modele": "H2 K FF.PRO.SS",
+    "code": "0110-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0110-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0110-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0110-0003.zip"
+  },
+  {
+    "modele": "H2 K FF.PRO.TH",
+    "code": "0110-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0110-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0110-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0110-0005.zip"
+  },
+  {
+    "modele": "S0 X FF.STA.CS",
+    "code": "0111-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0001.zip"
+  },
+  {
+    "modele": "S0 X FF.STA.SS",
+    "code": "0111-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0002.zip"
+  },
+  {
+    "modele": "S0 X FF.PRO.SS",
+    "code": "0111-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0003.zip"
+  },
+  {
+    "modele": "S0 XK FF.STA.CS",
+    "code": "0111-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0008.zip"
+  },
+  {
+    "modele": "S0 XK FF.STA.SS",
+    "code": "0111-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0009.zip"
+  },
+  {
+    "modele": "S0 XK FF.PRO.SS",
+    "code": "0111-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0010.zip"
+  },
+  {
+    "modele": "S0 X FF.PRO.CS",
+    "code": "0111-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0015.zip"
+  },
+  {
+    "modele": "S0 XK FF.PRO.CS",
+    "code": "0111-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0111-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0111-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0111-0016.zip"
+  },
+  {
+    "modele": "S1 X FF.STA.CS",
+    "code": "0112-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0001.zip"
+  },
+  {
+    "modele": "S1 X FF.STA.SS",
+    "code": "0112-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0002.zip"
+  },
+  {
+    "modele": "S1 X FF.PRO.SS",
+    "code": "0112-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0003.zip"
+  },
+  {
+    "modele": "S1 XK FF.STA.CS",
+    "code": "0112-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0008.zip"
+  },
+  {
+    "modele": "S1 XK FF.STA.SS",
+    "code": "0112-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0009.zip"
+  },
+  {
+    "modele": "S1 XK FF.PRO.SS",
+    "code": "0112-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0010.zip"
+  },
+  {
+    "modele": "S1 X FF.PRO.CS",
+    "code": "0112-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0015.zip"
+  },
+  {
+    "modele": "S1 XK FF.PRO.CS",
+    "code": "0112-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0112-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0112-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0112-0016.zip"
+  },
+  {
+    "modele": "JAD 3.18 EE.STA.CS",
+    "code": "0113-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0001.zip"
+  },
+  {
+    "modele": "JAD 3.18 EE.STA.SS",
+    "code": "0113-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0002.zip"
+  },
+  {
+    "modele": "JAD 3.18 EE.PRO.SS",
+    "code": "0113-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0003.zip"
+  },
+  {
+    "modele": "JAD K 3.18 EE.STA.CS",
+    "code": "0113-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0008.zip"
+  },
+  {
+    "modele": "JAD K 3.18 EE.STA.SS",
+    "code": "0113-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0009.zip"
+  },
+  {
+    "modele": "JAD K 3.18 EE.PRO.SS",
+    "code": "0113-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0010.zip"
+  },
+  {
+    "modele": "JAD 3.18 EE.PRO.CS",
+    "code": "0113-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0015.zip"
+  },
+  {
+    "modele": "JAD K 3.18 EE.PRO.CS",
+    "code": "0113-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0113-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0113-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0113-0016.zip"
+  },
+  {
+    "modele": "JAD 5.36 EE.STA.CS",
+    "code": "0114-0020",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0020.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0020-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0020.zip"
+  },
+  {
+    "modele": "JAD 5.36 EE.STA.SS",
+    "code": "0114-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0021.zip"
+  },
+  {
+    "modele": "JAD 5.36 EE.PRO.SS",
+    "code": "0114-0022",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0022.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0022-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0022.zip"
+  },
+  {
+    "modele": "JAD K 5.36 EE.STA.CS",
+    "code": "0114-0025",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0025.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0025-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0025.zip"
+  },
+  {
+    "modele": "JAD K 5.36 EE.STA.SS",
+    "code": "0114-0026",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0026.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0026-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0026.zip"
+  },
+  {
+    "modele": "JAD K 5.36 EE.PRO.SS",
+    "code": "0114-0027",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0027.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0027-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0027.zip"
+  },
+  {
+    "modele": "JAD 5.36 EE.PRO.CS",
+    "code": "0114-0030",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0030.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0030-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0030.zip"
+  },
+  {
+    "modele": "JAD K 5.36 EE.PRO.CS",
+    "code": "0114-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0114-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0114-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0114-0031.zip"
+  },
+  {
+    "modele": "JAD 6.50 EE.STA.CS",
+    "code": "0115-0037",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0037.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0037-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0037.zip"
+  },
+  {
+    "modele": "JAD 6.50 EE.STA.SS",
+    "code": "0115-0038",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0038.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0038-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0038.zip"
+  },
+  {
+    "modele": "JAD 6.50 EE.PRO.SS",
+    "code": "0115-0039",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0039.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0039-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0039.zip"
+  },
+  {
+    "modele": "JAD K 6.50 EE.STA.CS",
+    "code": "0115-0042",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0042.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0042-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0042.zip"
+  },
+  {
+    "modele": "JAD K 6.50 EE.STA.SS",
+    "code": "0115-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0043.zip"
+  },
+  {
+    "modele": "JAD K 6.50 EE.PRO.SS",
+    "code": "0115-0044",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0044.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0044-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0044.zip"
+  },
+  {
+    "modele": "JAD 6.50.10 EE.STA.CS",
+    "code": "0115-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0047.zip"
+  },
+  {
+    "modele": "JAD 6.50.10 EE.STA.SS",
+    "code": "0115-0048",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0048.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0048-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0048.zip"
+  },
+  {
+    "modele": "JAD 6.50.10 EE.PRO.SS",
+    "code": "0115-0049",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0049.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0049-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0049.zip"
+  },
+  {
+    "modele": "JAD K 6.50.10 EE.STA.CS",
+    "code": "0115-0052",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0052.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0052-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0052.zip"
+  },
+  {
+    "modele": "JAD K 6.50.10 EE.STA.SS",
+    "code": "0115-0053",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0053.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0053-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0053.zip"
+  },
+  {
+    "modele": "JAD K 6.50.10 EE.PRO.SS",
+    "code": "0115-0054",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0054.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0054-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0054.zip"
+  },
+  {
+    "modele": "JAD 6.50 EE.PRO.CS",
+    "code": "0115-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0057.zip"
+  },
+  {
+    "modele": "JAD K 6.50 EE.PRO.CS",
+    "code": "0115-0058",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0058.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0058-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0058.zip"
+  },
+  {
+    "modele": "JAD 6.50.10 EE.PRO.CS",
+    "code": "0115-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0059.zip"
+  },
+  {
+    "modele": "JAD K 6.50.10 EE.PRO.CS",
+    "code": "0115-0060",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0115-0060.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0115-0060-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0115-0060.zip"
+  },
+  {
+    "modele": "S1 EE.STA.CS",
+    "code": "0117-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0001.zip"
+  },
+  {
+    "modele": "S1 EE.STA.SS",
+    "code": "0117-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0002.zip"
+  },
+  {
+    "modele": "S1 EE.PRO.SS",
+    "code": "0117-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0003.zip"
+  },
+  {
+    "modele": "S1 K EE.STA.CS",
+    "code": "0117-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0008.zip"
+  },
+  {
+    "modele": "S1 K EE.STA.SS",
+    "code": "0117-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0009.zip"
+  },
+  {
+    "modele": "S1 K EE.PRO.SS",
+    "code": "0117-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0010.zip"
+  },
+  {
+    "modele": "S1 EE.PRO.CS",
+    "code": "0117-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0015.zip"
+  },
+  {
+    "modele": "S1 K EE.PRO.CS",
+    "code": "0117-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0117-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0117-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0117-0016.zip"
+  },
+  {
+    "modele": "JAD X 2.11 MF.STA.CS",
+    "code": "0124-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0001.zip"
+  },
+  {
+    "modele": "JAD X 2.11 MF.STA.SS",
+    "code": "0124-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0003.zip"
+  },
+  {
+    "modele": "JAD X 2.11 MF.PRO.SS",
+    "code": "0124-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0005.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 MF.STA.CS",
+    "code": "0124-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0015.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 MF.STA.SS",
+    "code": "0124-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0017.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 MF.PRO.SS",
+    "code": "0124-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0019.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 MF.STA.CS",
+    "code": "0124-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0029.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 MF.STA.SS",
+    "code": "0124-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0031.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 MF.PRO.SS",
+    "code": "0124-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0033.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 MF.STA.CS",
+    "code": "0124-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0043.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 MF.STA.SS",
+    "code": "0124-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0045.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 MF.PRO.SS",
+    "code": "0124-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0047.zip"
+  },
+  {
+    "modele": "JAD X 2.11 MF.PRO.CS",
+    "code": "0124-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0057.zip"
+  },
+  {
+    "modele": "JAD X 2.11.08.68 MF.PRO.CS",
+    "code": "0124-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0059.zip"
+  },
+  {
+    "modele": "JAD XK 2.11 MF.PRO.CS",
+    "code": "0124-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0061.zip"
+  },
+  {
+    "modele": "JAD XK 2.11.08.68 MF.PRO.CS",
+    "code": "0124-0063",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0124-0063.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0124-0063-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0124-0063.zip"
+  },
+  {
+    "modele": "JAD X 3.18 MF.STA.CS",
+    "code": "0125-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0001.zip"
+  },
+  {
+    "modele": "JAD X 3.18 MF.STA.SS",
+    "code": "0125-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0003.zip"
+  },
+  {
+    "modele": "JAD X 3.18 MF.PRO.SS",
+    "code": "0125-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0005.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 MF.STA.CS",
+    "code": "0125-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0015.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 MF.STA.SS",
+    "code": "0125-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0017.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 MF.PRO.SS",
+    "code": "0125-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0019.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 MF.STA.CS",
+    "code": "0125-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0029.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 MF.STA.SS",
+    "code": "0125-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0031.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 MF.PRO.SS",
+    "code": "0125-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0033.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 MF.STA.CS",
+    "code": "0125-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0043.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 MF.STA.SS",
+    "code": "0125-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0045.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 MF.PRO.SS",
+    "code": "0125-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0047.zip"
+  },
+  {
+    "modele": "JAD X 3.18 MF.PRO.CS",
+    "code": "0125-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0057.zip"
+  },
+  {
+    "modele": "JAD X 3.18.08.75 MF.PRO.CS",
+    "code": "0125-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0059.zip"
+  },
+  {
+    "modele": "JAD XK 3.18 MF.PRO.CS",
+    "code": "0125-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0061.zip"
+  },
+  {
+    "modele": "JAD XK 3.18.08.75 MF.PRO.CS",
+    "code": "0125-0063",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0125-0063.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0125-0063-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0125-0063.zip"
+  },
+  {
+    "modele": "JAD X 5.38 MF.STA.CS",
+    "code": "0126-0113",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0113.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0113-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0113.zip"
+  },
+  {
+    "modele": "JAD X 5.38 MF.STA.SS",
+    "code": "0126-0115",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0115.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0115-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0115.zip"
+  },
+  {
+    "modele": "JAD X 5.38 MF.PRO.SS",
+    "code": "0126-0117",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0117.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0117-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0117.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 MF.STA.CS",
+    "code": "0126-0123",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0123.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0123-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0123.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 MF.STA.SS",
+    "code": "0126-0125",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0125.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0125-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0125.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 MF.PRO.SS",
+    "code": "0126-0127",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0127.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0127-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0127.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 MF.STA.CS",
+    "code": "0126-0133",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0133.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0133-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0133.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 MF.STA.SS",
+    "code": "0126-0135",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0135.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0135-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0135.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 MF.PRO.SS",
+    "code": "0126-0137",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0137.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0137-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0137.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 MF.STA.CS",
+    "code": "0126-0143",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0143.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0143-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0143.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 MF.STA.SS",
+    "code": "0126-0145",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0145.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0145-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0145.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 MF.PRO.SS",
+    "code": "0126-0147",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0147.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0147-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0147.zip"
+  },
+  {
+    "modele": "JAD X 5.38 MF.PRO.CS",
+    "code": "0126-0153",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0153.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0153-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0153.zip"
+  },
+  {
+    "modele": "JAD X 5.38.08.71 MF.PRO.CS",
+    "code": "0126-0155",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0155.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0155-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0155.zip"
+  },
+  {
+    "modele": "JAD XK 5.38 MF.PRO.CS",
+    "code": "0126-0157",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0157.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0157-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0157.zip"
+  },
+  {
+    "modele": "JAD XK 5.38.08.71 MF.PRO.CS",
+    "code": "0126-0159",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0126-0159.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0126-0159-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0126-0159.zip"
+  },
+  {
+    "modele": "JAD X 6.50 MF.STA.CS",
+    "code": "0127-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0001.zip"
+  },
+  {
+    "modele": "JAD X 6.50 MF.STA.SS",
+    "code": "0127-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0003.zip"
+  },
+  {
+    "modele": "JAD X 6.50 MF.PRO.SS",
+    "code": "0127-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0005.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 MF.STA.CS",
+    "code": "0127-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0015.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 MF.STA.SS",
+    "code": "0127-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0017.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 MF.PRO.SS",
+    "code": "0127-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0019.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 MF.STA.CS",
+    "code": "0127-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0029.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 MF.STA.SS",
+    "code": "0127-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0031.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 MF.PRO.SS",
+    "code": "0127-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0033.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 MF.STA.CS",
+    "code": "0127-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0043.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 MF.STA.SS",
+    "code": "0127-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0045.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 MF.PRO.SS",
+    "code": "0127-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0047.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 MF.STA.CS",
+    "code": "0127-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0057.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 MF.STA.SS",
+    "code": "0127-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0059.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 MF.PRO.SS",
+    "code": "0127-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0061.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 MF.STA.CS",
+    "code": "0127-0071",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0071.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0071-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0071.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 MF.STA.SS",
+    "code": "0127-0073",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0073.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0073-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0073.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 MF.PRO.SS",
+    "code": "0127-0075",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0075.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0075-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0075.zip"
+  },
+  {
+    "modele": "JAD X 6.50 MF.PRO.CS",
+    "code": "0127-0085",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0085.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0085-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0085.zip"
+  },
+  {
+    "modele": "JAD X 6.50.08.72 MF.PRO.CS",
+    "code": "0127-0087",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0087.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0087-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0087.zip"
+  },
+  {
+    "modele": "JAD XK 6.50 MF.PRO.CS",
+    "code": "0127-0089",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0089.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0089-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0089.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.08.72 MF.PRO.CS",
+    "code": "0127-0091",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0091.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0091-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0091.zip"
+  },
+  {
+    "modele": "JAD X 6.50.10 MF.PRO.CS",
+    "code": "0127-0093",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0093.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0093-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0093.zip"
+  },
+  {
+    "modele": "JAD XK 6.50.10 MF.PRO.CS",
+    "code": "0127-0095",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0127-0095.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0127-0095-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0127-0095.zip"
+  },
+  {
+    "modele": "JAD X 9.88 MF.STA.CS",
+    "code": "0128-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0001.zip"
+  },
+  {
+    "modele": "JAD X 9.88 MF.STA.SS",
+    "code": "0128-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0003.zip"
+  },
+  {
+    "modele": "JAD X 9.88 MF.PRO.SS",
+    "code": "0128-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0005.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 MF.STA.CS",
+    "code": "0128-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0015.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 MF.STA.SS",
+    "code": "0128-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0017.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 MF.PRO.SS",
+    "code": "0128-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0019.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 MF.STA.CS",
+    "code": "0128-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0029.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 MF.STA.SS",
+    "code": "0128-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0031.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 MF.PRO.SS",
+    "code": "0128-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0033.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 MF.STA.CS",
+    "code": "0128-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0043.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 MF.STA.SS",
+    "code": "0128-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0045.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 MF.PRO.SS",
+    "code": "0128-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0047.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 MF.STA.CS",
+    "code": "0128-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0057.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 MF.STA.SS",
+    "code": "0128-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0059.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 MF.PRO.SS",
+    "code": "0128-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0061.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 MF.STA.CS",
+    "code": "0128-0071",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0071.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0071-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0071.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 MF.STA.SS",
+    "code": "0128-0073",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0073.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0073-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0073.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 MF.PRO.SS",
+    "code": "0128-0075",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0075.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0075-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0075.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 MF.STA.CS",
+    "code": "0128-0085",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0085.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0085-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0085.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 MF.STA.SS",
+    "code": "0128-0087",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0087.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0087-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0087.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 MF.PRO.SS",
+    "code": "0128-0089",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0089.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0089-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0089.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 MF.STA.CS",
+    "code": "0128-0099",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0099.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0099-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0099.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 MF.STA.SS",
+    "code": "0128-0101",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0101.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0101-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0101.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 MF.PRO.SS",
+    "code": "0128-0103",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0103.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0103-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0103.zip"
+  },
+  {
+    "modele": "JAD X 9.88 MF.PRO.CS",
+    "code": "0128-0113",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0113.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0113-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0113.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.65 MF.PRO.CS",
+    "code": "0128-0115",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0115.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0115-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0115.zip"
+  },
+  {
+    "modele": "JAD X 9.88.08.85 MF.PRO.CS",
+    "code": "0128-0117",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0117.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0117-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0117.zip"
+  },
+  {
+    "modele": "JAD X 9.88.10 MF.PRO.CS",
+    "code": "0128-0119",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0119.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0119-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0119.zip"
+  },
+  {
+    "modele": "JAD XK 9.88 MF.PRO.CS",
+    "code": "0128-0121",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0121.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0121-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0121.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.65 MF.PRO.CS",
+    "code": "0128-0123",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0123.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0123-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0123.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.08.85 MF.PRO.CS",
+    "code": "0128-0125",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0125.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0125-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0125.zip"
+  },
+  {
+    "modele": "JAD XK 9.88.10 MF.PRO.CS",
+    "code": "0128-0127",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0128-0127.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0128-0127-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0128-0127.zip"
+  },
+  {
+    "modele": "JAD X 12.114 MF.STA.CS",
+    "code": "0130-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0001.zip"
+  },
+  {
+    "modele": "JAD X 12.114 MF.STA.SS",
+    "code": "0130-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0003.zip"
+  },
+  {
+    "modele": "JAD X 12.114 MF.PRO.SS",
+    "code": "0130-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0005.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 MF.STA.CS",
+    "code": "0130-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0011.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 MF.STA.SS",
+    "code": "0130-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0013.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 MF.PRO.SS",
+    "code": "0130-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0015.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 MF.STA.CS",
+    "code": "0130-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0021.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 MF.STA.SS",
+    "code": "0130-0023",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0023.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0023-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0023.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 MF.PRO.SS",
+    "code": "0130-0025",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0025.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0025-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0025.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 MF.STA.CS",
+    "code": "0130-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0031.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 MF.STA.SS",
+    "code": "0130-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0033.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 MF.PRO.SS",
+    "code": "0130-0035",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0035.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0035-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0035.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 MF.STA.CS",
+    "code": "0130-0041",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0041.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0041-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0041.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 MF.STA.SS",
+    "code": "0130-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0043.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 MF.PRO.SS",
+    "code": "0130-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0045.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 MF.STA.CS",
+    "code": "0130-0051",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0051.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0051-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0051.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 MF.STA.SS",
+    "code": "0130-0053",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0053.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0053-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0053.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 MF.PRO.SS",
+    "code": "0130-0055",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0055.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0055-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0055.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 MF.STA.CS",
+    "code": "0130-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0061.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 MF.STA.SS",
+    "code": "0130-0063",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0063.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0063-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0063.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 MF.PRO.SS",
+    "code": "0130-0065",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0065.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0065-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0065.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 MF.STA.CS",
+    "code": "0130-0071",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0071.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0071-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0071.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 MF.STA.SS",
+    "code": "0130-0073",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0073.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0073-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0073.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 MF.PRO.SS",
+    "code": "0130-0075",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0075.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0075-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0075.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 MF.STA.CS",
+    "code": "0130-0081",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0081.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0081-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0081.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 MF.STA.SS",
+    "code": "0130-0083",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0083.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0083-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0083.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 MF.PRO.SS",
+    "code": "0130-0085",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0085.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0085-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0085.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 MF.STA.CS",
+    "code": "0130-0091",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0091.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0091-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0091.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 MF.STA.SS",
+    "code": "0130-0093",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0093.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0093-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0093.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 MF.PRO.SS",
+    "code": "0130-0095",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0095.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0095-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0095.zip"
+  },
+  {
+    "modele": "JAD X 12.114 MF.PRO.CS",
+    "code": "0130-0101",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0101.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0101-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0101.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.50 MF.PRO.CS",
+    "code": "0130-0103",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0103.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0103-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0103.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.60 MF.PRO.CS",
+    "code": "0130-0105",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0105.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0105-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0105.zip"
+  },
+  {
+    "modele": "JAD X 12.114.08.75 MF.PRO.CS",
+    "code": "0130-0107",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0107.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0107-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0107.zip"
+  },
+  {
+    "modele": "JAD X 12.114.10 MF.PRO.CS",
+    "code": "0130-0109",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0109.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0109-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0109.zip"
+  },
+  {
+    "modele": "JAD XK 12.114 MF.PRO.CS",
+    "code": "0130-0111",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0111.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0111-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0111.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.50 MF.PRO.CS",
+    "code": "0130-0113",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0113.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0113-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0113.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.60 MF.PRO.CS",
+    "code": "0130-0115",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0115.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0115-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0115.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.08.75 MF.PRO.CS",
+    "code": "0130-0117",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0117.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0117-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0117.zip"
+  },
+  {
+    "modele": "JAD XK 12.114.10 MF.PRO.CS",
+    "code": "0130-0119",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0130-0119.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0130-0119-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0130-0119.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 FF.PRO.SS",
+    "code": "0159-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0001.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 FF.PRO.SS",
+    "code": "0159-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0002.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 FF.PRO.SS",
+    "code": "0159-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0003.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 FF.STA.SS",
+    "code": "0159-0004",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0004.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0004-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0004.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 FF.STA.SS",
+    "code": "0159-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0005.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 FF.STA.SS",
+    "code": "0159-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0006.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 FF.PRO.CS",
+    "code": "0159-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0007.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 FF.PRO.CS",
+    "code": "0159-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0008.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 FF.PRO.CS",
+    "code": "0159-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0009.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 FF.STA.CS",
+    "code": "0159-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0010.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 FF.STA.CS",
+    "code": "0159-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0011.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 FF.STA.CS",
+    "code": "0159-0012",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0012.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0012-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0012.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 FF.PRO.SS",
+    "code": "0159-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0013.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 FF.PRO.SS",
+    "code": "0159-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0014.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 FF.PRO.SS",
+    "code": "0159-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0015.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 FF.STA.SS",
+    "code": "0159-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0016.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 FF.STA.SS",
+    "code": "0159-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0017.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 FF.STA.SS",
+    "code": "0159-0018",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0018.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0018-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0018.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 FF.PRO.CS",
+    "code": "0159-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0019.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 FF.PRO.CS",
+    "code": "0159-0020",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0020.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0020-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0020.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 FF.PRO.CS",
+    "code": "0159-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0021.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 FF.STA.CS",
+    "code": "0159-0022",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0022.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0022-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0022.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 FF.STA.CS",
+    "code": "0159-0023",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0023.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0023-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0023.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 FF.STA.CS",
+    "code": "0159-0024",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0024.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0024-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0024.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 MF.PRO.SS",
+    "code": "0159-0025",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0025.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0025-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0025.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 MF.PRO.SS",
+    "code": "0159-0026",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0026.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0026-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0026.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 MF.PRO.SS",
+    "code": "0159-0027",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0027.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0027-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0027.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 MF.STA.SS",
+    "code": "0159-0028",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0028.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0028-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0028.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 MF.STA.SS",
+    "code": "0159-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0029.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 MF.STA.SS",
+    "code": "0159-0030",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0030.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0030-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0030.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 MF.PRO.CS",
+    "code": "0159-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0031.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 MF.PRO.CS",
+    "code": "0159-0032",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0032.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0032-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0032.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 MF.PRO.CS",
+    "code": "0159-0033",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0033.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0033-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0033.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.75 MF.STA.CS",
+    "code": "0159-0034",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0034.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0034-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0034.zip"
+  },
+  {
+    "modele": "JAD 15.177.10.100 MF.STA.CS",
+    "code": "0159-0035",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0035.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0035-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0035.zip"
+  },
+  {
+    "modele": "JAD 15.177.10 MF.STA.CS",
+    "code": "0159-0036",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0036.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0036-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0036.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 MF.PRO.SS",
+    "code": "0159-0037",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0037.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0037-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0037.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 MF.PRO.SS",
+    "code": "0159-0038",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0038.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0038-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0038.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 MF.PRO.SS",
+    "code": "0159-0039",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0039.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0039-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0039.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 MF.STA.SS",
+    "code": "0159-0040",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0040.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0040-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0040.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 MF.STA.SS",
+    "code": "0159-0041",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0041.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0041-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0041.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 MF.STA.SS",
+    "code": "0159-0042",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0042.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0042-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0042.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 MF.PRO.CS",
+    "code": "0159-0043",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0043.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0043-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0043.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 MF.PRO.CS",
+    "code": "0159-0044",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0044.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0044-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0044.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 MF.PRO.CS",
+    "code": "0159-0045",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0045.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0045-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0045.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.75 MF.STA.CS",
+    "code": "0159-0046",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0046.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0046-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0046.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10.100 MF.STA.CS",
+    "code": "0159-0047",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0047.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0047-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0047.zip"
+  },
+  {
+    "modele": "JAD K 15.177.10 MF.STA.CS",
+    "code": "0159-0048",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0159-0048.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0159-0048-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0159-0048.zip"
+  },
+  {
+    "modele": "JAD X 17.217 FF.STA.CS",
+    "code": "0160-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0001.zip"
+  },
+  {
+    "modele": "JAD X 17.217 FF.STA.SS",
+    "code": "0160-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0002.zip"
+  },
+  {
+    "modele": "JAD X 17.217 FF.PRO.SS",
+    "code": "0160-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0003.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 FF.STA.CS",
+    "code": "0160-0004",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0004.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0004-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0004.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 FF.STA.SS",
+    "code": "0160-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0005.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 FF.PRO.SS",
+    "code": "0160-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0006.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 FF.STA.CS",
+    "code": "0160-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0007.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 FF.STA.SS",
+    "code": "0160-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0008.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 FF.PRO.SS",
+    "code": "0160-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0009.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 FF.STA.CS",
+    "code": "0160-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0010.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 FF.STA.SS",
+    "code": "0160-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0011.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 FF.PRO.SS",
+    "code": "0160-0012",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0012.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0012-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0012.zip"
+  },
+  {
+    "modele": "JAD X 17.217 FF.PRO.CS",
+    "code": "0160-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0013.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 FF.PRO.CS",
+    "code": "0160-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0014.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 FF.PRO.CS",
+    "code": "0160-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0015.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 FF.PRO.CS",
+    "code": "0160-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0160-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0160-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0160-0016.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 MF.PRO.CS",
+    "code": "0161-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0001.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 MF.PRO.SS",
+    "code": "0161-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0002.zip"
+  },
+  {
+    "modele": "JAD X 17.217 MF.PRO.CS",
+    "code": "0161-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0003.zip"
+  },
+  {
+    "modele": "JAD X 17.217 MF.PRO.SS",
+    "code": "0161-0004",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0004.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0004-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0004.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 MF.PRO.CS",
+    "code": "0161-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0005.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 MF.PRO.SS",
+    "code": "0161-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0006.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 MF.PRO.CS",
+    "code": "0161-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0007.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 MF.PRO.SS",
+    "code": "0161-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0008.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 MF.STA.CS",
+    "code": "0161-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0009.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 MF.STA.SS",
+    "code": "0161-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0010.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 MF.STA.CS",
+    "code": "0161-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0011.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 MF.STA.SS",
+    "code": "0161-0012",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0012.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0012-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0012.zip"
+  },
+  {
+    "modele": "JAD X 17.217 MF.STA.CS",
+    "code": "0161-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0013.zip"
+  },
+  {
+    "modele": "JAD X 17.217 MF.STA.SS",
+    "code": "0161-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0014.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 MF.STA.CS",
+    "code": "0161-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0015.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 MF.STA.SS",
+    "code": "0161-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0016.zip"
+  },
+  {
+    "modele": "JAD X 17.217 MF.STA.WD",
+    "code": "0161-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0017.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 MF.STA.WD",
+    "code": "0161-0018",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0018.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0018-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0018.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 MF.STA.WD",
+    "code": "0161-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0019.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 MF.STA.WD",
+    "code": "0161-0020",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0020.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0020-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0020.zip"
+  },
+  {
+    "modele": "JAD X 17.217 MF.PRO.WD",
+    "code": "0161-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0021.zip"
+  },
+  {
+    "modele": "JAD X 17.217.10 MF.PRO.WD",
+    "code": "0161-0022",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0022.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0022-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0022.zip"
+  },
+  {
+    "modele": "JAD XK 17.217 MF.PRO.WD",
+    "code": "0161-0023",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0023.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0023-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0023.zip"
+  },
+  {
+    "modele": "JAD XK 17.217.10 MF.PRO.WD",
+    "code": "0161-0024",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0161-0024.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0161-0024-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0161-0024.zip"
+  },
+  {
+    "modele": "REV250",
+    "code": "0169-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0001.zip"
+  },
+  {
+    "modele": "REV350",
+    "code": "0169-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0002.zip"
+  },
+  {
+    "modele": "REV500",
+    "code": "0169-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0003.zip"
+  },
+  {
+    "modele": "REV750",
+    "code": "0169-0004",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0004.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0004-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0004.zip"
+  },
+  {
+    "modele": "REV1000",
+    "code": "0169-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0005.zip"
+  },
+  {
+    "modele": "REV250S",
+    "code": "0169-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0006.zip"
+  },
+  {
+    "modele": "REV350S",
+    "code": "0169-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0007.zip"
+  },
+  {
+    "modele": "REV500S",
+    "code": "0169-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0008.zip"
+  },
+  {
+    "modele": "REV750S",
+    "code": "0169-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0009.zip"
+  },
+  {
+    "modele": "REV1000S",
+    "code": "0169-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0169-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0169-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0169-0010.zip"
+  },
+  {
+    "modele": "B45",
+    "code": "0170-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0170-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0170-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0170-0001.zip"
+  },
+  {
+    "modele": "B70",
+    "code": "0170-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0170-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0170-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0170-0002.zip"
+  },
+  {
+    "modele": "B130",
+    "code": "0170-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0170-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0170-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0170-0003.zip"
+  },
+  {
+    "modele": "B180",
+    "code": "0170-0004",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0170-0004.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0170-0004-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0170-0004.zip"
+  },
+  {
+    "modele": "B250",
+    "code": "0170-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0170-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0170-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0170-0005.zip"
+  },
+  {
+    "modele": "B300",
+    "code": "0170-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0170-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0170-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0170-0006.zip"
+  },
+  {
+    "modele": "B500",
+    "code": "0170-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0170-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0170-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0170-0007.zip"
+  },
+  {
+    "modele": "TI250",
+    "code": "0172-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0172-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0172-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0172-0019.zip"
+  },
+  {
+    "modele": "TI350",
+    "code": "0172-0020",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0172-0020.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0172-0020-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0172-0020.zip"
+  },
+  {
+    "modele": "TI500",
+    "code": "0172-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0172-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0172-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0172-0021.zip"
+  },
+  {
+    "modele": "TI750",
+    "code": "0172-0022",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0172-0022.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0172-0022-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0172-0022.zip"
+  },
+  {
+    "modele": "TI1000",
+    "code": "0172-0023",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0172-0023.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0172-0023-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0172-0023.zip"
+  },
+  {
+    "modele": "TI2000",
+    "code": "0172-0039",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0172-0039.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0172-0039-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0172-0039.zip"
+  },
+  {
+    "modele": "DNA 159.10.S24 FS.PRO.CS",
+    "code": "0186-0051",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0051.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0051-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0051.zip"
+  },
+  {
+    "modele": "DNA 159.10.S37 FS.PRO.CS",
+    "code": "0186-0052",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0052.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0052-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0052.zip"
+  },
+  {
+    "modele": "DNA 159.10.S49 FS.PRO.CS",
+    "code": "0186-0053",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0053.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0053-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0053.zip"
+  },
+  {
+    "modele": "DNA 219.10.S47 FS.PRO.CS",
+    "code": "0186-0054",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0054.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0054-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0054.zip"
+  },
+  {
+    "modele": "DNA 219.10.S72 FS.PRO.CS",
+    "code": "0186-0055",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0055.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0055-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0055.zip"
+  },
+  {
+    "modele": "DNA 219.10.S96 FS.PRO.CS",
+    "code": "0186-0056",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0056.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0056-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0056.zip"
+  },
+  {
+    "modele": "DNA 273.10.S74 FS.PRO.CS",
+    "code": "0186-0057",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0057.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0057-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0057.zip"
+  },
+  {
+    "modele": "DNA 273.10.S114 FS.PRO.CS",
+    "code": "0186-0058",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0058.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0058-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0058.zip"
+  },
+  {
+    "modele": "DNA 273.10.S151 FS.PRO.CS",
+    "code": "0186-0059",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0059.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0059-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0059.zip"
+  },
+  {
+    "modele": "DNA 324.10.S110 FS.PRO.CS",
+    "code": "0186-0060",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0060.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0060-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0060.zip"
+  },
+  {
+    "modele": "DNA 324.10.S168 FS.PRO.CS",
+    "code": "0186-0061",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0061.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0061-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0061.zip"
+  },
+  {
+    "modele": "DNA 324.10.S224 FS.PRO.CS",
+    "code": "0186-0062",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0062.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0062-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0062.zip"
+  },
+  {
+    "modele": "DNA 406.10.S181 FS.PRO.CS",
+    "code": "0186-0063",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0063.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0063-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0063.zip"
+  },
+  {
+    "modele": "DNA 406.10.S277 FS.PRO.CS",
+    "code": "0186-0064",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0064.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0064-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0064.zip"
+  },
+  {
+    "modele": "DNA 406.10.S369 FS.PRO.CS",
+    "code": "0186-0065",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0065.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0065-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0065.zip"
+  },
+  {
+    "modele": "DNA 508.10.S296 FS.PRO.CS",
+    "code": "0186-0066",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0066.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0066-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0066.zip"
+  },
+  {
+    "modele": "DNA 508.10.S446 FS.PRO.CS",
+    "code": "0186-0067",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0067.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0067-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0067.zip"
+  },
+  {
+    "modele": "DNA 508.10.S610 FS.PRO.CS",
+    "code": "0186-0068",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0068.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0068-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0068.zip"
+  },
+  {
+    "modele": "DNA 550.10.S770 FS.PRO.CS",
+    "code": "0186-0069",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0186-0069.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0186-0069-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0186-0069.zip"
+  },
+  {
+    "modele": "HAD PFX S0",
+    "code": "0730-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0730-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0730-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0730-0005.zip"
+  },
+  {
+    "modele": "HAD PFXK S0",
+    "code": "0730-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0730-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0730-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0730-0006.zip"
+  },
+  {
+    "modele": "HAD SFX S0",
+    "code": "0730-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0730-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0730-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0730-0007.zip"
+  },
+  {
+    "modele": "HAD SFXK S0",
+    "code": "0730-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0730-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0730-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0730-0008.zip"
+  },
+  {
+    "modele": "HAD PFX S1",
+    "code": "0731-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0731-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0731-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0731-0005.zip"
+  },
+  {
+    "modele": "HAD PFXK S1",
+    "code": "0731-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0731-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0731-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0731-0006.zip"
+  },
+  {
+    "modele": "HAD SFX S1",
+    "code": "0731-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0731-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0731-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0731-0007.zip"
+  },
+  {
+    "modele": "HAD SFXK S1",
+    "code": "0731-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0731-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0731-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0731-0008.zip"
+  },
+  {
+    "modele": "HAD PFX 2.11",
+    "code": "0732-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0009.zip"
+  },
+  {
+    "modele": "HAD PFXK 2.11",
+    "code": "0732-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0010.zip"
+  },
+  {
+    "modele": "HAD PFX 2.11.08.68",
+    "code": "0732-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0011.zip"
+  },
+  {
+    "modele": "HAD PFXK 2.11.08.68",
+    "code": "0732-0012",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0012.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0012-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0012.zip"
+  },
+  {
+    "modele": "HAD SFX 2.11",
+    "code": "0732-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0013.zip"
+  },
+  {
+    "modele": "HAD SFXK 2.11",
+    "code": "0732-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0014.zip"
+  },
+  {
+    "modele": "HAD SFX 2.11.08.68",
+    "code": "0732-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0015.zip"
+  },
+  {
+    "modele": "HAD SFXK 2.11.08.68",
+    "code": "0732-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0732-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0732-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0732-0016.zip"
+  },
+  {
+    "modele": "HAD PFX 3.18",
+    "code": "0733-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0009.zip"
+  },
+  {
+    "modele": "HAD PFXK 3.18",
+    "code": "0733-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0010.zip"
+  },
+  {
+    "modele": "HAD PFX 3.18.08.75",
+    "code": "0733-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0011.zip"
+  },
+  {
+    "modele": "HAD PFXK 3.18.08.75",
+    "code": "0733-0012",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0012.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0012-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0012.zip"
+  },
+  {
+    "modele": "HAD SFX 3.18",
+    "code": "0733-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0013.zip"
+  },
+  {
+    "modele": "HAD SFXK 3.18",
+    "code": "0733-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0014.zip"
+  },
+  {
+    "modele": "HAD SFX 3.18.08.75",
+    "code": "0733-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0015.zip"
+  },
+  {
+    "modele": "HAD SFXK 3.18.08.75",
+    "code": "0733-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0733-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0733-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0733-0016.zip"
+  },
+  {
+    "modele": "HAD PFX 5.38",
+    "code": "0734-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0009.zip"
+  },
+  {
+    "modele": "HAD PFXK 5.38",
+    "code": "0734-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0010.zip"
+  },
+  {
+    "modele": "HAD PFX 5.38.08.71",
+    "code": "0734-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0011.zip"
+  },
+  {
+    "modele": "HAD PFXK 5.38.08.71",
+    "code": "0734-0012",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0012.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0012-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0012.zip"
+  },
+  {
+    "modele": "HAD SFX 5.38",
+    "code": "0734-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0013.zip"
+  },
+  {
+    "modele": "HAD SFXK 5.38",
+    "code": "0734-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0014.zip"
+  },
+  {
+    "modele": "HAD SFX 5.38.08.71",
+    "code": "0734-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0015.zip"
+  },
+  {
+    "modele": "HAD SFXK 5.38.08.71",
+    "code": "0734-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0734-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0734-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0734-0016.zip"
+  },
+  {
+    "modele": "HAD PFX 6.50",
+    "code": "0735-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0013.zip"
+  },
+  {
+    "modele": "HAD PFXK 6.50",
+    "code": "0735-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0014.zip"
+  },
+  {
+    "modele": "HAD PFX 6.50.08.72",
+    "code": "0735-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0015.zip"
+  },
+  {
+    "modele": "HAD PFXK 6.50.08.72",
+    "code": "0735-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0016.zip"
+  },
+  {
+    "modele": "HAD PFX 6.50.10",
+    "code": "0735-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0017.zip"
+  },
+  {
+    "modele": "HAD PFXK 6.50.10",
+    "code": "0735-0018",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0018.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0018-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0018.zip"
+  },
+  {
+    "modele": "HAD SFX 6.50",
+    "code": "0735-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0019.zip"
+  },
+  {
+    "modele": "HAD SFXK 6.50",
+    "code": "0735-0020",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0020.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0020-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0020.zip"
+  },
+  {
+    "modele": "HAD SFX 6.50.08.72",
+    "code": "0735-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0021.zip"
+  },
+  {
+    "modele": "HAD SFXK 6.50.08.72",
+    "code": "0735-0022",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0022.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0022-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0022.zip"
+  },
+  {
+    "modele": "HAD SFX 6.50.10",
+    "code": "0735-0023",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0023.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0023-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0023.zip"
+  },
+  {
+    "modele": "HAD SFXK 6.50.10",
+    "code": "0735-0024",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0735-0024.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0735-0024-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0735-0024.zip"
+  },
+  {
+    "modele": "HAD PFX 9.88",
+    "code": "0736-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0017.zip"
+  },
+  {
+    "modele": "HAD PFXK 9.88",
+    "code": "0736-0018",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0018.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0018-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0018.zip"
+  },
+  {
+    "modele": "HAD PFX 9.88.08.65",
+    "code": "0736-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0019.zip"
+  },
+  {
+    "modele": "HAD PFXK 9.88.08.65",
+    "code": "0736-0020",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0020.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0020-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0020.zip"
+  },
+  {
+    "modele": "HAD PFX 9.88.08.85",
+    "code": "0736-0021",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0021.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0021-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0021.zip"
+  },
+  {
+    "modele": "HAD PFXK 9.88.08.85",
+    "code": "0736-0022",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0022.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0022-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0022.zip"
+  },
+  {
+    "modele": "HAD PFX 9.88.10",
+    "code": "0736-0023",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0023.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0023-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0023.zip"
+  },
+  {
+    "modele": "HAD PFXK 9.88.10",
+    "code": "0736-0024",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0024.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0024-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0024.zip"
+  },
+  {
+    "modele": "HAD SFX 9.88",
+    "code": "0736-0025",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0025.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0025-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0025.zip"
+  },
+  {
+    "modele": "HAD SFXK 9.88",
+    "code": "0736-0026",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0026.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0026-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0026.zip"
+  },
+  {
+    "modele": "HAD SFX 9.88.08.65",
+    "code": "0736-0027",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0027.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0027-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0027.zip"
+  },
+  {
+    "modele": "HAD SFXK 9.88.08.65",
+    "code": "0736-0028",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0028.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0028-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0028.zip"
+  },
+  {
+    "modele": "HAD SFX 9.88.08.85",
+    "code": "0736-0029",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0029.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0029-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0029.zip"
+  },
+  {
+    "modele": "HAD SFXK 9.88.08.85",
+    "code": "0736-0030",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0030.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0030-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0030.zip"
+  },
+  {
+    "modele": "HAD SFX 9.88.10",
+    "code": "0736-0031",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0031.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0031-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0031.zip"
+  },
+  {
+    "modele": "HAD SFXK 9.88.10",
+    "code": "0736-0032",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0736-0032.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0736-0032-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0736-0032.zip"
+  },
+  {
+    "modele": "HAD PFX 12.114",
+    "code": "0739-0001",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0001.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0001-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0001.zip"
+  },
+  {
+    "modele": "HAD PFXK 12.114",
+    "code": "0739-0002",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0002.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0002-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0002.zip"
+  },
+  {
+    "modele": "HAD PFX 12.114.08.50",
+    "code": "0739-0003",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0003.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0003-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0003.zip"
+  },
+  {
+    "modele": "HAD PFXK 12.114.08.50",
+    "code": "0739-0004",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0004.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0004-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0004.zip"
+  },
+  {
+    "modele": "HAD PFX 12.114.08.60",
+    "code": "0739-0005",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0005.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0005-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0005.zip"
+  },
+  {
+    "modele": "HAD PFXK 12.114.08.60",
+    "code": "0739-0006",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0006.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0006-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0006.zip"
+  },
+  {
+    "modele": "HAD PFX 12.114.08.75",
+    "code": "0739-0007",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0007.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0007-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0007.zip"
+  },
+  {
+    "modele": "HAD PFXK 12.114.08.75",
+    "code": "0739-0008",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0008.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0008-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0008.zip"
+  },
+  {
+    "modele": "HAD PFX 12.114.10",
+    "code": "0739-0009",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0009.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0009-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0009.zip"
+  },
+  {
+    "modele": "HAD PFXK 12.114.10",
+    "code": "0739-0010",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0010.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0010-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0010.zip"
+  },
+  {
+    "modele": "HAD SFX 12.114",
+    "code": "0739-0011",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0011.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0011-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0011.zip"
+  },
+  {
+    "modele": "HAD SFXK 12.114",
+    "code": "0739-0012",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0012.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0012-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0012.zip"
+  },
+  {
+    "modele": "HAD SFX 12.114.08.50",
+    "code": "0739-0013",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0013.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0013-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0013.zip"
+  },
+  {
+    "modele": "HAD SFXK 12.114.08.50",
+    "code": "0739-0014",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0014.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0014-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0014.zip"
+  },
+  {
+    "modele": "HAD SFX 12.114.08.60",
+    "code": "0739-0015",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0015.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0015-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0015.zip"
+  },
+  {
+    "modele": "HAD SFXK 12.114.08.60",
+    "code": "0739-0016",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0016.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0016-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0016.zip"
+  },
+  {
+    "modele": "HAD SFX 12.114.08.75",
+    "code": "0739-0017",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0017.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0017-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0017.zip"
+  },
+  {
+    "modele": "HAD SFXK 12.114.08.75",
+    "code": "0739-0018",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0018.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0018-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0018.zip"
+  },
+  {
+    "modele": "HAD SFX 12.114.10",
+    "code": "0739-0019",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0019.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0019-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0019.zip"
+  },
+  {
+    "modele": "HAD SFXK 12.114.10",
+    "code": "0739-0020",
+    "step": "https://cdn88720591.blazingcdn.net/STEP/0739-0020.zip",
+    "dwg": "https://cdn88720591.blazingcdn.net/DWG/0739-0020-sgd.zip",
+    "ifc": "https://cdn88720591.blazingcdn.net/IFC/0739-0020.zip"
+  }
+]

@@ -1,0 +1,2831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Step Viewer — Hexonic</title>
+<script src="libs/o3dv.min.js"></script>
+<style>
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #21262d;
+  --border: #30363d;
+  --accent: #388bfd;
+  --accent2: #1f6feb;
+  --text: #c9d1d9;
+  --text-dim: #8b949e;
+  --text-bright: #f0f6fc;
+  --step-bg: #1a4a2e;
+  --step-color: #3fb950;
+  --dwg-bg: #1a3a5c;
+  --dwg-color: #58a6ff;
+  --ifc-bg: #4a2d1a;
+  --ifc-color: #f0883e;
+  --view3d-bg: #2d1a4a;
+  --view3d-color: #c084fc;
+  --row-hover: #1c2128;
+  --toast-bg: #1f2937;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:14px}
+a{color:inherit;text-decoration:none}
+
+/* Header */
+header{
+  background:#111820;
+  border-bottom:1px solid #1e2a38;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:16px;
+  min-height:90px;
+}
+.header-left{}
+.logo-wrap{
+  justify-self:center;
+  height:60px;
+  width:auto;
+}
+.logo-wrap img{
+  height:100%;
+  width:auto;
+  display:block;
+}
+.logo{
+  font-size:1.15em;
+  font-weight:700;
+  color:var(--text-bright);
+  letter-spacing:.03em;
+}
+.logo span{color:#e05a2b}
+.tagline{color:var(--text-dim);font-size:.82em;margin-top:2px}
+.header-stats{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  text-align:right;
+  font-size:.78em;
+  color:var(--text-dim);
+}
+.header-stats b{color:var(--text-bright)}
+
+/* Controls */
+.controls{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  padding:10px 24px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.search-wrap{position:relative;flex:1;min-width:200px;max-width:400px}
+.search-wrap svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text-dim)}
+input[type=text]{
+  width:100%;
+  padding:7px 10px 7px 34px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:6px;
+  color:var(--text-bright);
+  font-size:.9em;
+  outline:none;
+  transition:border-color .15s;
+}
+input[type=text]:focus{border-color:var(--accent)}
+input[type=text]::placeholder{color:var(--text-dim)}
+select{
+  padding:7px 10px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:6px;
+  color:var(--text-bright);
+  font-size:.9em;
+  outline:none;
+  cursor:pointer;
+}
+.filter-label{color:var(--text-dim);font-size:.85em;white-space:nowrap}
+.count-badge{
+  margin-left:auto;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:3px 12px;
+  font-size:.8em;
+  color:var(--text-dim);
+  white-space:nowrap;
+}
+.count-badge b{color:var(--text-bright)}
+
+/* Table */
+.table-wrap{overflow-x:auto;padding:0 24px 80px}
+table{width:100%;border-collapse:collapse;min-width:640px}
+thead th{
+  background:var(--surface2);
+  border-bottom:2px solid var(--border);
+  padding:9px 12px;
+  text-align:left;
+  font-size:.8em;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--text-dim);
+  white-space:nowrap;
+  user-select:none;
+}
+thead th.sortable{cursor:pointer}
+thead th.sortable:hover{color:var(--text-bright)}
+thead th.sorted{color:var(--accent)}
+thead th .sort-icon{display:inline-block;margin-left:4px;opacity:.5}
+thead th.sorted .sort-icon{opacity:1;color:var(--accent)}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+tbody tr:hover{background:var(--row-hover)}
+td{padding:8px 12px;vertical-align:middle}
+td.col-modele{font-weight:600;color:var(--text-bright);font-size:.92em}
+td.col-code{color:var(--text-dim);font-family:monospace;font-size:.85em}
+td.col-fam{
+}
+td.col-links{white-space:nowrap}
+
+/* Family badge */
+.fam-badge{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:10px;
+  font-size:.75em;
+  font-weight:600;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  color:var(--text-dim);
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:4px 9px;
+  border-radius:5px;
+  font-size:.78em;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  transition:filter .15s,transform .1s;
+  margin-right:4px;
+  white-space:nowrap;
+}
+.btn:last-child{margin-right:0}
+.btn:hover{filter:brightness(1.2);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn:disabled,.btn.disabled{filter:none;transform:none;opacity:.3;cursor:default}
+.btn-step  {background:var(--step-bg);  color:var(--step-color);  border:1px solid #2ea84322}
+.btn-dwg   {background:var(--dwg-bg);   color:var(--dwg-color);   border:1px solid #388bfd22}
+.btn-ifc   {background:var(--ifc-bg);   color:var(--ifc-color);   border:1px solid #f0883e22}
+.btn-view3d{background:var(--view3d-bg);color:var(--view3d-color);border:1px solid #c084fc22}
+
+/* Pagination */
+.pagination{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:var(--surface);
+  border-top:1px solid var(--border);
+  padding:10px 24px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  justify-content:center;
+  z-index:20;
+}
+.pg-btn{
+  padding:5px 11px;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:5px;
+  color:var(--text);
+  cursor:pointer;
+  font-size:.85em;
+  transition:background .1s;
+}
+.pg-btn:hover:not(.active):not(:disabled){background:var(--border)}
+.pg-btn.active{background:var(--accent2);border-color:var(--accent);color:white}
+.pg-btn:disabled{opacity:.35;cursor:default}
+.pg-sep{color:var(--text-dim);padding:0 2px}
+
+/* Category switcher */
+.cat-switcher{display:flex;gap:6px;margin-top:6px}
+.cat-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text-dim);border-radius:6px;padding:4px 12px;font-size:.8em;cursor:pointer;transition:all .15s;white-space:nowrap}
+.cat-btn.active{background:#e05a2b22;border-color:#e05a2b;color:#e05a2b;font-weight:600}
+.cat-btn:hover:not(.active){border-color:var(--text-dim);color:var(--text)}
+/* PN buttons */
+.btn-pn10{background:#0f2a3a;color:#5bc4f0;border:1px solid #5bc4f033}
+.btn-pn16{background:#101a3a;color:#7094f0;border:1px solid #7094f033}
+.btn-pn25{background:#20103a;color:#c084fc;border:1px solid #c084fc33}
+
+/* Loading */
+#loading{
+  position:fixed;inset:0;background:#111820;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  z-index:200;color:var(--text-dim);font-size:.9em;
+}
+#loading img.load-logo{
+  width:420px;max-width:80vw;opacity:.92;
+  filter:drop-shadow(0 0 24px rgba(100,140,200,.18));
+}
+.spinner{
+  width:36px;height:36px;border:3px solid var(--border);
+  border-top-color:var(--accent);border-radius:50%;
+  animation:spin .7s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinCenter{
+  from{transform:translate(calc(-50% - 2px),-50%) rotate(0deg)}
+  to  {transform:translate(calc(-50% - 2px),-50%) rotate(360deg)}
+}
+
+/* Empty state */
+.empty{
+  text-align:center;padding:60px 24px;color:var(--text-dim);
+}
+.empty b{display:block;font-size:1.1em;margin-bottom:8px;color:var(--text)}
+
+/* Modal viewer */
+.modal-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.8);z-index:100;
+  align-items:center;justify-content:center;
+  backdrop-filter:blur(3px);
+}
+.modal-overlay.open{display:flex}
+.modal{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;overflow:hidden;
+  width:94vw;max-width:1300px;height:86vh;
+  display:flex;flex-direction:column;
+  box-shadow:0 24px 80px rgba(0,0,0,.7);
+}
+.modal-head{
+  padding:10px 16px;background:var(--surface2);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:12px;flex-shrink:0;
+  position:relative;
+}
+/* Tool dropdown panel */
+#toolPanel{
+  display:none;position:absolute;top:100%;right:52px;
+  z-index:60;
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-top:none;
+  border-radius:0 0 10px 10px;
+  padding:10px 14px;
+  flex-direction:column;gap:10px;
+  min-width:260px;
+  box-shadow:0 12px 30px rgba(0,0,0,.6);
+}
+#toolPanel.open{display:flex}
+#toolPanel hr{border:none;border-top:1px solid var(--border);margin:2px 0}
+.btn-tools{
+  background:none;border:1px solid var(--border);color:var(--text);
+  border-radius:5px;padding:4px 10px;cursor:pointer;font-size:.78em;white-space:nowrap;
+  transition:background .15s,border-color .15s;
+}
+.btn-tools:hover{background:var(--surface2);border-color:#e05a2b;color:#e05a2b}
+.btn-tools.active{background:#2a1208;border-color:#e05a2b;color:#e05a2b}
+.modal-title{font-weight:600;color:var(--text-bright);font-size:.95em}
+.modal-code{font-size:.8em;color:var(--text-dim);font-family:monospace}
+.modal-close{
+  margin-left:auto;background:none;border:none;
+  color:var(--text-dim);cursor:pointer;font-size:1.3em;
+  padding:2px 8px;border-radius:4px;
+}
+.modal-close:hover{background:var(--border);color:var(--text-bright)}
+/* Measure tool */
+.btn-measure{
+  background:var(--surface);border:1px solid var(--border);color:var(--text);
+  border-radius:5px;padding:4px 10px;cursor:pointer;font-size:.78em;
+  display:flex;align-items:center;gap:5px;white-space:nowrap;
+  transition:background .15s,border-color .15s;
+}
+.btn-measure:hover{background:var(--surface2);border-color:var(--accent);color:var(--accent)}
+.btn-measure.active{background:#1a3a2a;border-color:#4caf7d;color:#4caf7d}
+.btn-measure-reset{border-color:#e57373;color:#e57373}
+.btn-measure-reset:hover{background:#2a1a1a;border-color:#ef5350;color:#ef5350}
+.measure-result{font-size:.85em;font-weight:600;color:#4fc3f7;font-family:monospace;white-space:nowrap}
+#measureOverlay{position:absolute;inset:0;z-index:20;display:none;cursor:crosshair}
+#measureOverlay.active{display:block}
+#measureSvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:21}
+/* Color / material section */
+.mat-section{display:flex;align-items:center;gap:6px;opacity:.4;pointer-events:none;transition:opacity .2s;flex-wrap:wrap}
+.mat-section.ready{opacity:1;pointer-events:auto}
+.mat-section label{font-size:.78em;color:var(--text-dim);white-space:nowrap}
+#colorPicker{width:26px;height:26px;border:1px solid var(--border);border-radius:4px;cursor:pointer;padding:1px;background:none}
+.btn-preset{
+  border:1px solid var(--border);border-radius:4px;cursor:pointer;
+  font-size:.72em;padding:3px 7px;white-space:nowrap;transition:border-color .15s,filter .15s;
+}
+.btn-preset:hover{filter:brightness(1.3);border-color:#aaa}
+.btn-preset.active{outline:2px solid #4fc3f7;outline-offset:1px}
+.color-info{font-size:.72em;color:var(--text-dim);font-family:monospace;white-space:nowrap}
+/* Part picker */
+.btn-pick{background:var(--surface);border:1px solid var(--border);color:var(--text);
+  border-radius:5px;padding:4px 10px;cursor:pointer;font-size:.78em;white-space:nowrap;
+  opacity:.4;pointer-events:none;transition:background .15s,border-color .15s}
+.btn-pick.ready{opacity:1;pointer-events:auto}
+.btn-pick:hover{background:var(--surface2);border-color:#ffa726;color:#ffa726}
+.btn-pick.active{background:#2a1e08;border-color:#ffa726;color:#ffa726}
+#pickPopup{
+  display:none;align-items:center;gap:6px;flex-wrap:wrap;
+  background:var(--surface2);border:1px solid #ffa726;border-radius:6px;
+  padding:3px 8px;font-size:.78em;color:var(--text);
+}
+#pickPopup.open{display:flex}
+#pickPopup .pp-title{font-weight:600;color:#ffa726;margin-right:4px}
+/* Light control */
+.light-section{display:flex;align-items:center;gap:6px;opacity:.4;pointer-events:none;transition:opacity .2s}
+.light-section.ready{opacity:1;pointer-events:auto}
+.light-section label{font-size:.78em;color:var(--text-dim);white-space:nowrap}
+#lightSlider{width:70px;accent-color:var(--accent);cursor:pointer}
+#mirrorSlider{width:70px;accent-color:#88aaff;cursor:pointer}
+.modal-body{flex:1;position:relative;overflow:hidden;min-height:0;background:var(--bg)}
+/* Panneau info technique (droite du viewer) */
+#infoPanel{
+  position:absolute;top:0;right:0;bottom:0;
+  width:260px;
+  background:rgba(10,14,20,.95);
+  backdrop-filter:blur(8px);
+  border-left:1px solid rgba(255,255,255,.09);
+  z-index:11;
+  display:none;flex-direction:column;gap:0;
+  overflow-y:auto;
+}
+#infoPanel.visible{display:flex}
+.info-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 12px 8px;border-bottom:1px solid rgba(255,255,255,.07);
+  flex-shrink:0;
+}
+.info-head span{font-size:.65em;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);}
+.info-close{background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:1em;padding:0 2px;line-height:1;}
+.info-close:hover{color:var(--text);}
+.info-body{padding:12px;flex:1;overflow-y:auto;}
+.info-part-name{font-size:.92em;font-weight:700;color:var(--text-bright);margin-bottom:2px;line-height:1.3}
+.info-part-en{font-size:.7em;color:var(--text-dim);font-style:italic;margin-bottom:12px;}
+.info-section-lbl{font-size:.58em;text-transform:uppercase;letter-spacing:.1em;color:#e05a2b;
+  margin-bottom:3px;font-weight:600;}
+.info-section-txt{font-size:.74em;color:var(--text);line-height:1.55;margin-bottom:10px;}
+.info-empty{color:var(--text-dim);font-size:.75em;padding:8px 0;font-style:italic;}
+.btn-info{
+  background:none;border:none;cursor:pointer;
+  font-size:1em;padding:0 2px;opacity:.55;
+  transition:opacity .15s;line-height:1;font-weight:700;color:var(--text);
+}
+.btn-info:hover,.btn-info.active{opacity:1;color:#e05a2b;}
+/* Groups sidebar */
+#groupSidebar{
+  position:absolute;top:0;left:0;bottom:0;
+  width:210px;
+  background:rgba(13,17,23,.88);
+  backdrop-filter:blur(6px);
+  border-right:1px solid rgba(255,255,255,.07);
+  z-index:10;
+  display:none;
+  flex-direction:column;
+  gap:2px;
+  padding:10px 8px;
+  overflow-y:auto;
+}
+#groupSidebar.visible{display:flex}
+/* En-tête sidebar : titre + bouton disquette */
+.sidebar-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:4px;padding-bottom:4px;
+  border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;
+}
+.sidebar-head h4{
+  font-size:.7em;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--text-dim);margin:0;padding:0;border:none;white-space:nowrap;
+}
+.btn-save{
+  background:none;border:none;cursor:pointer;
+  font-size:1em;padding:0 2px;opacity:.55;
+  transition:opacity .15s;line-height:1;
+}
+.btn-save:hover{opacity:1;}
+/* Panneau de renommage (message Claude) */
+.rename-panel{
+  background:rgba(12,18,26,.97);border:1px solid rgba(255,255,255,.12);
+  border-radius:6px;padding:8px;margin-bottom:6px;flex-shrink:0;
+}
+.rename-panel-top{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:6px;font-size:.65em;color:var(--text-dim);letter-spacing:.03em;
+}
+.rename-close{
+  background:none;border:none;color:var(--text-dim);
+  cursor:pointer;font-size:1em;padding:0 2px;line-height:1;
+}
+.rename-close:hover{color:var(--text);}
+.rename-pre{
+  background:rgba(0,0,0,.35);border-radius:4px;padding:6px;margin:0 0 6px;
+  white-space:pre-wrap;word-break:break-all;color:#c9d1d9;
+  font-family:monospace;font-size:.68em;line-height:1.45;
+  max-height:170px;overflow-y:auto;
+}
+.btn-copy-rename{
+  width:100%;padding:4px 6px;background:#1b3f28;
+  border:1px solid rgba(77,175,100,.35);border-radius:4px;
+  color:#6be08b;cursor:pointer;font-size:.72em;
+  transition:background .15s;
+}
+.btn-copy-rename:hover{background:#255235;}
+.btn-copy-rename:disabled{opacity:.55;cursor:default;}
+.grp-row{
+  display:flex;align-items:center;gap:7px;
+  padding:4px 6px;border-radius:5px;cursor:pointer;
+  transition:background .15s;
+}
+.grp-row:hover{background:rgba(255,255,255,.06)}
+.grp-swatch{
+  width:12px;height:12px;border-radius:50%;flex-shrink:0;
+  border:1px solid rgba(255,255,255,.2);
+}
+.grp-row label{
+  font-size:.75em;color:var(--text);white-space:nowrap;
+  cursor:pointer;user-select:none;
+}
+.grp-row input[type=checkbox]{
+  accent-color:#e05a2b;cursor:pointer;flex-shrink:0;
+}
+.solo-cb{
+  appearance:none;-webkit-appearance:none;
+  width:12px;height:12px;flex-shrink:0;cursor:pointer;
+  border:1.5px solid rgba(255,255,255,.22);border-radius:2px;
+  background:transparent;transition:background .12s,border-color .12s;
+}
+.solo-cb:checked{background:#e0872b;border-color:#e0872b;}
+.solo-active .grp-row:not(.solo-on){opacity:.35;}
+.grp-row.solo-on{background:rgba(224,135,43,.08);}
+.grp-row.info-active{background:rgba(100,180,255,.12);outline:1px solid rgba(100,180,255,.25);}
+/* Indicateur pieds de bâti */
+.pied-validation{
+  display:none;font-size:.65em;border-radius:4px;
+  padding:3px 8px;margin-bottom:4px;text-align:center;letter-spacing:.03em;
+}
+.pied-validation.ok{display:block;color:#4caf50;background:rgba(76,175,80,.13);}
+.pied-validation.warn{display:block;color:#ff9800;background:rgba(255,152,0,.13);}
+.pied-validation.err{display:block;color:#f44336;background:rgba(244,67,54,.13);}
+/* Barre de filtres par étiquette */
+#labelFilterBar{
+  display:flex;flex-wrap:wrap;gap:3px;
+  padding:4px 2px 7px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  margin-bottom:2px;
+}
+#labelFilterBar:empty{display:none}
+.lbl-chip{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.11);
+  color:rgba(255,255,255,.5);
+  border-radius:9px;padding:2px 7px;
+  font-size:.63em;cursor:pointer;
+  transition:background .13s,border-color .13s,color .13s;
+  white-space:nowrap;line-height:1.4;
+}
+.lbl-chip:hover{background:rgba(255,255,255,.11);color:var(--text)}
+.lbl-chip.active{background:#e0872b;border-color:#e0872b;color:#fff;}
+/* Clic rangée → cursor pointer déjà défini, on ajoute feedback visuel */
+.grp-row{cursor:pointer;}
+body.info-mode .grp-row{cursor:help;}
+body.info-mode .lbl-chip{cursor:help;}
+
+#viewerContainer{width:100%;height:100%;position:relative;z-index:1}
+.viewer-loading{
+  position:absolute;inset:0;
+  background:transparent;pointer-events:none;
+  transition:opacity .3s;z-index:15;
+}
+.viewer-loading.hidden{opacity:0;pointer-events:none}
+.viewer-spinner{
+  position:absolute;top:50%;left:50%;
+  transform:translate(calc(-50% - 2px),-50%);
+  width:0;height:0; /* dimensionné via JS dans sizeSpinner() */
+  border:3px solid rgba(255,255,255,0.08);
+  border-top-color:#e05a2b;
+  border-radius:50%;
+  animation:spinCenter 1.4s linear infinite;
+}
+.viewer-loading>span{
+  position:absolute;top:9%;left:50%;
+  transform:translateX(-50%);
+  font-size:.78em;color:var(--text-dim);
+  white-space:nowrap;letter-spacing:.04em;
+}
+.viewer-loading-bg{
+  position:absolute;inset:0;
+  background:#111820 url('hexonic_blueprint.png') center center / auto 100% no-repeat;
+  opacity:.55;pointer-events:none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   VERSION LITE (clone de step_viewer)
+   Masque les outils retirés de cette version : baguette d'isolation (🪄 Iso),
+   panneau outils avancés (🔧 clé à molette), bouton disquette (💾) et le
+   menu de gauche des groupes. Les éléments restent dans le DOM — leurs valeurs
+   par défaut (lumières/sliders) pilotent encore le rendu 3D — mais ne sont
+   plus visibles ni accessibles. !important pour battre les style inline JS.
+   ───────────────────────────────────────────────────────────────────────── */
+#btnWand,
+#btnTools,
+#toolPanel,
+#btnSave,
+#groupSidebar { display:none !important; }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <img class="load-logo" src="hexonic_blueprint.png" alt="Hexonic">
+  <div class="spinner"></div>
+  <span>Chargement du catalogue…</span>
+</div>
+
+<header>
+  <div class="header-left">
+    <div class="logo">HEXONIC <span>Step Viewer</span></div>
+    <div class="tagline" id="tagline">Catalogue 3D des brasés</div>
+    <div class="cat-switcher">
+      <button id="catBrases" class="cat-btn active" onclick="switchCategory('brases')">🔧 Brasés</button>
+      <button id="catPJ"     class="cat-btn"        onclick="switchCategory('pj')">📋 Plaques &amp; joints</button>
+      <button id="catTub"    class="cat-btn"        onclick="switchCategory('tubulaires')">🔩 Tubulaires</button>
+    </div>
+  </div>
+  <div class="logo-wrap">
+    <img src="hexonic2.png" alt="Hexonic">
+  </div>
+  <div class="header-stats">
+    <span>Produits : <b id="hTotal">—</b></span>
+    <span id="hStepLabel">Avec STEP : <b id="hStep">—</b></span>
+    <span id="hDwgLabel">Avec DWG : <b id="hDwg">—</b></span>
+    <span id="hIfcLabel">Avec IFC : <b id="hIfc">—</b></span>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.868-3.834zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+    </svg>
+    <input type="text" id="search" placeholder="Modèle ou code produit…" autocomplete="off">
+  </div>
+  <span class="filter-label">Famille :</span>
+  <select id="famFilter"><option value="">Toutes</option></select>
+  <span class="filter-label" id="linkLabel">Liens :</span>
+  <select id="linkFilter">
+    <option value="">Tous</option>
+    <option value="step">Avec STEP</option>
+    <option value="dwg">Avec DWG</option>
+    <option value="ifc">Avec IFC</option>
+  </select>
+  <span class="filter-label" id="chassisLabel" style="display:none">Châssis :</span>
+  <select id="chassisFilter" style="display:none"><option value="">Tous</option></select>
+  <span class="filter-label" id="pnLabel" style="display:none">PN :</span>
+  <select id="pnFilter" style="display:none">
+    <option value="">Tous</option>
+    <option value="pn10">PN10</option>
+    <option value="pn16">PN16</option>
+    <option value="pn25">PN25</option>
+  </select>
+  <div class="count-badge"><b id="filteredCount">—</b> produit(s)</div>
+</div>
+
+<div class="table-wrap">
+  <table>
+    <thead><tr id="theadRow"></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <div id="emptyState" class="empty" style="display:none">
+    <b>Aucun résultat</b>Modifiez vos critères de recherche.
+  </div>
+</div>
+
+<div class="pagination" id="paginationBar"></div>
+
+<!-- Modal viewer embarqué -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <span class="modal-title" id="modalTitle"></span>
+      <span class="modal-code" id="modalCode"></span>
+      <button class="btn-measure" id="btnMeasure" onclick="toggleMeasure()" title="Activer l'outil de mesure de distance">📏 Mesure</button>
+      <button class="btn-measure btn-measure-reset" id="btnMeasureReset" onclick="clearMeasure()" style="display:none" title="Effacer la mesure">✕ Reset</button>
+      <span class="measure-result" id="measureResult"></span>
+      <button class="btn-measure" id="btnWand" onclick="toggleWand()" title="Cliquer sur un groupe en 3D pour cocher son isolation">🪄 Iso</button>
+      <button class="btn-tools" id="btnTools" onclick="toggleToolPanel()" title="Outils avancés">🔧</button>
+      <button class="modal-close" onclick="closeViewer()">✕</button>
+
+      <!-- Dropdown outils avancés -->
+      <div id="toolPanel">
+        <div class="mat-section" id="colorSection">
+          <label>✦ Aspect global</label>
+          <button class="btn-preset" id="presetOrig"   style="background:#3a3a3a;color:#ccc"  onclick="applyPreset('orig')"   title="Couleur d'origine">Origine</button>
+          <button class="btn-preset" id="presetInox"   style="background:#a8b0b8;color:#fff"  onclick="applyPreset('inox')"   title="Acier inoxydable">Inox</button>
+          <button class="btn-preset" id="presetLaiton" style="background:#c8a040;color:#fff"  onclick="applyPreset('laiton')" title="Laiton / brass">Laiton</button>
+          <button class="btn-preset" id="presetChrome" style="background:#d8d8e8;color:#333"  onclick="applyPreset('chrome')" title="Chrome miroir">Chrome</button>
+          <button class="btn-preset" id="presetCuivre" style="background:#b87333;color:#fff"  onclick="applyPreset('cuivre')" title="Cuivre">Cuivre</button>
+          <label for="colorPicker" style="margin-left:4px">🎨</label>
+          <input type="color" id="colorPicker" value="#c8c8c8" oninput="applyPreset('custom',this.value)" title="Couleur personnalisée">
+          <span class="color-info" id="colorInfo"></span>
+        </div>
+        <hr>
+        <div class="light-section" id="mat1Section">
+          <label style="font-size:.75em;color:var(--text-dim);white-space:nowrap">🎨 Mat.1</label>
+          <input type="color" id="mat1Color" value="#cfb296" oninput="applyMat1Color(this.value)" title="Couleur matériau 1" style="width:24px;height:22px;border:1px solid #555;border-radius:3px;cursor:pointer;padding:1px;background:none">
+        </div>
+        <div class="light-section" id="lightSection">
+          <label for="lightSlider">💡 Direct.</label>
+          <input type="range" id="lightSlider" min="0.1" max="3.14" step="0.05" value="1.1" oninput="applyLighting(+this.value)" title="Lumière directionnelle">
+          <span id="lightVal" style="font-size:.72em;color:var(--text-dim);font-family:monospace;width:28px">1.10</span>
+        </div>
+        <div class="light-section" id="ambientSection">
+          <label for="ambientSlider">🌅 Ambient</label>
+          <input type="range" id="ambientSlider" min="0" max="5" step="0.1" value="1.8" oninput="applyAmbient(+this.value)" title="Lumière ambiante">
+          <span id="ambientVal" style="font-size:.72em;color:var(--text-dim);font-family:monospace;width:28px">1.8</span>
+        </div>
+        <div class="light-section" id="mirrorSection">
+          <label for="mirrorSlider">🪞 Miroir</label>
+          <input type="range" id="mirrorSlider" min="0" max="3" step="0.1" value="3" oninput="applyMirror(+this.value)" title="Effet miroir / réflexions">
+          <span id="mirrorVal" style="font-size:.72em;color:var(--text-dim);font-family:monospace;width:28px">3.0</span>
+        </div>
+        <hr>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <button class="btn-pick" id="btnPick" onclick="togglePick()" title="Cliquer sur une partie pour lui appliquer un matériau">🎯 Sélectionner un groupe</button>
+          <div id="pickPopup">
+            <span class="pp-title">Matériau :</span>
+            <button class="btn-preset" style="background:#3a3a3a;color:#ccc"  onclick="applyPickPreset('orig')"   >Origine</button>
+            <button class="btn-preset" style="background:#a8b0b8;color:#fff"  onclick="applyPickPreset('inox')"   >Inox</button>
+            <button class="btn-preset" style="background:#c8a040;color:#fff"  onclick="applyPickPreset('laiton')" >Laiton</button>
+            <button class="btn-preset" style="background:#d0d0d8;color:#333"  onclick="applyPickPreset('chrome')" >Chrome</button>
+            <button class="btn-preset" style="background:#b87333;color:#fff"  onclick="applyPickPreset('cuivre')" >Cuivre</button>
+            <input type="color" id="pickColor" value="#c8c8c8" style="width:24px;height:24px;border:1px solid #555;border-radius:3px;cursor:pointer;padding:1px;background:none" oninput="applyPickPreset('custom',this.value)">
+            <button onclick="document.getElementById('pickPopup').classList.remove('open')" style="background:none;border:none;color:#aaa;cursor:pointer;font-size:1.1em;margin-left:4px">✕</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div id="groupSidebar">
+        <div class="sidebar-head">
+          <h4>Groupes</h4>
+          <div style="display:flex;gap:4px;align-items:center">
+            <button id="btnInfo" class="btn-info" style="display:none"
+                    title="Informations techniques sur le composant sélectionné"
+                    onclick="toggleInfoMode()">?</button>
+            <button id="btnSave" class="btn-save" style="display:none"
+                    title="Envoyer les groupes décochés à Claude Code pour renommage"
+                    onclick="showRenamePanel()">💾</button>
+          </div>
+        </div>
+        <div id="renamePanel" class="rename-panel" style="display:none">
+          <div class="rename-panel-top">
+            <span>Message → Claude Code</span>
+            <button class="rename-close" onclick="hideRenamePanel()">✕</button>
+          </div>
+          <pre id="renamePre" class="rename-pre"></pre>
+          <button class="btn-copy-rename" onclick="copyRenameMsg()">📋 Copier</button>
+        </div>
+        <div id="piedValidation" class="pied-validation"></div>
+        <div id="labelFilterBar"></div>
+      </div>
+      <div class="viewer-loading" id="viewerLoading"></div>
+      <div id="viewerContainer"></div>
+      <!-- Panneau info technique — affiché à droite du viewer -->
+      <div id="infoPanel">
+        <div class="info-head">
+          <span>Infos techniques</span>
+          <button class="info-close" onclick="closeInfoPanel()" title="Fermer">✕</button>
+        </div>
+        <div class="info-body" id="infoPanelBody">
+          <p class="info-empty">Cliquez sur un groupe dans la liste pour afficher ses informations techniques.</p>
+        </div>
+      </div>
+      <div id="measureOverlay"></div>
+      <svg id="measureSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+  </div>
+</div>
+
+<script>
+const PAGE_SIZE = 60;
+let allProducts      = [];
+let allProductsPJ    = [];
+let allProductsTub   = [];
+let cdnBase          = '';
+let filtered = [];
+let page = 1;
+let sortKey = 'modele';
+let sortDir = 1;
+let currentCat = 'brases';
+
+function getFamily(modele) {
+  const m = modele.match(/^([A-Z]+\d+)/i);
+  return m ? m[1].toUpperCase() : modele.substring(0, 4).toUpperCase();
+}
+function getFamilyPJ(modele) {
+  const m = modele.match(/^(JF[A-Z]-\d+)/i);
+  return m ? m[1].toUpperCase() : modele.substring(0, 6).toUpperCase();
+}
+function getFamilyTub(modele) {
+  return (modele || '').split(' ')[0].toUpperCase() || modele.substring(0, 4).toUpperCase();
+}
+
+// Load all datasets in parallel
+Promise.all([
+  fetch('data.json').then(r => r.json()),
+  fetch('data_pj.json').then(r => r.json()),
+  fetch('data_tubulaires.json').then(r => r.json())
+]).then(([brases, pj, tub]) => {
+  allProducts      = brases;
+  cdnBase          = pj.cdn;
+  allProductsPJ    = pj.products;
+  allProductsTub   = tub;
+
+  document.getElementById('loading').style.display = 'none';
+  switchCategory('brases');
+
+  // URL hash routing: #model=JFD-060-P10-219
+  const _hash = window.location.hash;
+  if (_hash.startsWith('#model=')) {
+    const _modelName = decodeURIComponent(_hash.slice(7));
+    const _prod = allProductsPJ.find(p => p.modele === _modelName);
+    if (_prod) {
+      const _pk = _prod.pn16 ? 'pn16' : (_prod.pn25 ? 'pn25' : (_prod.pn10 ? 'pn10' : null));
+      if (_pk) {
+        switchCategory('pj');
+        const _stepUrl = (_prod[_pk].startsWith('http') ? '' : cdnBase) + _prod[_pk];
+        const _sfx = _pk.slice(2);
+        const _dn = _prod.modele.replace(/-P\d+(-)/i, `-P${_sfx}-`);
+        const _bc = '0652-' + _prod.modele.replace(/-P\d+-\d+$/i, '').replace(/-/g, '');
+        setTimeout(() => openViewer(_stepUrl, _dn, _bc), 50);
+      }
+    }
+  }
+}).catch(() => {
+  document.getElementById('loading').innerHTML = '<span>Erreur de chargement des données</span>';
+});
+
+function switchCategory(cat) {
+  currentCat = cat;
+  page = 1; sortKey = 'modele'; sortDir = 1;
+
+  // Boutons actifs
+  document.getElementById('catBrases').classList.toggle('active', cat === 'brases');
+  document.getElementById('catPJ').classList.toggle('active', cat === 'pj');
+  document.getElementById('catTub').classList.toggle('active', cat === 'tubulaires');
+
+  // Tagline
+  document.getElementById('tagline').textContent = cat === 'brases'
+    ? 'Catalogue 3D des brasés'
+    : cat === 'pj' ? 'Catalogue 3D — Plaques & joints'
+    : 'Catalogue 3D — Échangeurs tubulaires';
+
+  // Contrôles visibles
+  const isPJ = cat === 'pj';
+  document.getElementById('linkLabel').style.display    = isPJ ? 'none' : '';
+  document.getElementById('linkFilter').style.display   = isPJ ? 'none' : '';
+  document.getElementById('chassisLabel').style.display = isPJ ? '' : 'none';
+  document.getElementById('chassisFilter').style.display= isPJ ? '' : 'none';
+  document.getElementById('pnLabel').style.display      = isPJ ? '' : 'none';
+  document.getElementById('pnFilter').style.display     = isPJ ? '' : 'none';
+  document.getElementById('linkFilter').value = '';
+  document.getElementById('chassisFilter').value = '';
+  document.getElementById('pnFilter').value = '';
+
+  // En-tête de table
+  const tr = document.getElementById('theadRow');
+  if (cat === 'pj') {
+    tr.innerHTML = `
+      <th class="sortable" data-key="modele">Modèle <span class="sort-icon">↕</span></th>
+      <th class="sortable" data-key="chassis">Châssis <span class="sort-icon">↕</span></th>
+      <th>Famille</th><th>PN10</th><th>PN16</th><th>PN25</th>`;
+  } else {
+    tr.innerHTML = `
+      <th class="sortable" data-key="modele">Modèle <span class="sort-icon">↕</span></th>
+      <th class="sortable" data-key="code">Code produit <span class="sort-icon">↕</span></th>
+      <th>Famille</th><th>STEP</th><th>DWG</th><th>IFC / BIM</th><th>Visionneuse 3D</th>`;
+  }
+  tr.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if (sortKey === key) sortDir *= -1; else { sortKey = key; sortDir = 1; }
+      tr.querySelectorAll('th').forEach(t => t.classList.remove('sorted'));
+      th.classList.add('sorted');
+      th.querySelector('.sort-icon').textContent = sortDir === 1 ? '↑' : '↓';
+      applyFilter();
+    });
+  });
+
+  // Famille filter
+  const products = cat === 'brases' ? allProducts : cat === 'pj' ? allProductsPJ : allProductsTub;
+  const famFn    = cat === 'brases' ? getFamily : cat === 'pj' ? getFamilyPJ : getFamilyTub;
+  const sel = document.getElementById('famFilter');
+  sel.innerHTML = '<option value="">Toutes</option>';
+  const families = [...new Set(products.map(p => famFn(p.modele)))].sort();
+  families.forEach(f => { const o = document.createElement('option'); o.value = f; o.textContent = f; sel.appendChild(o); });
+
+  // Châssis filter (PJ uniquement)
+  if (cat === 'pj') {
+    const cSel = document.getElementById('chassisFilter');
+    cSel.innerHTML = '<option value="">Tous</option>';
+    const chassis = [...new Set(allProductsPJ.map(p => p.chassis).filter(Boolean))].sort((a,b) => a-b);
+    chassis.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c + ' mm'; cSel.appendChild(o); });
+  }
+
+  // Stats header
+  if (cat === 'pj') {
+    document.getElementById('hTotal').textContent = allProductsPJ.length;
+    document.getElementById('hStep').textContent  = allProductsPJ.filter(p => p.pn10).length;
+    document.getElementById('hDwg').textContent   = allProductsPJ.filter(p => p.pn16).length;
+    document.getElementById('hIfc').textContent   = allProductsPJ.filter(p => p.pn25).length;
+    document.getElementById('hStepLabel').firstChild.textContent = 'Avec PN10 : ';
+    document.getElementById('hDwgLabel').firstChild.textContent  = 'Avec PN16 : ';
+    document.getElementById('hIfcLabel').firstChild.textContent  = 'Avec PN25 : ';
+  } else {
+    const src = cat === 'brases' ? allProducts : allProductsTub;
+    document.getElementById('hTotal').textContent = src.length;
+    document.getElementById('hStep').textContent  = src.filter(p => p.step).length;
+    document.getElementById('hDwg').textContent   = src.filter(p => p.dwg).length;
+    document.getElementById('hIfc').textContent   = src.filter(p => p.ifc).length;
+    document.getElementById('hStepLabel').firstChild.textContent = 'Avec STEP : ';
+    document.getElementById('hDwgLabel').firstChild.textContent  = 'Avec DWG : ';
+    document.getElementById('hIfcLabel').firstChild.textContent  = 'Avec IFC : ';
+  }
+
+  // Lumière directionnelle par catégorie
+  const lightDefault = cat === 'pj' ? 3.1 : 1.1;
+  const lightSlider  = document.getElementById('lightSlider');
+  const lightVal     = document.getElementById('lightVal');
+  lightSlider.value  = lightDefault;
+  lightVal.textContent = lightDefault.toFixed(2);
+
+  applyFilter();
+}
+
+// Events
+document.getElementById('search').addEventListener('input',         () => { page = 1; applyFilter(); });
+document.getElementById('famFilter').addEventListener('change',     () => { page = 1; applyFilter(); });
+document.getElementById('linkFilter').addEventListener('change',    () => { page = 1; applyFilter(); });
+document.getElementById('chassisFilter').addEventListener('change', () => { page = 1; applyFilter(); });
+document.getElementById('pnFilter').addEventListener('change',      () => { page = 1; applyFilter(); });
+
+document.getElementById('tbody').addEventListener('click', e => {
+  const btn = e.target.closest('[data-step]');
+  if (btn) openViewer(btn.dataset.step, btn.dataset.modele, btn.dataset.code || btn.dataset.pn);
+});
+
+function applyFilter() {
+  const q       = document.getElementById('search').value.toLowerCase().trim();
+  const fam     = document.getElementById('famFilter').value;
+  const link    = document.getElementById('linkFilter').value;
+  const chassis = document.getElementById('chassisFilter').value;
+  const pn      = document.getElementById('pnFilter').value;
+
+  if (currentCat === 'pj') {
+    filtered = allProductsPJ.filter(p => {
+      if (q && !p.modele.toLowerCase().includes(q)) return false;
+      if (fam     && getFamilyPJ(p.modele) !== fam)         return false;
+      if (chassis && String(p.chassis) !== chassis)          return false;
+      if (pn === 'pn10' && !p.pn10) return false;
+      if (pn === 'pn16' && !p.pn16) return false;
+      if (pn === 'pn25' && !p.pn25) return false;
+      return true;
+    });
+  } else {
+    const src   = currentCat === 'brases' ? allProducts : allProductsTub;
+    const famFn = currentCat === 'brases' ? getFamily : getFamilyTub;
+    filtered = src.filter(p => {
+      if (q && !p.modele.toLowerCase().includes(q) && !(p.code||'').toLowerCase().includes(q)) return false;
+      if (fam  && famFn(p.modele) !== fam) return false;
+      if (link === 'step' && !p.step) return false;
+      if (link === 'dwg'  && !p.dwg)  return false;
+      if (link === 'ifc'  && !p.ifc)  return false;
+      return true;
+    });
+  }
+
+  filtered.sort((a, b) => {
+    let av = a[sortKey] ?? '', bv = b[sortKey] ?? '';
+    if (typeof av === 'number' && typeof bv === 'number') return (av - bv) * sortDir;
+    av = String(av); bv = String(bv);
+    return av < bv ? -sortDir : av > bv ? sortDir : 0;
+  });
+
+  document.getElementById('filteredCount').textContent = filtered.length;
+  render();
+}
+
+function render() {
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  if (page > totalPages) page = totalPages;
+  const start = (page - 1) * PAGE_SIZE;
+  const slice = filtered.slice(start, start + PAGE_SIZE);
+
+  const tbody = document.getElementById('tbody');
+  const empty = document.getElementById('emptyState');
+
+  if (slice.length === 0) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+  } else {
+    empty.style.display = 'none';
+    tbody.innerHTML = slice.map(p => currentCat === 'pj' ? buildRowPJ(p) : buildRow(p)).join('');
+  }
+
+  renderPagination(totalPages);
+}
+
+function buildRow(p) {
+  const fam = currentCat === 'tubulaires' ? getFamilyTub(p.modele) : getFamily(p.modele);
+
+  // STEP — téléchargement direct
+  const stepBtn = p.step
+    ? `<a class="btn btn-step" href="${esc(p.step)}" target="_blank" title="Télécharger STEP">⬇ STEP</a>`
+    : `<span class="btn btn-step disabled">—</span>`;
+
+  // DWG
+  const dwgBtn = p.dwg
+    ? `<a class="btn btn-dwg" href="${esc(p.dwg)}" target="_blank" title="Télécharger DWG">⬇ DWG</a>`
+    : `<span class="btn btn-dwg disabled">—</span>`;
+
+  // IFC
+  const ifcBtn = p.ifc
+    ? `<a class="btn btn-ifc" href="${esc(p.ifc)}" target="_blank" title="Télécharger IFC / BIM">⬇ IFC</a>`
+    : `<span class="btn btn-ifc disabled">—</span>`;
+
+  // Visionneuse 3D — data-attributes pour éviter les problèmes d'échappement
+  const viewBtn = p.step
+    ? `<button class="btn btn-view3d" data-step="${esc(p.step)}" data-modele="${esc(p.modele)}" data-code="${esc(p.code)}" title="Visualiser en 3D">▶ Voir 3D</button>`
+    : `<span class="btn btn-view3d disabled">—</span>`;
+
+  return `<tr>
+    <td class="col-modele">${escHtml(p.modele)}</td>
+    <td class="col-code">${escHtml(p.code)}</td>
+    <td class="col-fam"><span class="fam-badge">${escHtml(fam)}</span></td>
+    <td class="col-links">${stepBtn}</td>
+    <td class="col-links">${dwgBtn}</td>
+    <td class="col-links">${ifcBtn}</td>
+    <td class="col-links">${viewBtn}</td>
+  </tr>`;
+}
+
+function buildRowPJ(p) {
+  const fam = getFamilyPJ(p.modele);
+  const displayName = p.modele.replace(/-P\d+(-)/i, '$1');
+  const baseCode = '0652-' + p.modele.replace(/-P\d+-\d+$/i, '').replace(/-/g, '');
+  const pnCell = (key, cls, label) => {
+    const url = p[key] ? (p[key].startsWith('http') ? p[key] : cdnBase + p[key]) : null;
+    if (!url) return `<td class="col-links"><span class="btn ${cls} disabled">—</span></td>`;
+    const viewName = p.modele.replace(/-P\d+(-)/i, `-${label.replace('PN','P')}-`);
+    return `<td class="col-links">
+      <button class="btn ${cls}" data-step="${esc(url)}" data-modele="${esc(viewName)}" data-code="${esc(baseCode)}" data-pn="${label}" title="Visualiser ${label} en 3D">▶ ${label}</button>
+      <a class="btn btn-step" href="${esc(url)}" download title="Télécharger STEP ${label}">⬇</a>
+    </td>`;
+  };
+  return `<tr>
+    <td class="col-modele">${escHtml(displayName)}</td>
+    <td class="col-code">${escHtml(baseCode)}</td>
+    <td class="col-fam"><span class="fam-badge">${escHtml(fam)}</span></td>
+    ${pnCell('pn10','btn-pn10','PN10')}
+    ${pnCell('pn16','btn-pn16','PN16')}
+    ${pnCell('pn25','btn-pn25','PN25')}
+  </tr>`;
+}
+
+function renderPagination(totalPages) {
+  const bar = document.getElementById('paginationBar');
+  if (totalPages <= 1) { bar.innerHTML = ''; return; }
+
+  const parts = [];
+  const btn = (label, p, cls='', disabled=false) =>
+    `<button class="pg-btn ${cls}" ${disabled ? 'disabled' : ''} onclick="goPage(${p})">${label}</button>`;
+
+  parts.push(btn('‹', page - 1, '', page === 1));
+
+  const range = pageRange(page, totalPages);
+  let prev = null;
+  for (const p of range) {
+    if (prev !== null && p - prev > 1) parts.push('<span class="pg-sep">…</span>');
+    parts.push(btn(p, p, p === page ? 'active' : ''));
+    prev = p;
+  }
+
+  parts.push(btn('›', page + 1, '', page === totalPages));
+  bar.innerHTML = parts.join('');
+}
+
+function pageRange(current, total) {
+  const delta = 2;
+  const range = new Set([1, total]);
+  for (let i = Math.max(2, current - delta); i <= Math.min(total - 1, current + delta); i++) range.add(i);
+  return [...range].sort((a, b) => a - b);
+}
+
+function goPage(p) {
+  page = p;
+  render();
+  window.scrollTo(0, 0);
+}
+
+
+/* ── Mesure 3D ── */
+let currentOVViewer = null;
+let viewerCat       = 'brases'; // catégorie active lors de l'ouverture du viewer
+let viewerFamily    = '';       // famille PJ active (JFA, JFB, JFC…)
+let viewerModele    = '';       // nom affiché du modèle courant (ex. "JFB-025")
+let measureActive   = false;
+let mPoints3D = [], mPoints2D = [];
+
+function sizeSpinner() {
+  const body    = document.querySelector('.modal-body');
+  const spinner = document.querySelector('.viewer-spinner');
+  if (!body || !spinner) return;
+  const sz = Math.min(body.clientHeight, body.clientWidth) - 4;
+  spinner.style.width  = sz + 'px';
+  spinner.style.height = sz + 'px';
+}
+
+function toggleToolPanel() {
+  const panel = document.getElementById('toolPanel');
+  const btn   = document.getElementById('btnTools');
+  const open  = panel.classList.toggle('open');
+  btn.classList.toggle('active', open);
+  if (open) {
+    const close = e => { if (!panel.contains(e.target) && e.target !== btn) { panel.classList.remove('open'); btn.classList.remove('active'); document.removeEventListener('click', close, true); } };
+    setTimeout(() => document.addEventListener('click', close, true), 0);
+  }
+}
+
+function toggleMeasure() {
+  measureActive = !measureActive;
+  document.getElementById('btnMeasure').classList.toggle('active', measureActive);
+  document.getElementById('measureOverlay').classList.toggle('active', measureActive || pickMode);
+  if (!measureActive) clearMeasure();
+}
+
+function clearMeasure() {
+  mPoints3D = []; mPoints2D = [];
+  document.getElementById('measureSvg').innerHTML = '';
+  document.getElementById('measureResult').textContent = '';
+  document.getElementById('btnMeasureReset').style.display = 'none';
+}
+
+document.getElementById('measureOverlay').addEventListener('click', function(e) {
+  if (!measureActive || !currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+
+  const rect = this.getBoundingClientRect();
+  const sx = e.clientX - rect.left;
+  const sy = e.clientY - rect.top;
+
+  // Utilise l'API interne OV (THREE.Raycaster) — beaucoup plus fiable que le raycasting manuel
+  const isect = iv.GetMeshIntersectionUnderMouse(1, {x:sx, y:sy}, iv.camera, rect.width, rect.height);
+  if (!isect || !isect.point) {
+    document.getElementById('measureResult').textContent = '— aucun point touché';
+    return;
+  }
+  const hit = isect.point; // THREE.Vector3
+  mPoints3D.push(hit);
+  mPoints2D.push({ x: sx, y: sy });
+  mvDrawOverlay(rect.width, rect.height);
+
+  if (mPoints3D.length === 2) {
+    const dx = mPoints3D[1].x - mPoints3D[0].x;
+    const dy = mPoints3D[1].y - mPoints3D[0].y;
+    const dz = mPoints3D[1].z - mPoints3D[0].z;
+    const d  = Math.sqrt(dx*dx + dy*dy + dz*dz);
+    document.getElementById('measureResult').textContent = d.toFixed(2) + ' mm';
+    document.getElementById('btnMeasureReset').style.display = '';
+    mPoints3D = []; mPoints2D = [];
+  }
+});
+
+function mvDrawOverlay(w, h) {
+  const svg = document.getElementById('measureSvg');
+  svg.innerHTML = '';
+  const ns = 'http://www.w3.org/2000/svg';
+  mPoints2D.forEach((p, i) => {
+    const c = document.createElementNS(ns, 'circle');
+    c.setAttribute('cx', p.x); c.setAttribute('cy', p.y);
+    c.setAttribute('r', 6);
+    c.setAttribute('fill', i === 0 ? '#4fc3f7' : '#4caf7d');
+    c.setAttribute('stroke', '#fff'); c.setAttribute('stroke-width', 1.5);
+    svg.appendChild(c);
+    const t = document.createElementNS(ns, 'text');
+    t.setAttribute('x', p.x + 10); t.setAttribute('y', p.y - 8);
+    t.setAttribute('fill', '#fff'); t.setAttribute('font-size', 12);
+    t.setAttribute('font-family', 'monospace');
+    t.textContent = i === 0 ? 'P1' : 'P2';
+    svg.appendChild(t);
+  });
+  if (mPoints2D.length === 2) {
+    const line = document.createElementNS(ns, 'line');
+    line.setAttribute('x1', mPoints2D[0].x); line.setAttribute('y1', mPoints2D[0].y);
+    line.setAttribute('x2', mPoints2D[1].x); line.setAttribute('y2', mPoints2D[1].y);
+    line.setAttribute('stroke', '#4fc3f7'); line.setAttribute('stroke-width', 1.5);
+    line.setAttribute('stroke-dasharray', '5,3');
+    svg.appendChild(line);
+  }
+}
+
+/* ── Effet miroir ── */
+let mirrorEnvReady = false;
+let customLightsAdded = false;
+
+function applyMirror(intensity) {
+  document.getElementById('mirrorVal').textContent = intensity.toFixed(1);
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+
+  const factor = intensity / 3;
+  const root = iv.mainModel?.GetRootObject?.();
+  (root || iv.scene).traverse(obj => {
+    if (!obj.isMesh) return;
+    const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
+    mats.forEach(m => {
+      if (!m) return;
+      // Sauvegarde les valeurs de base la première fois (Standard ET Phong)
+      if (m.userData._baseMirrorSaved === undefined) {
+        m.userData._baseRoughness = m.roughness  ?? 0.5;
+        m.userData._baseMetalness = m.metalness  ?? 0.5;
+        m.userData._baseShininess = m.shininess  ?? 30;
+        m.userData._baseMirrorSaved = true;
+      }
+      // MeshStandardMaterial : roughness + metalness
+      if ('roughness' in m) m.roughness = m.userData._baseRoughness * (1 - factor) + 0.02 * factor;
+      if ('metalness' in m) m.metalness = m.userData._baseMetalness * (1 - factor) + 1.0  * factor;
+      // MeshPhongMaterial : shininess (0 → 400)
+      if ('shininess' in m && !('roughness' in m)) {
+        m.shininess = m.userData._baseShininess + (400 - m.userData._baseShininess) * factor;
+      }
+      m.needsUpdate = true;
+    });
+  });
+  if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender();
+}
+
+/* ── Sélection de composant par clic ── */
+let pickMode = false;
+let pickedMesh = null;
+let wandMode = false;
+let activeLabelFilter = null;
+
+function togglePick() {
+  pickMode = !pickMode;
+  document.getElementById('btnPick').classList.toggle('active', pickMode);
+  document.getElementById('measureOverlay').classList.toggle('active', pickMode || wandMode || measureActive);
+  if (!pickMode) document.getElementById('pickPopup').classList.remove('open');
+}
+
+function toggleWand() {
+  wandMode = !wandMode;
+  document.getElementById('btnWand').classList.toggle('active', wandMode);
+  document.getElementById('measureOverlay').classList.toggle('active', wandMode || pickMode || measureActive);
+  if (wandMode && pickMode) {
+    // Désactive pick si actif (les deux modes partagent l'overlay)
+    pickMode = false;
+    document.getElementById('btnPick')?.classList.remove('active');
+    document.getElementById('pickPopup')?.classList.remove('open');
+  }
+  if (wandMode) {
+    // Activation baguette → repart d'un solo vide (efface filtre et isolation existants)
+    activeLabelFilter = null;
+    document.querySelectorAll('.lbl-chip').forEach(b => b.classList.remove('active'));
+    soloSet = new Set();
+    document.querySelectorAll('.solo-cb').forEach(cb => cb.checked = false);
+    applySolo();
+  }
+  // Désactivation : ne touche pas soloSet — l'utilisateur revient en mode vue sans perdre l'isolation
+}
+
+document.getElementById('measureOverlay').addEventListener('click', function(e) {
+  if (!pickMode || measureActive) return;
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+
+  const rect = this.getBoundingClientRect();
+  const sx = e.clientX - rect.left;
+  const sy = e.clientY - rect.top;
+
+  const isect = iv.GetMeshIntersectionUnderMouse(1, {x:sx, y:sy}, iv.camera, rect.width, rect.height);
+  if (!isect?.object) return;
+
+  pickedMesh = isect.object;
+
+  // Affiche le popup immédiatement
+  const popup = document.getElementById('pickPopup');
+  popup.classList.add('open');
+
+  // Clone material + flash dans try-catch pour ne pas bloquer le popup
+  try {
+    if (!pickedMesh.userData._matCloned) {
+      if (Array.isArray(pickedMesh.material)) {
+        pickedMesh.material = pickedMesh.material.map(m => m.clone());
+      } else {
+        pickedMesh.material = pickedMesh.material.clone();
+      }
+      pickedMesh.userData._matCloned = true;
+    }
+    const flashMats = Array.isArray(pickedMesh.material) ? pickedMesh.material : [pickedMesh.material];
+
+    // Met à jour le color picker avec la couleur actuelle
+    const firstMat = flashMats[0];
+    if (firstMat?.color) {
+      document.getElementById('pickColor').value = rgbToHex(
+        Math.round(firstMat.color.r*255),
+        Math.round(firstMat.color.g*255),
+        Math.round(firstMat.color.b*255)
+      );
+    }
+
+    // Flash de sélection
+    flashMats.forEach(m => { if(m?.emissive) m.emissive.set('#336655'); });
+    if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender();
+    setTimeout(() => {
+      flashMats.forEach(m => { if(m?.emissive) m.emissive.set('#000000'); });
+      if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender();
+    }, 300);
+  } catch(err) {
+    console.warn('Pick material error:', err);
+  }
+}, true); // capture pour passer avant le listener mesure
+
+// ── Baguette d'isolation : clic 3D → coche le carré solo du groupe touché ──
+document.getElementById('measureOverlay').addEventListener('click', function(e) {
+  if (!wandMode || measureActive) return;
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+  const rect = this.getBoundingClientRect();
+  const isect = iv.GetMeshIntersectionUnderMouse(1, {x: e.clientX - rect.left, y: e.clientY - rect.top}, iv.camera, rect.width, rect.height);
+  if (!isect?.object) return;
+  const idx = originalMats.findIndex(om => om.mesh === isect.object);
+  if (idx < 0) return;
+  const soloCb = document.getElementById('solo' + idx);
+  if (!soloCb) return;
+  soloCb.checked = !soloCb.checked;
+  toggleSolo(idx, soloCb.checked);
+  // Fait défiler la ligne dans le sidebar pour la rendre visible
+  soloCb.closest('.grp-row')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  // Auto-désactive la baguette → retour mode vue pour orbiter autour de la pièce isolée
+  if (wandMode) toggleWand();
+}, true);
+
+function applyPickPreset(name, customHex) {
+  if (!pickedMesh || !currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+
+  const preset = PRESETS[name];
+
+  // Clone le material pour que ce mesh soit indépendant des autres
+  if (!pickedMesh.userData._matCloned) {
+    if (Array.isArray(pickedMesh.material)) {
+      pickedMesh.material = pickedMesh.material.map(m => m.clone());
+    } else {
+      pickedMesh.material = pickedMesh.material.clone();
+    }
+    pickedMesh.userData._matCloned = true;
+  }
+  const mats = Array.isArray(pickedMesh.material) ? pickedMesh.material : [pickedMesh.material];
+
+  if (name === 'orig') {
+    // Cherche l'original dans originalMats
+    const orig = originalMats.find(om => om.mesh === pickedMesh);
+    if (orig) {
+      mats.forEach(m => {
+        if (!m) return;
+        if (m.color) m.color.setRGB(orig.color.r, orig.color.g, orig.color.b);
+        if (m.isMeshStandardMaterial) { m.metalness = orig.metalness; m.roughness = orig.roughness; }
+        if (m.isMeshPhongMaterial && orig.specular) {
+          m.shininess = orig.shininess;
+          m.specular.setRGB(orig.specular.r, orig.specular.g, orig.specular.b);
+        }
+        m.needsUpdate = true;
+      });
+    }
+  } else {
+    const hex = name === 'custom' ? (customHex || '#c8c8c8') : preset.color;
+    mats.forEach(m => {
+      if (!m) return;
+      if (m.color) m.color.set(hex);
+      if (m.isMeshStandardMaterial) { m.metalness = preset?.metalness ?? 0.5; m.roughness = preset?.roughness ?? 0.4; }
+      if (m.isMeshPhongMaterial && preset?.specular) { m.shininess = preset.shininess; m.specular.set(preset.specular); }
+      delete m.userData._baseRoughness;
+      delete m.userData._baseMetalness;
+      delete m.userData._baseShininess;
+      delete m.userData._baseMirrorSaved;
+      m.needsUpdate = true;
+    });
+  }
+  iv.Render();
+}
+
+/* ── Aspect matériau ── */
+let originalMats = []; // [{mesh, color:{r,g,b}, metalness, roughness, shininess, specular:{r,g,b}}]
+let groupLabels  = []; // label affiché dans le sidebar pour chaque groupe (parallèle à originalMats)
+let soloSet = new Set(); // indices des groupes en mode isolation (carré de droite coché)
+let activePreset = 'orig';
+
+const PRESETS = {
+  orig:   null, // restored from originalMats
+  inox:   { color:'#a8b0b8', metalness:0.75, roughness:0.25, shininess:90,  specular:'#aaaaaa' },
+  laiton: { color:'#c8a040', metalness:0.65, roughness:0.35, shininess:80,  specular:'#c8a040' },
+  chrome: { color:'#d0d0d8', metalness:1.0,  roughness:0.04, shininess:220, specular:'#ffffff' },
+  cuivre: { color:'#cfb296', metalness:0.75, roughness:0.22, shininess:130, specular:'#c8a070' },
+  custom: null, // color from picker, metalness auto
+};
+
+// Couleurs fixes PJ par index de groupe (image réelle)
+const PJ_FIXED = [
+  { color:'#c21600', metalness:0.92, roughness:0.10, shininess:280 }, // Groupe 1
+  { color:'#c21600', metalness:0.92, roughness:0.10, shininess:280 }, // Groupe 2 — même orange
+];
+const TUB_INOX = { color:'#c0c8d0', metalness:0.95, roughness:0.04, shininess:350, specular:'#ffffff' };
+
+function applyMetallicBase() {
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+
+  originalMats.forEach((om, i) => {
+    const mesh = om.mesh;
+    if (!mesh.userData._matCloned) {
+      mesh.material = Array.isArray(mesh.material)
+        ? mesh.material.map(m => m.clone()) : mesh.material.clone();
+      mesh.userData._matCloned = true;
+    }
+    const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+    const fix = viewerCat === 'tubulaires' ? TUB_INOX : PJ_FIXED[i];
+    mats.forEach(m => {
+      if (!m) return;
+      if (fix) {
+        if (m.color) m.color.set(fix.color);
+        if ('metalness' in m) m.metalness = fix.metalness;
+        if ('roughness' in m) m.roughness = fix.roughness;
+        if ('shininess' in m) m.shininess = fix.shininess;
+        if (m.specular && fix.specular) m.specular.set(fix.specular);
+      } else {
+        // Autres groupes PJ — métallique satiné
+        if ('metalness' in m) m.metalness = 0.80;
+        if ('roughness' in m) m.roughness = 0.22;
+        if ('shininess' in m) m.shininess = 160;
+        if (m.specular) m.specular.set('#aaaaaa');
+      }
+      delete m.userData._baseRoughness;
+      delete m.userData._baseMetalness;
+      delete m.userData._baseShininess;
+      delete m.userData._baseMirrorSaved;
+      m.needsUpdate = true;
+    });
+  });
+  if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender();
+}
+
+function applyPreset(name, customHex) {
+  activePreset = name;
+  // update button states
+  ['Orig','Inox','Laiton','Chrome','Cuivre'].forEach(n => {
+    const btn = document.getElementById('preset'+n);
+    if (btn) btn.classList.toggle('active', name === n.toLowerCase());
+  });
+
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv?.scene) return;
+
+  if (name === 'orig') {
+    // Restore saved material state
+    originalMats.forEach(({ mesh, color, metalness, roughness, shininess, specular }) => {
+      const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+      mats.forEach(m => {
+        if (!m) return;
+        if (m.color) m.color.setRGB(color.r, color.g, color.b);
+        if (m.isMeshStandardMaterial) { m.metalness = metalness; m.roughness = roughness; }
+        if (m.isMeshPhongMaterial && specular) { m.shininess = shininess; m.specular.setRGB(specular.r, specular.g, specular.b); }
+        m.needsUpdate = true;
+      });
+    });
+    if (originalMats.length) {
+      const c = originalMats[0].color;
+      document.getElementById('colorPicker').value = rgbToHex(Math.round(c.r*255), Math.round(c.g*255), Math.round(c.b*255));
+    }
+  } else {
+    const preset = PRESETS[name];
+    const hex = name === 'custom' ? (customHex || document.getElementById('colorPicker').value) : preset.color;
+    ivTraverse(iv, obj => {
+      if (obj.type !== 'Mesh' && !obj.isMesh) return;
+      // Pas besoin de cloner ici — preset global réassigne tout
+      const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
+      mats.forEach(m => {
+        if (!m) return;
+        if (m.color) m.color.set(hex);
+        if (m.isMeshStandardMaterial) {
+          m.metalness = preset ? preset.metalness : 0.5;
+          m.roughness = preset ? preset.roughness : 0.4;
+        }
+        if (m.isMeshPhongMaterial && preset?.specular) {
+          m.shininess = preset.shininess;
+          m.specular.set(preset.specular);
+        }
+        m.needsUpdate = true;
+      });
+    });
+    if (name !== 'custom') document.getElementById('colorPicker').value = preset.color;
+  }
+  iv.Render();
+}
+
+function rgbToHex(r, g, b) {
+  return '#' + [r,g,b].map(v => v.toString(16).padStart(2,'0')).join('');
+}
+
+/* ── Éclairage ── */
+function setupCustomLights(iv) {
+  if (customLightsAdded) return;
+
+  // Récupère le constructeur et la couleur depuis la lumière OV existante
+  let DirClass = null;
+  iv.scene.traverse(obj => {
+    if (obj.isDirectionalLight && !DirClass) { DirClass = obj.constructor; obj.intensity = 0; }
+    else if (obj.isDirectionalLight) obj.intensity = 0; // désactive toutes les lights OV
+  });
+  if (!DirClass) return;
+
+  const intensity = +document.getElementById('lightSlider').value;
+
+  const addLight = (x, y, z, mult = 1) => {
+    const l = new DirClass(0xfff5e8, intensity * mult);
+    l.position.set(x, y, z);
+    l.userData._custom = true;
+    l.userData._mult   = mult;
+    iv.scene.add(l);
+    iv.scene.add(l.target);
+  };
+
+  addLight(-5,  2, -3, 1.0);  // gauche arrière
+  addLight( 5,  2, -3, 1.0);  // droite arrière
+  addLight( 0,  8,  0, 0.3);  // dessus
+  addLight( 0, -8,  0, 0.2);  // dessous
+
+  if (viewerCat === 'pj') {
+    addLight( 0,  2,  8, 0.7);  // avant (derrière caméra vue initiale) — PJ uniquement
+  }
+
+  customLightsAdded = true;
+}
+
+function applyLighting(intensity) {
+  document.getElementById('lightVal').textContent = intensity.toFixed(2);
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv?.scene) return;
+  iv.scene.traverse(obj => {
+    if (!obj.isDirectionalLight) return;
+    // Si les lumières custom sont en place, ne touche que celles-ci
+    if (customLightsAdded && !obj.userData._custom) return;
+    obj.intensity = intensity * (obj.userData._mult ?? 1);
+  });
+  if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender();
+}
+
+function applyAmbient(intensity) {
+  document.getElementById('ambientVal').textContent = intensity.toFixed(1);
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv?.scene) return;
+  iv.scene.traverse(obj => { if (obj.isAmbientLight) obj.intensity = intensity; });
+  if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender();
+}
+
+function applyMat1Color(hex) {
+  if (!originalMats.length || !currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+  const mesh = originalMats[0].mesh;
+  if (!mesh.userData._matCloned) {
+    mesh.material = Array.isArray(mesh.material)
+      ? mesh.material.map(m => m.clone())
+      : mesh.material.clone();
+    mesh.userData._matCloned = true;
+  }
+  const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+  mats.forEach(m => { if (m?.color) { m.color.set(hex); m.needsUpdate = true; } });
+  if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender();
+}
+
+function ivTraverse(iv, cb) {
+  const root = iv.mainModel?.GetRootObject?.();
+  (root || iv.scene).traverse(cb);
+}
+
+// Couleurs brasés standard : Corps=cuivre, Plaque de fond=inox, Plaque avant=inox, Connexions=chrome
+const PRESET_COLORS   = ['#cfb296','#a8b0b8','#a8b0b8','#d0d0d8','#d0d0d8','#d0d0d8','#d0d0d8'];
+// Couleurs brasés -2- (7 groupes) : Plaque de fond=inox, Corps=cuivre, reste=chrome
+const PRESET_COLORS_2 = ['#a8b0b8','#cfb296','#d0d0d8','#d0d0d8','#d0d0d8','#d0d0d8','#d0d0d8'];
+const BRASES_GROUP_NAMES   = ['Corps','Plaque de fond','Plaque avant','Connexion K1','Connexion K2','Connexion K3','Connexion K4'];
+const BRASES_GROUP_NAMES_2 = ['Plaque de fond','Corps','Plaque avant','Connexion K3','Connexion K4','Connexion D4','Connexion D3'];
+// Noms par famille PJ — longueur du tableau = nombre de groupes statiques (structurels)
+// Les groupes au-delà sont classifiés géométriquement (tirant, écrou, rondelle)
+const PJ_FAMILY_NAMES = {
+  // JFA (sans rails): seuls [0,1] sont des groupes structurels — [2-6] sont hardware (tirants, pièces de fixation)
+  'JFA': ['Bâti fixe','Bâti mobile'],
+  // JFB: 8 groupes statiques — grp5(#3e4343)=Pied de bâti (1er statique), grp6(#908880)=Pied de support (unique),
+  // grp7=Faisceau. Le 2e Pied de bâti (#3e4343, grp~43) est dynamique (validateAndCorrectPieds, expectedPieds=1).
+  'JFB': ['Bâti fixe','Bâti mobile','Poutre supérieure','Poutre inférieure','Colonne de support','Pied de bâti','Pied de support','Faisceau'],
+  // JFC : 6 groupes statiques — [0-3] Poutres + [4] Colonne + [5] Pied; [6,7]=hardware (vérifiés JFC-035)
+  'JFC': ['Bâti fixe','Bâti mobile','Poutre supérieure','Poutre inférieure','Colonne de support','Pied de support'],
+  // JFD : grands modèles — grp[2,3] position variable selon modèle → label dynamique + validateAndCorrectPieds
+  // grp[4]=Axe de galet, grp[5]=Poutre de portage, grp[6]=Support de galet, grp[7]=Profilé de portage
+  // Pieds détectés par Y-monde (les plus bas) parmi #3e4343/#60574e avec L>=30 S>=25
+  'JFD': ['Bâti fixe','Bâti mobile',undefined,undefined,'Axe de galet','Poutre de portage','Support de galet','Profilé de portage'],
+  // JFE-JFH : grands modèles — [2,5]=corps de Connexion K (tube piquage) + [3,4,6,7]=Bride de connexion (flasque ext.)
+  // K1=[2], K2=[5] — 2 nozzle bodies dans la plage statique ; K3/K4 détectés géométriquement si présents
+  'JFE': ['Bâti fixe','Bâti mobile','Connexion K1','Bride de connexion','Bride de connexion','Connexion K2','Bride de connexion','Bride de connexion'],
+  'JFF': ['Bâti fixe','Bâti mobile','Connexion K1','Bride de connexion','Bride de connexion','Connexion K2','Bride de connexion','Bride de connexion'],
+  'JFG': ['Bâti fixe','Bâti mobile','Connexion K1','Bride de connexion','Bride de connexion','Connexion K2','Bride de connexion','Bride de connexion'],
+  'JFH': ['Bâti fixe','Bâti mobile','Connexion K1','Bride de connexion','Bride de connexion','Connexion K2','Bride de connexion','Bride de connexion'],
+};
+function pjMeshBBox(geom) {
+  const pos = geom?.attributes?.position;
+  if (!pos || pos.count === 0) return null;
+  let xMn=Infinity,xMx=-Infinity,yMn=Infinity,yMx=-Infinity,zMn=Infinity,zMx=-Infinity;
+  for (let j=0;j<pos.count;j++){const x=pos.getX(j),y=pos.getY(j),z=pos.getZ(j);
+    if(x<xMn)xMn=x;if(x>xMx)xMx=x;if(y<yMn)yMn=y;if(y>yMx)yMx=y;if(z<zMn)zMn=z;if(z>zMx)zMx=z;}
+  return [xMx-xMn,yMx-yMn,zMx-zMn].sort((a,b)=>b-a); // [L,M,S] sorted descending
+}
+const PJ_MSIZES=[[3.5,'M4'],[5.5,'M6'],[7,'M8'],[9.2,'M10'],[11.5,'M12'],[15.5,'M16'],[19.5,'M20'],[23,'M24'],[26.5,'M27'],[29.5,'M30'],[32,'M33'],[35,'M36'],[41,'M42'],[47,'M48']];
+function pjNearestMSize(d){let b=PJ_MSIZES[0][1],bd=9999;for(const[t,n]of PJ_MSIZES){const dd=Math.abs(d-t);if(dd<bd){bd=dd;b=n;}}return b;}
+
+function pjGeometryLabel(geom, counters, msize, color, family) {
+  const dims = pjMeshBBox(geom);
+  if (!dims) return null;
+  const [L,M,S] = dims;
+  const rLS=L/Math.max(S,0.01), rMS=M/Math.max(S,0.01), rLM=L/Math.max(M,0.01);
+  let base;
+  // Rondelle: thin flat washer (S<12) OR thin disc rLM≈1 (S<15 évite d'attraper les écrous M24+ S≈21-29)
+  // L<=200 : exclut faisceaux fins détectés ailleurs (Tirant plat → null) tout en acceptant brides Ø160mm
+  // PHE : aucune rondelle/flasque de connexion standard ne dépasse 200mm
+  // 3e condition : rondelle bloquante / frein épaisse (S 12-20mm) — discriminée par rLS>3 (disque L>>S) vs écrou (rLS≈2)
+  if ((S < 12 && rLM < 2.5 && L > 20 && L <= 200 && rLS > 3)  // rLS>3 : exclut les écrous hexagonaux compacts (M8-M12, rLS≈1.6-2)
+   || (S < 15 && rLM < 1.1 && L > 20 && L <= 200)
+   || (S < 20 && rLM < 1.2 && rLS > 3 && L > 15 && L <= 200)
+   || (S < 25 && rLM < 1.05 && L > 20 && L <= 200))           // disque quasi-parfait : rondelle autobloquante (L≈M≈S=18-24)
+    base = 'Rondelle';
+  // Tirant rond: tige filetée à section CIRCULAIRE uniquement (rMS<1.4 = M≈S)
+  // Tous les tirants réels ont une section ronde — exclut colonnes/poutres rectangulaires (rMS≥1.4)
+  // M<80 : standard jusqu'à M48 ; M≥80 → Tirant massif
+  else if (rLS >= 8 && rMS < 1.4 && M < 80)
+    base = `Tirant ${msize || pjNearestMSize(S)}`;
+  // Tirant rond massif (M≥80) : tiges de très grand diamètre
+  else if (rLS >= 8 && rMS < 1.4)
+    base = msize ? `Tirant ${msize}` : 'Tirant';
+  // Tirant plat / Poutre structurelle à section rectangulaire (rMS≥1.4)
+  // rMS≥3 : barre plate JFE/JFF/JFG/JFH (Tirant plat) ou pied JFB/JFA/JFC
+  // rMS 1.4-3 : élément à section carrée/rectangulaire (colonne, poutre, profil) — pas un tirant
+  else if (rLS >= 8 && rMS >= 3) {
+    if (['JFE','JFF','JFG','JFH'].includes(family))
+      base = 'Tirant plat';
+    else if (color === '#3e4343' && L >= 30)
+      base = 'Pied de bâti';
+    else if (L > 100 && S > 8)
+      base = 'Faisceau'; // faisceau chassis court JFA-JFD (rMS≥3 car M>>S, rLM peut dépasser 5)
+    // else: base reste undefined → return null → fallback STEP name
+  }
+  // Poutre structurelle : barre allongée à section rectangulaire (rMS 1.4-3, rLS≥8)
+  // En JFE-JFH uniquement — JFA-JFD n'ont pas de Poutre structurelle dynamique
+  else if (rLS >= 8) {
+    if (rLM < 5 && L > 100 && S > 8)
+      base = 'Faisceau'; // faisceau compact ou chassis court
+    else if (['JFE','JFF','JFG','JFH'].includes(family))
+      base = 'Poutre structurelle';
+    else if (color !== '#3e4343' && L > 100 && S > 8)
+      base = 'Faisceau'; // faisceau chassis court JFA-JFD (couleur non-acier-sombre)
+    else if (L > 100 && S > 8)
+      base = 'Poutre structurelle'; // éléments #3e4343 allongés JFD (colonne/poutre)
+  }
+  // Connexion K: nozzle cylindrique court (corps D>30mm, rLS<2) OU bague (ø>100mm)
+  // OU flasque épaisse JFC (rLM<1.2, S≥28, S<70 pour exclure faisceau compact, rLS 2-5)
+  // OU grand nozzle JFG/JFH (L≥300, rLS<3) : DN200-DN250 où flange_OD>300mm échappe à cond.1+2
+  //   rLS<3 discrimine le nozzle (rLS≈2-2.8) du faisceau (rLS≥3.5 pour grand pack plat)
+  // Numérotation K1→K4 selon ordre STEP (K1=haut-gauche, K2=haut-droite, K3=bas-droite, K4=bas-gauche)
+  else if ((rLM < 1.5 && rLS < 2 && L > 50 && S > 30)
+        || (rLM < 1.1 && S > 30 && M > 100 && L < 300)
+        || (rLM < 1.2 && S >= 28 && S < 70 && L > 60 && L < 200 && rLS >= 2 && rLS < 5)
+        || (rLM < 1.4 && S > 70 && L >= 300 && rLS < 3)) {
+    const _kn = (counters['Connexion K']||0);
+    counters['Connexion K'] = _kn + 1;
+    base = `Connexion K${_kn + 1}`;
+  }
+  // Galet de guidage / Manchon coulissant : cylindre D>25mm, L≈1.5→4×D
+  // Exclusion #3e4343 : acier sombre = pièce structurelle (pied, bride), pas un manchon plastique/laiton
+  // JFD/JFE-JFH : galets de guidage métalliques (ø≈28-60mm) ; JFA/JFB/JFC : manchon coulissant
+  else if (rMS < 1.3 && M > 25 && rLM > 1.5 && rLM < 4 && L < 150 && color !== '#3e4343') {
+    if (family === 'JFD')
+      base = 'Galet de guidage';
+    else if (['JFE','JFF','JFG','JFH'].includes(family))
+      base = 'Galet de guidage';
+    else
+      base = 'Manchon coulissant';
+  }
+  // Faisceau compact: paquet de plaques dont L<500 (petits/moyens modèles)
+  // Condition 1 — épaisseur standard (S>50) : exclut toute visserie
+  // Condition 2 — chassis court/peu de plaques (S>20, L>150) : rMS>1.4 exclut section ronde (tirant/galet)
+  //   rLM>1.2 exclut les disques plats (flasques) ; rLM<5 exclut les barres allongées (poutres)
+  else if ((S > 50 && L > 200 && rLM < 5)
+        || (S > 20 && L > 150 && rLM > 1.2 && rLM < 5 && rMS > 1.4))
+    base = 'Faisceau';
+  // Écrou / pièce compacte: catch-all L<500
+  else if (L < 500)
+    base = msize ? `Écrou ${msize}` : 'Écrou';
+  // Faisceau: grand bloc structurel (L≥500)
+  else
+    base = 'Faisceau';
+
+  // Raffinements par couleur matière (acier SolidWorks Hexonic)
+  // Cache : pièce très sombre (#373737) — caches de protection des tirants et bouchons noirs
+  // Les glissières (patins PTFE blancs) sont #ffffff ; les VRAIS tirants noirs (#373737) ont M ≈ msize
+  // Cache-tirant (gaine protectrice) = diamètre plus grand que le tirant → M > msize + 4
+  if (color === '#373737') {
+    if (!(base && base.startsWith('Tirant')))
+      base = 'Cache'; // bouchon/cache ; si géométrie dit déjà Tirant → tirant noir, conserver
+  }
+  // Poutre structurelle : barre allongée à section rectangulaire — raffinement par couleur
+  // #3e4343 : acier sombre → Colonne de supportage (tube structurel JFD+) — ex. colonne de supportage de JFD-060
+  // #908880 : acier moyen → Poutre inférieure (première détectée uniquement, voir règle dédiée JFE-JFH plus bas)
+  if (base === 'Poutre structurelle' && color === '#3e4343')
+    base = rLM > 20 ? 'Colonne de supportage' : 'Poutre inférieure';
+  if (base === 'Poutre structurelle' && color === '#908880')
+    base = 'Poutre inférieure';
+  // Bouchon de palier : couleur brun foncé distinctif (#645746) — unique, ferme l'axe de galet
+  if (color === '#645746')
+    base = 'Bouchon de palier';
+  // Capuchon de la colonne de support : quasi-noir (#000000 / #010101) — bouchon plastique haut de colonne
+  if (color === '#000000' || color === '#010101')
+    base = 'Capuchon de la colonne de support';
+  // Colonne de supportage : rouge-saumon (#da6464) — tube structural de grande section (colonnes de cadre JFE-JFG)
+  if (color === '#da6464')
+    base = 'Colonne de supportage';
+  // Joint d'étanchéité : orange (#e25303) — caoutchouc EPDM/NBR des joints entre plaques
+  if (color === '#e25303')
+    base = 'Joint';
+  // Collerette de manchon (JFA/JFB/JFC) vs Glissière (JFD et supérieur) : anneau blanc (#ffffff)
+  // En JFA-JFC : anneau de guidage du manchon coulissant ; en JFD+ : patin glissant (PTFE) du bâti mobile
+  if (color === '#ffffff' && L < 100) {
+    if (['JFD','JFE','JFF','JFG','JFH'].includes(family))
+      base = 'Glissière';
+    else
+      base = 'Collerette de manchon';
+  }
+  // Plaque signalétique : pièce plate fine (#c8d2d8, gris clair acier inox) — rondelle fine en réalité plaque nominative
+  if (base === 'Rondelle' && color === '#c8d2d8')
+    base = 'Plaque signalétique';
+  // Rivet de plaque signalétique : petite quincaillerie (#c8d2d8, L≤20) montant la plaque nominative sur le bâti
+  // Trop petite pour être détectée comme Rondelle (L<20 exclut cond.1) → Écrou catch-all avec msize erroné
+  if (color === '#c8d2d8' && L <= 20)
+    base = 'Rivet de plaque signalétique';
+  // Rondelle autobloquante : disque épais acier sombre (#3e4343) sur tirant ou goujon (rondelle frein/blocage)
+  if (base === 'Rondelle' && color === '#3e4343' && S > 8)
+    base = 'Rondelle autobloquante';
+  // Petit écrou argent (#9090a1) capturé comme Rondelle (condition 2 : S<15 rLM≈1 — ex. M16 sur goujon)
+  // Préconversion en 'Écrou' pour que la règle "petit écrou" ci-dessous puisse dimensionner par S réel
+  if (base === 'Rondelle' && color === '#9090a1' && rLS < 3)
+    base = 'Écrou';
+  // Vis : argent-bleu (#9090a1) + manchon ou galet — visserie, pas un manchon/galet de guidage
+  if ((base === 'Manchon coulissant' || base === 'Galet de guidage') && color === '#9090a1')
+    base = 'Vis';
+  // Écrou compact argent-bleu (#9090a1) — goujons (allongés) traités plus bas après la règle #60574e
+  if (base && base.startsWith('Écrou') && color === '#9090a1')
+    base = msize ? `Écrou ${msize}` : 'Écrou';
+  // Petit écrou sur goujon de fixation (#9090a1, S<20 M<30) : taille réelle via pjNearestMSize, pas le msize global
+  // (goujons de pied et colonne de support : M8-M16, pas le M24 du tirant principal)
+  if (base && base.startsWith('Écrou') && color === '#9090a1' && S < 20 && M < 30)
+    base = `Écrou ${pjNearestMSize(S)}`;
+  // Pied de bâti mal détecté comme Connexion K : pièce structurelle acier foncé #3e4343 ≠ piquage
+  // (ex. équerre de pied JFA-003-P25-24 dont la bbox courte/carrée ressemble à un nozzle)
+  // → annule aussi l'incrément du compteur Connexion K pour que le vrai piquage garde son numéro
+  if (base && base.startsWith('Connexion K') && color === '#3e4343') {
+    counters['Connexion K'] = Math.max(0, (counters['Connexion K']||0) - 1);
+    if (['JFE','JFF','JFG','JFH'].includes(family))
+      base = (rLM <= 2 || (counters['Bouchon de palier']||0) === 0) ? 'Goupille' : 'Axe de galet';
+    else
+      base = 'Pied de bâti';
+  }
+  // Embase de colonne de support : plaque plate large (#908880) dans JFE-JFH
+  // (L≈210 M≈135 S≈10 rLM≈1.56 grp44) — S<12 → classée 'Rondelle' par géométrie mais L>100 l'exclut
+  if ((base === 'Tirant plat' || base === 'Rondelle') && color === '#908880' && L > 100 && rLM < 3
+      && ['JFE','JFF','JFG','JFH'].includes(family))
+    base = 'Embase de colonne de support';
+  // Poutre inférieure : barre allongée acier moyen (#908880) dans familles JFE-JFH
+  // Peut être de section ronde (Tirant) ou rectangulaire (Poutre structurelle)
+  if (base && (base.startsWith('Tirant') || base === 'Poutre structurelle') && !base.includes('plat')
+      && color === '#908880'
+      && ['JFE','JFF','JFG','JFH'].includes(family) && (counters['Poutre inférieure']||0) === 0)
+    base = 'Poutre inférieure';
+  // Poutre de portage : barre allongée très foncée (#3e4343) dans JFE-JFH — poutre structurelle de portage
+  if (base && (base.startsWith('Tirant') || base === 'Poutre structurelle') && !base.includes('plat')
+      && color === '#3e4343'
+      && ['JFE','JFF','JFG','JFH'].includes(family))
+    base = 'Poutre de portage';
+  // JFA : les 2 premiers tirants-ronds sont les poutres structurelles du cadre (barre de serrage horizontale)
+  // tirant n°1 = Poutre supérieure, n°2 = Poutre inférieure, les suivants restent des tirants normaux
+  if (base && base.startsWith('Tirant') && !base.includes('plat') && family === 'JFA') {
+    const _n = (counters['_jfa_tirant']||0) + 1;
+    counters['_jfa_tirant'] = _n;
+    if (_n === 1) base = 'Poutre supérieure';
+    else if (_n === 2) base = 'Poutre inférieure';
+  }
+  // Profilé de guidage : barre plate allongée (#60574e) dans JFE-JFH — profil extrudé de guidage du bâti mobile
+  // Bride de connexion : même couleur mais disque circulaire (rLM≈1) — géré ici en même temps
+  if (base === 'Tirant plat' && color === '#60574e' && ['JFE','JFF','JFG','JFH'].includes(family)) {
+    if (rLM > 5)
+      base = 'Profilé de guidage'; // barre plate allongée (profil extrudé, rLM≈14)
+    else if (rLM <= 2)
+      base = 'Bride de connexion'; // disque de bride (rLM≈1), pas une barre plate
+  }
+  // Goupille / Axe de galet : couleur #3e4343, familles JFE-JFH uniquement (roulement bâti mobile)
+  // JFA/JFB/JFC : #3e4343 + Écrou-géométrie = PEUT ÊTRE un pied de bâti, mais aussi des écrous ordinaires.
+  // On NE label PAS ici → validateAndCorrectPieds sélectionne les 3 plus volumineux (#3e4343) après chargement.
+  if (base && base.startsWith('Écrou') && color === '#3e4343') {
+    if (['JFE','JFF','JFG','JFH'].includes(family)) {
+      // Ordre : Goupille ×2 vient avant Bouchon de palier, Axe vient après
+      if (rLM <= 2 || (counters['Bouchon de palier']||0) === 0)
+        base = 'Goupille';
+      else
+        base = 'Axe de galet';
+    } else if (family === 'JFD' && rLM <= 2.5 && S >= 20 && rMS < 1.5) {
+      // JFD : tiges/goupilles de l'ensemble galet — rMS<1.5 assure section cylindrique (pas carrée)
+      base = 'Goupille';
+    } else if (rMS < 1.3 && rLM > 1.2 && S < 25) {
+      // Entretoise de tirant : tube ou bloc allongé (section ≈ circulaire/carrée) sur le tirant
+      // Distinct de la rondelle autobloquante (rLM≈1.0) et du pied de bâti (S≥25)
+      // Fonction : espacer les écrous et maintenir la position des rondelles le long du tirant
+      base = msize ? `Entretoise de tirant ${msize}` : 'Entretoise de tirant';
+    }
+    // else JFA/JFB/JFC : reste 'Écrou Mxx' — pieds gérés par validateAndCorrectPieds
+  }
+  // Galet de guidage : pièce compacte acier moyen (#908880) classée Écrou dans JFE-JFH
+  // (galets de roulement du bâti mobile, ø≈M24-M27, non détectés par géométrie cylindrique)
+  if (color === '#908880' && base && base.startsWith('Écrou') && ['JFE','JFF','JFG','JFH'].includes(family))
+    base = 'Galet de guidage';
+  // Galet de guidage (#60574e) et Bague de roulement (#60574e) — même couleur, même geometrie compacte
+  // En JFE-045 : 1 galet (#60574e, grp20) précède 3 bagues (#60574e, grp26/27/34) dans l'ordre de groupe
+  // → 1er compact #60574e = Galet, suivants = Bague de roulement
+  if (base && (base === 'Rondelle' || base.startsWith('Écrou')) && color === '#60574e'
+      && ['JFE','JFF','JFG','JFH'].includes(family)) {
+    const _k = '_jfe60574e';
+    counters[_k] = (counters[_k] || 0) + 1;
+    base = counters[_k] === 1 ? 'Galet de guidage' : 'Bague de roulement';
+  }
+  // Flasque de manchon : disque plat fin (#60574e, L<70mm) adjacent à la Collerette de manchon
+  // Disque d'appui/retenue extérieur de l'ensemble manchon coulissant — distinct du flasque de connexion K
+  // Flasque de connexion : disque plat fin (#60574e, L≥70mm) lié à la partie tubulaire des connexions K
+  if (base === 'Rondelle' && color === '#60574e' && !['JFE','JFF','JFG','JFH'].includes(family)) {
+    if (L > 40 && L < 70)
+      base = 'Flasque de manchon'; // petit disque (Ø≈50-65mm) adjacent à la Collerette de manchon
+    else if (L >= 70)
+      base = 'Flasque de connexion'; // grand disque (Ø≥70mm) lié aux brides de connexion K
+  }
+  // Collerette de manchon (extérieure) : anneau #908880 en disque plat autour du manchon coulissant
+  // Distinct de la collerette blanche (#ffffff) déjà traitée — anneau extérieur de la collerette coulissante
+  if (base === 'Rondelle' && color === '#908880' && L > 40 && L < 200
+      && !['JFE','JFF','JFG','JFH'].includes(family))
+    base = 'Collerette de manchon';
+  // JFA/JFC faisceau mal détecté comme Connexion K : faisceau compact (couleur #908880) dont la géométrie disc
+  // ressemble à un piquage flush → annule le compteur K et relabele en Faisceau
+  // JFA/JFC uniquement : JFB faisceau est statique (grp7), JFD faisceau est trop grand (rLS>>2 → jamais K),
+  // JFE-JFH connexions peuvent avoir S>70 (DN150-DN250) et le faisceau est aussi statique ou trop large
+  if (base && base.startsWith('Connexion K') && color === '#908880' && S > 70
+      && ['JFA','JFC'].includes(family)) {
+    counters['Connexion K'] = Math.max(0, (counters['Connexion K']||0) - 1);
+    base = 'Faisceau';
+  }
+  // Connexion K mal détectée (#9090a1) en JFD : boulonnerie argent (goujons de manchon, raccords) capturée
+  // par la condition K (rLM<1.5, rLS<2, L>50, S>30) — en JFD les vraies connexions sont #908880
+  // → annule le compteur K et attribue un Écrou calibré via S (pas le msize global M42 du tirant)
+  // En JFD+ : les goujons, boulons et raccords argent (#9090a1) peuvent avoir la géométrie d'un nozzle K
+  // (corps court S>30, rLM<1.5) → rollback K et étiqueter par S réel (pas le msize global du modèle)
+  if (base && base.startsWith('Connexion K') && color === '#9090a1'
+      && ['JFD','JFE','JFF','JFG','JFH'].includes(family)) {
+    counters['Connexion K'] = Math.max(0, (counters['Connexion K']||0) - 1);
+    base = `Écrou ${pjNearestMSize(S)}`;
+  }
+  // Goujon : tige filetée argent (#9090a1) à section CIRCULAIRE (rMS<1.3) — allongée OU très courte
+  // rLM>2.0 rMS<1.3 : goujons standard (L≈37-76mm, rLM≈2.0-3.2) — grp66,72,73,86 JFD-030
+  // rLM>1.2 rMS<1.1 : goujons très courts (L≈13mm, rLM≈1.5) — section parfaitement circulaire ≠ écrou hex (rMS≥1.5)
+  if (base && base.startsWith('Écrou') && color === '#9090a1'
+      && ((rLM > 2.0 && rMS < 1.3) || (rLM > 1.2 && rMS < 1.1))) {
+    const dia = Math.round(S); const len = Math.round(L);
+    base = `Goujon M${dia} L${len}`;
+  }
+
+  // Géométrie plate non identifiable (Tirant plat hors JFE) + aucun raffinement couleur → STEP fallback
+  if (!base) return null;
+
+  counters[base] = (counters[base]||0)+1;
+  return counters[base]===1 ? base : `${base} ×${counters[base]}`;
+}
+
+function meshNameLabel(name) {
+  if (!name) return '';
+  if (/^(solid|shape|body|part|compound|group|mesh|object|node|brep)[\s_\-\d]*$/i.test(name.trim())) return '';
+  if (/^[0-9a-f]{20,}$/i.test(name.trim())) return ''; // hash MD5/SHA Cairo → inutilisable comme libellé
+  return name.trim();
+}
+
+function matColorHex(om) {
+  const c = om.color;
+  if (!c) return '#888';
+  const r = Math.round((c.r ?? 0) * 255).toString(16).padStart(2,'0');
+  const g = Math.round((c.g ?? 0) * 255).toString(16).padStart(2,'0');
+  const b = Math.round((c.b ?? 0) * 255).toString(16).padStart(2,'0');
+  return '#' + r + g + b;
+}
+
+// ── Position monde d'un mesh : Y minimum (point le plus bas) ─────────────────
+// Transforme les 8 coins du bbox local via la matrice monde (colonne-majeure Three.js).
+// world_y = e[1]·x + e[5]·y + e[9]·z + e[13]  — sans dépendance à THREE.Box3 global.
+// Renvoie Infinity si la géométrie ou la matrice n'est pas disponible.
+function meshWorldMinY(mesh) {
+  if (!mesh?.geometry) return Infinity;
+  try {
+    const geo = mesh.geometry;
+    geo.computeBoundingBox();
+    const bb = geo.boundingBox;
+    if (!bb) return Infinity;
+    mesh.updateWorldMatrix(true, false);
+    const e = mesh.matrixWorld.elements; // Matrix4 column-major
+    let minY = Infinity;
+    for (const x of [bb.min.x, bb.max.x]) {
+      for (const y of [bb.min.y, bb.max.y]) {
+        for (const z of [bb.min.z, bb.max.z]) {
+          const wy = e[1]*x + e[5]*y + e[9]*z + e[13];
+          if (wy < minY) minY = wy;
+        }
+      }
+    }
+    return minY;
+  } catch(_) { return Infinity; }
+}
+
+// ── Validation automatique des pieds de bâti ────────────────────────────────
+// Invariant PHE par famille :
+//   JFA : 3 pieds (2 sous bâti fixe + 1 sous bâti mobile — pas de galets, modèle compact)
+//   JFB-JFH : 2 pieds (2 sous bâti fixe — le bâti mobile repose sur galets/roulettes)
+// Critère physique : les pieds sont en contact avec le sol → Y monde minimum le plus bas parmi
+// tous les groupes #3e4343 hardware. On sélectionne les N dont minWorldY est le plus petit.
+function validateAndCorrectPieds() {
+  const ind = document.getElementById('piedValidation');
+  if (!ind) return;
+  ind.className = 'pied-validation';
+  ind.textContent = '';
+
+  // Nombre attendu de pieds de bâti hardware selon la famille
+  // JFA : 3 pieds tous hardware (pas de galets, modèle compact)
+  // JFB : 1 pied hardware dynamique (#3e4343, grp~43) + 1 statique (grp6 #3e4343, PJ_FAMILY_NAMES[5]) = 2 Pieds de bâti
+  //        Pied de support = statique grp7 (#908880, PJ_FAMILY_NAMES[6]) — unique
+  // JFC : 2 pieds hardware dynamiques
+  // JFD : 2 — pieds détectés dynamiquement par Y-monde (position grp variable entre modèles)
+  // JFE-JFH : 0 — pieds intégrés à la plaque bâti, pas de groupe hardware séparé dans le STEP
+  const expectedPieds = viewerFamily === 'JFA' ? 3
+                       : viewerFamily === 'JFB' ? 1
+                       : viewerFamily === 'JFD' ? 2
+                       : ['JFE','JFF','JFG','JFH'].includes(viewerFamily) ? 0
+                       : 2; // JFC uniquement
+
+  if (expectedPieds === 0) {
+    ind.style.display = 'none';
+    return; // Famille sans pied hardware séparé (JFE-JFH)
+  }
+
+  const baseCount = (PJ_FAMILY_NAMES[viewerFamily] || []).length;
+  let piedCount = 0;
+  const dark = []; // groupes #3e4343 hardware avec position monde
+
+  // JFD : les pieds ont une position STEP variable (grp2,3 en JFD-050 mais pas en JFD-030)
+  // On scanne depuis index 2 (skip Bâti fixe/mobile seulement) pour couvrir tous les cas
+  // Les pièces #60574e JFD (Galet de guidage géométriquement) peuvent aussi être des pieds
+  const isJFD = viewerFamily === 'JFD';
+  const scanStart = isJFD ? 2 : baseCount;
+
+  for (let i = scanStart; i < originalMats.length; i++) {
+    const om = originalMats[i];
+    if (!om) continue;
+    // Compte les pieds déjà labellisés (strip ×N pour couvrir "Pied de bâti ×2" etc.)
+    if ((om.label || '').replace(/\s*×\d+$/, '') === 'Pied de bâti') piedCount++;
+    const col = matColorHex(om);
+    const isFootCandidate = col === '#3e4343' || (isJFD && col === '#60574e');
+    if (isFootCandidate) {
+      const dims = pjMeshBBox(om.mesh?.geometry);
+      if (dims) {
+        const [L,, S] = dims;
+        // L≥30 : exclut petite visserie ; S≥25 : exclut écrous M24 (S≈18-24) — pieds ont S≥25+
+        // Pour les pieds #60574e JFD : ils ont L≈100, S≈50 — S>=25 les inclut toujours
+        if (L >= 30 && L <= 400 && S >= 25) {
+          dark.push({ idx: i, om, minWorldY: meshWorldMinY(om.mesh) });
+        }
+      }
+    }
+  }
+
+  if (piedCount === expectedPieds) {
+    ind.textContent = `✓ ${expectedPieds} pieds de bâti`;
+    ind.className = 'pied-validation ok';
+    return;
+  }
+
+  if (dark.length < expectedPieds) {
+    ind.textContent = `⚠ ${piedCount}/${expectedPieds} pieds`;
+    ind.className = 'pied-validation err';
+    return;
+  }
+
+  // Tri par Y monde croissant : les N plus proches du sol = les pieds de bâti
+  dark.sort((a, b) => a.minWorldY - b.minWorldY);
+
+  // Force les N premiers (plus bas) en "Pied de bâti" et met à jour le DOM
+  let corrected = 0;
+  for (let j = 0; j < expectedPieds; j++) {
+    const d = dark[j];
+    const baseLabel = (d.om.label || '').replace(/\s*×\d+$/, '');
+    if (baseLabel !== 'Pied de bâti') {
+      d.om.label = 'Pied de bâti';
+      const lbl = document.querySelector(`label[for="grp${d.idx}"]`);
+      if (lbl) lbl.textContent = 'Pied de bâti';
+      corrected++;
+    }
+  }
+
+  ind.textContent = corrected > 0
+    ? `⚠ ${expectedPieds} pieds (${corrected} corrigé${corrected > 1 ? 's' : ''})`
+    : `✓ ${expectedPieds} pieds de bâti`;
+  ind.className = corrected > 0 ? 'pied-validation warn' : 'pied-validation ok';
+}
+
+// ── Base de données info technique PHE ────────────────────────────────────────
+// Chaque clé correspond à un préfixe de label (sans " ×N" ni suffixe M-size)
+const PJ_PART_INFO = {
+  'Bâti fixe': {
+    en: 'Fixed Frame Plate (Front Plate)',
+    role: 'Plaque avant fixe de l\'échangeur — point d\'ancrage des connexions process (K1–K4) et des poutres supérieure/inférieure. Percée pour les tirants de serrage. Les pieds de bâti sont vissés en dessous pour la fixation au sol. (Doc. officielle : « Plaque avant »)',
+    maint: 'Contrôler l\'état des filets des piquages K. Inspecter les faces de contact pour fissures ou corrosion. Vérifier la fixation des pieds de bâti. Avant mise en service, s\'assurer que tous les bouchons de transport sont retirés des connexions.',
+  },
+  'Bâti mobile': {
+    en: 'Movable Pressure Plate (Rear Plate)',
+    role: 'Plaque arrière mobile montée sur les poutres supérieure et inférieure. Presse le faisceau de plaques contre le bâti fixe. Coulisse pour permettre le démontage ou le nettoyage du faisceau. Sur les grands modèles (JFE–JFH) elle peut être équipée de connexions supplémentaires. (Doc. officielle : « Plaque arrière »)',
+    maint: 'Vérifier le libre coulissement sur les tirants / rails ou galets. Contrôler l\'état des glissières ou galets de guidage. Nettoyer les surfaces de contact avant chaque remontage.',
+  },
+  'Faisceau': {
+    en: 'Plate Pack',
+    role: 'Empilement de plaques embouties (acier inoxydable AISI 304/316 ou titane) séparées par des joints élastomères. Constitue le cœur thermique de l\'échangeur. Composé d\'une plaque de démarrage, de plaques de canaux H (fort flux) et L (faible flux), et d\'une plaque d\'extrémité. Chaque plaque paire est tournée de 180° pour créer des canaux séparés alternés.',
+    maint: 'Inspecter la planéité des plaques lors du démontage. Rechercher corrosion, érosion ou entartrage. Remplacer les joints systématiquement. Lors de la commande de plaques de rechange, préciser le type H ou L et le numéro de port (ex. L1234 = plaque gauche 4 ports). Fournir le numéro de série de l\'échangeur.',
+  },
+  'Tirant': {
+    en: 'Tie Rod (Threaded Rod)',
+    role: 'Tige filetée à section circulaire (acier inox ou carbone) fixant le bâti fixe et le bâti mobile en maintenant la compression axiale du faisceau. Le nombre, la taille et la longueur dépendent du modèle. (Doc. officielle : « Tige filetée ») — Couples de serrage indicatifs : JFA M16 ≈ 47 Nm, JFB M16 ≈ 55–62 Nm, JFC M16 ≈ 64–68 Nm, JFD M24 ≈ 104–112 Nm, JFE M24/M36 ≈ 257–444 Nm, JFG M36 ≈ 311–363 Nm.',
+    maint: 'Nettoyer et lubrifier les filets avant démontage. Inspecter le filetage pour déformations ou grippage. Appliquer le couple de serrage nominal avec clé dynamométrique, en croix alternée. Ne jamais retirer complètement les tiges : les desserrer seulement pour permettre le démontage du faisceau.',
+  },
+  'Entretoise de tirant': {
+    en: 'Tie Rod Spacer',
+    role: 'Tube ou bloc espaceur en acier sombre (acier carbone traité) enfilé sur le tirant entre les écrous et les rondelles autobloquantes. Maintient la distance entre les composants, distribue les efforts de serrage le long du tirant et empêche la migration axiale des rondelles sous vibration. Pièce spécifique aux modèles JFA/JFB/JFC.',
+    maint: 'Vérifier l\'absence de corrosion et d\'écrasement des faces d\'appui. Remplacer si les faces sont déformées (risque de perte de couple de serrage). Ne pas intervertir avec des entretoises de longueur différente.',
+  },
+  'Écrou': {
+    en: 'Nut',
+    role: 'Écrou hexagonal spécialement sélectionné pour maintenir la rigidité de l\'empilement sous pression de service. Monté par paires (avant et arrière) sur chaque tirant. Type DIN 934 ou équivalent, en acier zingué ou inox selon le modèle.',
+    maint: 'Contrôler l\'état des faces portantes et des filets. Remplacer si corrodés ou endommagés. Respecter le couple de serrage spécifié (voir documentation modèle). Serrer en croix alternée pour éviter les efforts dissymétriques.',
+  },
+  'Rondelle': {
+    en: 'Washer',
+    role: 'Rondelle plate interposée sous les écrous. Répartit la pression de serrage sur la surface d\'appui.',
+    maint: 'Remplacer systématiquement lors du démontage des tirants.',
+  },
+  'Rondelle autobloquante': {
+    en: 'Lock Washer',
+    role: 'Rondelle frein (anti-desserrage) montée sur les tirants noirs et les goujons de fixation (JFA/JFB). Disque épais à dentelures ou évidements intérieurs qui s\'impriment dans les filets et la surface d\'appui pour bloquer le desserrage sous vibrations.',
+    maint: 'Remplacer systématiquement lors du démontage — les dentelures s\'écrasent au serrage et ne peuvent pas être réutilisées. Vérifier l\'état des dentelures avant repose.',
+  },
+  'Flasque de manchon': {
+    en: 'Sleeve Flange Disc',
+    role: 'Disque plat mince (#60574e) formant la face d\'appui extérieure de l\'ensemble manchon coulissant. Retient la collerette de manchon sur le tirant et répartit les efforts axiaux. Diamètre légèrement supérieur à la collerette blanche.',
+    maint: 'Vérifier planéité et absence de corrosion. Remplacer si déformé ou oxydé.',
+  },
+  'Flasque de connexion': {
+    en: 'Connection Flange Disc',
+    role: 'Disque plat solidaire de la partie tubulaire des connexions (piquages K). Assure la continuité mécanique entre le corps cylindrique du piquage et le bâti fixe. Soudé ou bridé selon la conception.',
+    maint: 'Inspecter la surface d\'appui du joint. Contrôler l\'absence de fissuration en pied de soudure.',
+  },
+  'Connexion K': {
+    en: 'Nozzle / Process Connection',
+    role: 'Piquage de raccordement process (entrée/sortie de fluide). Percé dans le bâti fixe, numéroté K1–K4 (ou K1–K8+ sur les grands modèles). La taille dépend du modèle : JFA G1¼", JFB G2", JFC DN80, JFD DN100, JFE DN150, JFG/JFH DN250. Raccord fileté (JFA/JFB) ou à bride PN6/PN10/PN16 selon la version.',
+    maint: 'Contrôler la surface d\'appui du joint de tuyauterie. Vérifier l\'alignement avec la tuyauterie process (éviter les contraintes mécaniques). Inspecter la boulonnerie de bride selon le plan de serrage. Protéger les connexions pendant le stockage (bouchons fournis).',
+  },
+  'Manchon coulissant': {
+    en: 'Sliding Sleeve',
+    role: 'Manchon guidant le déplacement axial du bâti mobile sur les tirants. Appelé « Sliding sleeve » dans la documentation anglaise. Élimine le contact métal/métal et assure un coulissement précis du bâti mobile lors du démontage ou du serrage du faisceau. Généralement en plastique ou alliage bronze.',
+    maint: 'Inspecter l\'usure des faces intérieures. Remplacer si jeu radial excessif ou surface rayée. Lubrifier légèrement si prévu par la notice.',
+  },
+  'Collerette de manchon': {
+    en: 'Sleeve Collar',
+    role: 'Collerette de retenue du manchon coulissant. Maintient le manchon en position axiale sur le tirant et absorbe les efforts de poussée lors du serrage.',
+    maint: 'Vérifier l\'absence de fissure et de déformation.',
+  },
+  'Glissière': {
+    en: 'Sliding Pad / Guide Rail',
+    role: 'Patin glissant (PTFE ou nylon) ou rail de guidage permettant le déplacement du bâti mobile. En JFD et modèles supérieurs : patins interposés entre le bâti mobile et les rails de support.',
+    maint: 'Inspecter l\'usure de la surface de glissement. Remplacer si épaisseur résiduelle < 2mm ou si rayures profondes.',
+  },
+  'Galet de guidage': {
+    en: 'Guide Roller',
+    role: 'Rouleau métallique monté sur le bâti mobile permettant son déplacement sur les rails de portage. Réduit les efforts de manœuvre lors du démontage/remontage du faisceau de plaques.',
+    maint: 'Vérifier la rotation libre. Contrôler l\'usure du méplat de roulement. Lubrifier selon le plan de maintenance.',
+  },
+  'Pied de bâti': {
+    en: 'Frame Foot',
+    role: 'Pied de support du bâti fixe reposant au sol. En acier ou fonte, il assure la stabilité de l\'échangeur et transmet les charges statiques à la structure porteuse. Généralement réglable en hauteur.',
+    maint: 'Vérifier le niveau de l\'appareil. Contrôler l\'état des vis de réglage et des plaques d\'assise. Inspecter la corrosion en cas d\'environnement humide.',
+  },
+  'Pied de support': {
+    en: 'U-Bracket Rear Support Foot',
+    role: 'Fixation arrière en U faisant partie de la poutre inférieure. Facilite l\'installation du faisceau de plaques et permet simultanément de fixer la partie arrière de l\'échangeur au sol. Appelé « U-LEG » dans la documentation anglaise. (Doc. officielle : « Fixation arrière en U »)',
+    maint: 'Vérifier le serrage des vis de fixation au sol. Contrôler l\'absence de déformation sous charge. Mettre de niveau si nécessaire lors de l\'installation — la surface de pose doit être plane et régulière.',
+  },
+  'Poutre supérieure': {
+    en: 'Top Carrying Bar',
+    role: 'Barre de guidage supérieure (portante) reliée au bâti fixe et au bâti mobile. Principale fonction : guider et positionner le bâti mobile ; sur les grands modèles, supporte également le faisceau de plaques. La longueur dépend du nombre de plaques et de la taille de l\'échangeur (jusqu\'à 2 500 mm). (Doc. officielle : « Poutre supérieure »)',
+    maint: 'Contrôler l\'absence de déformation et de corrosion. Vérifier les fixations aux deux extrémités. Vérifier que le guide de la plaque arrière coulisse librement sur toute la longueur.',
+  },
+  'Poutre inférieure': {
+    en: 'Bottom Beam',
+    role: 'Poutre inférieure du cadre alignant les plaques des canaux et le bâti mobile à leur extrémité basse. Reliée au bâti arrière et au bâti fixe. Supporte la fixation arrière en U (pied de support) permettant l\'ancrage au sol. (Doc. officielle : « Poutre inférieure »)',
+    maint: 'Inspecter les soudures de raccordement. Contrôler la planéité et l\'absence de déformation sous charge. Vérifier l\'état du pied en U solidaire.',
+  },
+  'Colonne de support': {
+    en: 'Support Column',
+    role: 'Colonne tubulaire verticale du cadre de portage. Transmets les charges du faisceau aux poutres inférieures et au sol. Présente sur les modèles JFB et supérieurs.',
+    maint: 'Vérifier la verticalité. Contrôler l\'état des boulons de fixation et l\'absence de corrosion sur la section tubulaire.',
+  },
+  'Colonne de supportage': {
+    en: 'Structural Support Column',
+    role: 'Colonne de grand cadre (JFD et supérieurs) transmettant les charges de l\'empilement vers la structure portante. Section circulaire ou rectangulaire selon le modèle.',
+    maint: 'Inspecter les zones de soudure et les fixations. Contrôler la section pour déformations.',
+  },
+  'Poutre structurelle': {
+    en: 'Structural Beam',
+    role: 'Élément de structure allongé à section non circulaire (poutre, profilé). Fait partie du cadre porteur de l\'échangeur.',
+    maint: 'Inspecter les assemblages boulonnés et soudés. Contrôler l\'absence de déformation ou de fissuration.',
+  },
+  'Tirant plat': {
+    en: 'Flat Tie Bar / Guide Rail',
+    role: 'Barre plate allongée servant de rail de guidage latéral du bâti mobile (modèles JFE–JFH). Oriente le coulissement horizontal lors du démontage du faisceau.',
+    maint: 'Contrôler la planéité. Vérifier les fixations aux extrémités. Huiler légèrement si rainures de guidage présentes.',
+  },
+  'Goujon': {
+    en: 'Stud Bolt',
+    role: 'Tige filetée aux deux extrémités, sans tête. Utilisé pour le boulonnage de brides de connexions ou d\'éléments de cadre. Le diamètre et la longueur sont indiqués sur l\'étiquette (ex. M24 L96).',
+    maint: 'Vérifier l\'état du filetage et l\'absence de grippage. Appliquer un frein-filet ou lubrification selon le plan de maintenance.',
+  },
+  'Vis': {
+    en: 'Screw / Fastener',
+    role: 'Visserie d\'assemblage (vis à tête) utilisée pour la fixation de petits éléments : capteurs, plaques de fixation, couvercles. Généralement inox A2/A4.',
+    maint: 'Remplacer si corrodée ou tête endommagée.',
+  },
+  'Joint': {
+    en: 'Gasket / Seal',
+    role: 'Joint d\'étanchéité élastomérique interposé entre chaque paire de plaques chauffantes. Assure l\'étanchéité hydraulique et sépare les deux fluides. Matériaux disponibles : NBR HT (jaune), EPDM HT (bleu), EPDM (gris), FKM/VITON (violet). Le choix dépend des fluides et températures. Durée de vie recommandée : 3 ans en service continu.',
+    maint: 'Remplacer SYSTÉMATIQUEMENT lors de chaque démontage — ne jamais réutiliser un joint démonté. Stocker les joints à l\'abri de l\'UV, de l\'ozone et des solvants (5 à 25°C, humidité ≤70%). Durée de conservation : NBR jusqu\'à 5 ans, EPDM/FKM jusqu\'à 7 ans. Vérifier la compatibilité chimique des joints de remplacement.',
+  },
+  'Bride de connexion': {
+    en: 'Connection Flange',
+    role: 'Bride plate ou collerette soudée à la connexion process (modèles JFE–JFH). Permet le raccordement normalisé à la tuyauterie (PN10/PN16 selon le modèle).',
+    maint: 'Inspecter la surface de joint. Vérifier la boulonnerie de bride selon le plan de serrage.',
+  },
+  'Profilé de guidage': {
+    en: 'Guide Profile',
+    role: 'Profilé extrudé de guidage latéral du bâti mobile (modèles JFE–JFH). Barre plate en acier guidant le déplacement sur toute la longueur de l\'échangeur.',
+    maint: 'Contrôler la planéité et les fixations. Lubrifier les rainures si nécessaire.',
+  },
+  'Axe de galet': {
+    en: 'Roller Axle',
+    role: 'Axe en acier sur lequel pivotent les galets de guidage. Fixé au bâti mobile par des goupilles ou boulons. Supporte les charges transversales lors du déplacement.',
+    maint: 'Vérifier le jeu radial. Contrôler l\'usure de l\'axe sur les portées de galets. Remplacer si usure > 0.5mm.',
+  },
+  'Goupille': {
+    en: 'Pin',
+    role: 'Goupille cylindrique (ou conique) en acier maintenant l\'axe de galet en position et bloquant sa rotation. Permet un démontage facile lors de l\'entretien des galets.',
+    maint: 'Inspecter la déformation ou le cisaillement de la goupille. Remplacer si déformée.',
+  },
+  'Bouchon de palier': {
+    en: 'Bearing Plug',
+    role: 'Bouchon fermant l\'extrémité du palier de l\'axe de galet. Protège le roulement ou le palier lisse de la pénétration de saletés. Généralement en plastique ou en acier traité.',
+    maint: 'Vérifier l\'état de la surface de bouchage. Remplacer si fissure ou jeu excessif.',
+  },
+  'Bague de roulement': {
+    en: 'Bearing Ring',
+    role: 'Bague de palier interposée entre l\'axe et le galet de guidage. Réduit le frottement et l\'usure lors du déplacement du bâti mobile. Peut être en bronze, PTFE ou acier fritté.',
+    maint: 'Inspecter la surface intérieure pour usure ou rainures. Remplacer par paires si jeu > 0.3mm.',
+  },
+  'Cache': {
+    en: 'Cover / End Cap',
+    role: 'Capot ou cache de protection couvrant les extrémités des tirants ou des parties mobiles. Rôle protecteur contre les chocs accidentels et la corrosion des parties filetées.',
+    maint: 'Vérifier l\'intégrité. Remplacer si déformé ou manquant.',
+  },
+  'Capuchon de la colonne de support': {
+    en: 'Column Top Cap',
+    role: 'Capuchon plastique vissé ou clipsé au sommet de la colonne de support. Protège l\'extrémité de la colonne et donne un aspect soigné à l\'installation.',
+    maint: 'Remplacer si cassé ou manquant.',
+  },
+  'Plaque signalétique': {
+    en: 'Nameplate / Data Plate',
+    role: 'Plaque d\'identification fixée sur le bâti fixe (panneau avant). Contient : fabricant, logo, code modèle, numéro de série, année de fabrication, pression/température max., pression d\'essai, capacité, groupe de fluide (Directive 2014/68/UE), catégorie PED, pression différentielle max., date du test de pression, couple de serrage nominal, code de calcul. Essentielle pour toute commande de pièces de rechange.',
+    maint: 'Vérifier la lisibilité de la gravure ou de la sérigraphie. Conserver en bon état — obligation réglementaire. Pour toute commande de pièces de rechange, fournir le numéro de série inscrit sur cette plaque.',
+  },
+  'Rivet de plaque signalétique': {
+    en: 'Nameplate Rivet / Mounting Fastener',
+    role: 'Petite fixation (rivet ou vis, ø≈5mm) assurant le montage mécanique de la plaque signalétique sur le bâti fixe. Couleur identique à la plaque (#c8d2d8, inox ou acier galvanisé).',
+    maint: 'Remplacer si déformé ou corrodé. Veiller à ne pas endommager la plaque lors du retrait.',
+  },
+  'Poutre de portage': {
+    en: 'Carrying Beam',
+    role: 'Poutre structurelle principale portant le poids du faisceau de plaques (modèles JFD et supérieurs). Transmets les charges vers les colonnes et les pieds de sol.',
+    maint: 'Inspecter les soudures et assemblages. Contrôler la déflexion sous charge nominale.',
+  },
+  'Support de galet': {
+    en: 'Roller Support',
+    role: 'Support fixant l\'axe de galet au bâti mobile. Plaque ou équerre usinée maintenant le positionnement précis du galet par rapport au rail de portage.',
+    maint: 'Contrôler les boulons de fixation. Vérifier le positionnement du galet (jeu latéral).',
+  },
+  'Profilé de portage': {
+    en: 'Carrying Profile',
+    role: 'Profilé structural sur lequel roulent les galets de guidage. Rail d\'appui longitudinal en acier épais. Dimensionné pour supporter la charge maximale du paquet de plaques.',
+    maint: 'Inspecter l\'usure de la surface de roulement. Contrôler l\'horizontalité.',
+  },
+  'Embase de colonne de support': {
+    en: 'Column Base Plate',
+    role: 'Platine d\'embase de la colonne de support. Assure la jonction entre la colonne tubulaire et la structure porteuse (sol ou châssis).',
+    maint: 'Contrôler les boulons d\'ancrage et l\'absence de corrosion.',
+  },
+};
+
+// Lookup : normalise le label (strip ×N, identifie le préfixe)
+function getInfoKey(label) {
+  if (!label) return null;
+  let key = label.replace(/\s*×\d+$/, '').trim(); // strip " ×N"
+  if (PJ_PART_INFO[key]) return key;
+  // Connexion K (K1…K13) → 'Connexion K'
+  if (/^Connexion K\d+/.test(key)) return 'Connexion K';
+  // Tirant M12/M16/… ou Tirant seul → 'Tirant'
+  if (/^Tirant(\s+M\d+)?$/.test(key)) return 'Tirant';
+  // Goujon M24 L96 → 'Goujon'
+  if (/^Goujon\s+/.test(key)) return 'Goujon';
+  // Écrou M12/M24 → 'Écrou'
+  if (/^Écrou(\s+M\d+)?$/.test(key)) return 'Écrou';
+  return null;
+}
+
+let infoPanelActive = false;
+
+function toggleInfoMode() {
+  infoPanelActive = !infoPanelActive;
+  const btn = document.getElementById('btnInfo');
+  if (btn) btn.classList.toggle('active', infoPanelActive);
+  if (!infoPanelActive) {
+    document.getElementById('infoPanel').classList.remove('visible');
+    document.querySelectorAll('.grp-row.info-active').forEach(r => r.classList.remove('info-active'));
+    document.body.classList.remove('info-mode');
+  } else {
+    document.getElementById('infoPanel').classList.add('visible');
+    document.body.classList.add('info-mode');
+  }
+}
+
+function closeInfoPanel() {
+  infoPanelActive = false;
+  const btn = document.getElementById('btnInfo');
+  if (btn) btn.classList.remove('active');
+  document.getElementById('infoPanel').classList.remove('visible');
+  document.querySelectorAll('.grp-row.info-active').forEach(r => r.classList.remove('info-active'));
+  document.body.classList.remove('info-mode');
+}
+
+function showInfoForLabel(label, rowEl, grpIdx) {
+  if (!infoPanelActive) return;
+  const body = document.getElementById('infoPanelBody');
+  if (!body) return;
+  // Highlight selected row
+  document.querySelectorAll('.grp-row.info-active').forEach(r => r.classList.remove('info-active'));
+  if (rowEl) rowEl.classList.add('info-active');
+  const key = getInfoKey(label);
+  const info = key ? PJ_PART_INFO[key] : null;
+  // Label affiché = strip ×N mais garde M-size et longueur
+  const displayLabel = (label || '').replace(/\s*×\d+$/, '').trim();
+  // Dimensions du groupe (si disponibles)
+  let dimsHtml = '';
+  if (grpIdx !== undefined && originalMats[grpIdx]) {
+    const dims = pjMeshBBox(originalMats[grpIdx].mesh?.geometry);
+    if (dims) {
+      const [L, M, S] = dims;
+      const fmt = v => v.toFixed(0);
+      const rat = (a,b) => (a/Math.max(b,0.01)).toFixed(2);
+      const col = matColorHex(originalMats[grpIdx]);
+      dimsHtml = `<p class="info-section-lbl">Dimensions</p>` +
+        `<p class="info-section-txt" style="font-family:monospace;font-size:.72em">` +
+        `L=${fmt(L)} M=${fmt(M)} S=${fmt(S)} mm<br>` +
+        `rLM=${rat(L,M)} rLS=${rat(L,S)} rMS=${rat(M,S)}<br>` +
+        `<span style="display:inline-block;width:10px;height:10px;border-radius:50%;` +
+        `background:${col};border:1px solid rgba(255,255,255,.3);vertical-align:middle;margin-right:4px"></span>` +
+        `${col}</p>`;
+    }
+  }
+  if (!info) {
+    body.innerHTML = `<p class="info-part-name">${displayLabel}</p>${dimsHtml}<p class="info-empty">Aucune information technique disponible pour ce composant.</p>`;
+    return;
+  }
+  body.innerHTML = `
+    <p class="info-part-name">${displayLabel}</p>
+    <p class="info-part-en">${info.en}</p>
+    <p class="info-section-lbl">Fonction</p>
+    <p class="info-section-txt">${info.role}</p>
+    ${info.maint ? `<p class="info-section-lbl">Maintenance</p><p class="info-section-txt">${info.maint}</p>` : ''}
+    ${dimsHtml}
+  `;
+}
+
+function updateInfoBtnVisibility() {
+  const btn = document.getElementById('btnInfo');
+  if (btn) btn.style.display = (viewerCat === 'pj' && originalMats.length > 0) ? '' : 'none';
+}
+
+function buildGroupSidebar() {
+  const sidebar = document.getElementById('groupSidebar');
+  [...sidebar.querySelectorAll('.grp-row')].forEach(r => r.remove());
+  const filterBar = document.getElementById('labelFilterBar');
+  if (filterBar) filterBar.innerHTML = '';
+  activeLabelFilter = null;
+  soloSet = new Set();
+  sidebar.classList.remove('solo-active');
+  const piedInd = document.getElementById('piedValidation');
+  if (piedInd) { piedInd.className = 'pied-validation'; piedInd.textContent = ''; }
+  if (originalMats.length === 0) { sidebar.classList.remove('visible'); return; }
+  const staticNames = viewerCat === 'pj'
+                    ? (PJ_FAMILY_NAMES[viewerFamily] || PJ_FAMILY_NAMES['JFA'])
+                    : viewerCat === 'brases' ? (viewerModele.includes('-2-') ? BRASES_GROUP_NAMES_2 : BRASES_GROUP_NAMES)
+                    : [];
+  // Pre-scan hardware groups (beyond static) to find round tirant diameter → M-size for écrou labeling
+  let pjMSize = null;
+  if (viewerCat === 'pj') {
+    for (let i = staticNames.length; i < originalMats.length; i++) {
+      const d = pjMeshBBox(originalMats[i].mesh?.geometry);
+      if (!d) continue;
+      const [L,M,S] = d;
+      if (L/Math.max(S,0.01) > 8 && M/Math.max(S,0.01) < 1.4 && M < 80) {
+        pjMSize = pjNearestMSize(S);
+        break;
+      }
+    }
+  }
+  const staticLabelCounts = {};
+  const geoCounters = {};
+  // Pré-initialiser les compteurs correspondant aux noms statiques déjà attribués
+  // Evite que les labels dynamiques dupliquent les noms statiques (ex: K3/K4 → K1/K2, brides → ×5 pas ×1)
+  // 'Connexion K' : compteur ordinal des connexions K (K1=1, K2=2 → prochain dynamique = K3)
+  // Autres (Bride de connexion×4, Pied de bâti×2, Pied de support×2…) : évite collision de numérotation
+  if (viewerCat === 'pj' && staticNames.length > 0) {
+    geoCounters['Connexion K'] = staticNames.filter(n => /^Connexion K\d+/.test(n)).length;
+    for (const n of staticNames) {
+      if (!/^Connexion K\d+/.test(n)) // les K1/K2 statiques comptent via 'Connexion K' ci-dessus
+        geoCounters[n] = (geoCounters[n] || 0) + 1;
+    }
+  }
+  originalMats.forEach((om, i) => {
+    let label;
+    if (originalMats.length === 1) {
+      label = 'Echangeur';
+    } else if (viewerCat === 'pj' && staticNames[i] !== undefined) {
+      const _sn = staticNames[i];
+      staticLabelCounts[_sn] = (staticLabelCounts[_sn]||0)+1;
+      label = staticLabelCounts[_sn] === 1 ? _sn : `${_sn} ×${staticLabelCounts[_sn]}`;
+    } else if (viewerCat === 'pj') {
+      // PJ hardware: geometry+color runs before STEP names (STEP names often wrong for hardware)
+      label = pjGeometryLabel(om.mesh.geometry, geoCounters, pjMSize, matColorHex(om), viewerFamily)
+           || meshNameLabel(om.name)
+           || `Groupe ${i + 1}`;
+    } else if (meshNameLabel(om.name)) {
+      label = meshNameLabel(om.name);
+    } else if (staticNames[i] !== undefined) {
+      label = staticNames[i];
+    } else {
+      label = `Groupe ${i + 1}`;
+    }
+    om.label = label; // mémorisé pour buildLabelFilterChips et outils de diagnostic
+    const color = viewerCat === 'pj'
+      ? (PJ_FIXED[i]?.color || matColorHex(om))
+      : viewerCat === 'tubulaires' ? TUB_INOX.color
+      : ((viewerModele.includes('-2-') ? PRESET_COLORS_2 : PRESET_COLORS)[i] || '#888');
+    const hex = (viewerCat === 'pj' || viewerCat === 'tubulaires')
+      ? `<span style="font-size:.65em;color:var(--text-dim);font-family:monospace;margin-left:2px">${color}</span>` : '';
+    const row = document.createElement('div');
+    row.className = 'grp-row';
+    row.innerHTML = `
+      <input type="checkbox" id="grp${i}" checked onchange="toggleGroup(${i}, this.checked)">
+      <input type="checkbox" class="solo-cb" id="solo${i}" onchange="toggleSolo(${i}, this.checked)" title="Isoler ce groupe">
+      <span class="grp-swatch" id="grpSwatch${i}" style="background:${color}"></span>
+      <label for="grp${i}">${label}</label>${hex}`;
+    // Clic sur la rangée (hors checkboxes et labels) → solo direct de ce groupe
+    row.addEventListener('click', function(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'LABEL') return;
+      if (infoPanelActive) { showInfoForLabel(label, this, i); return; }
+      const cb = document.getElementById('solo' + i);
+      if (!cb) return;
+      // Si ce groupe est le seul solo actif → désactive (retour vue complète)
+      if (soloSet.size === 1 && soloSet.has(i)) {
+        cb.checked = false;
+        toggleSolo(i, false);
+        activeLabelFilter = null;
+        document.querySelectorAll('.lbl-chip').forEach(b => b.classList.remove('active'));
+      } else {
+        // Isole uniquement ce groupe (remplace toute sélection précédente)
+        soloSet = new Set();
+        document.querySelectorAll('.solo-cb').forEach(c => c.checked = false);
+        activeLabelFilter = null;
+        document.querySelectorAll('.lbl-chip').forEach(b => b.classList.remove('active'));
+        cb.checked = true;
+        toggleSolo(i, true);
+      }
+    });
+    sidebar.appendChild(row);
+  });
+  if (viewerCat === 'pj') validateAndCorrectPieds();
+  buildLabelFilterChips();
+  sidebar.classList.add('visible');
+  window.originalMats = originalMats; // expose pour outils de diagnostic
+  updateSaveBtnVisibility(); // au chargement tout est coché → bouton caché
+  updateInfoBtnVisibility();
+}
+
+// ── Disquette : bouton d'envoi de message à Claude Code ─────────────────────
+
+// Affiche / masque le bouton 💾 selon qu'au moins un groupe est décoché
+function updateSaveBtnVisibility() {
+  const btn = document.getElementById('btnSave');
+  if (!btn) return;
+  // Toujours visible pour les modèles PJ (pas besoin de décocher d'abord pour voir le bouton)
+  btn.style.display = (viewerCat === 'pj' && originalMats.length > 0) ? '' : 'none';
+}
+
+// Construit le message formaté pour Claude Code
+// Mode : 'all' = tous les groupes (par défaut) | 'unchecked' = seulement décochés
+function buildRenameMsg(mode) {
+  const baseCount = (PJ_FAMILY_NAMES[viewerFamily] || []).length;
+  const lines = [];
+  for (let i = 0; i < originalMats.length; i++) {
+    const om = originalMats[i];
+    if (!om) continue;
+    const cb = document.getElementById('grp' + i);
+    const checked = cb ? cb.checked : true;
+    if (mode === 'unchecked' && checked) continue;
+    const label  = om.label || `Groupe ${i + 1}`;
+    const color  = matColorHex(om);
+    const hw     = i >= baseCount; // groupe hardware (vs structural)
+    const flag   = !checked ? ' ✗' : '';
+    if (hw) {
+      const dims = pjMeshBBox(om.mesh?.geometry);
+      if (dims) {
+        const [L, M, S] = dims;
+        const fmt = v => v.toFixed(0);
+        const rat = (a,b) => (a/Math.max(b,0.01)).toFixed(2);
+        lines.push(
+          `Grp ${i+1}${flag} | "${label}" | ${color}` +
+          ` | L=${fmt(L)} M=${fmt(M)} S=${fmt(S)}` +
+          ` | rLM=${rat(L,M)} rLS=${rat(L,S)} rMS=${rat(M,S)}`
+        );
+      } else {
+        lines.push(`Grp ${i+1}${flag} | "${label}" | ${color}`);
+      }
+    } else {
+      lines.push(`Grp ${i+1}${flag} | "${label}" | ${color} [structurel]`);
+    }
+  }
+  if (lines.length === 0) return '';
+  const title = viewerModele
+    ? `${viewerModele} (famille ${viewerFamily})`
+    : `famille ${viewerFamily}`;
+  return `\u{1F4BE} Groupes — ${title}\n${lines.join('\n')}`;
+}
+
+function showRenamePanel() {
+  const panel = document.getElementById('renamePanel');
+  const pre   = document.getElementById('renamePre');
+  if (!panel || !pre) return;
+  const msg = buildRenameMsg('all');
+  const cpBtn = panel.querySelector('.btn-copy-rename');
+  pre.textContent = msg || '(aucun groupe chargé)';
+  pre.style.color = msg ? '' : 'var(--text-dim)';
+  if (cpBtn) {
+    cpBtn.style.display = msg ? '' : 'none';
+    cpBtn.textContent = '\u{1F4CB} Copier';
+    cpBtn.disabled = false;
+  }
+  panel.style.display = '';
+}
+
+function hideRenamePanel() {
+  const panel = document.getElementById('renamePanel');
+  if (panel) panel.style.display = 'none';
+}
+
+function copyRenameMsg() {
+  const pre = document.getElementById('renamePre');
+  if (!pre) return;
+  const cpBtn = document.querySelector('.btn-copy-rename');
+  navigator.clipboard.writeText(pre.textContent).then(() => {
+    if (cpBtn) {
+      cpBtn.textContent = '✓ Copié — colle dans Claude Code';
+      cpBtn.disabled = true;
+      setTimeout(() => {
+        cpBtn.textContent = '\u{1F4CB} Copier';
+        cpBtn.disabled = false;
+      }, 3000);
+    }
+  }).catch(() => {
+    // Fallback : sélectionne le texte pour copie manuelle
+    const range = document.createRange();
+    range.selectNode(pre);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+  });
+}
+
+// Construit les chips de filtrage par étiquette au-dessus de la liste des groupes
+function buildLabelFilterChips() {
+  const bar = document.getElementById('labelFilterBar');
+  if (!bar) return;
+  bar.innerHTML = '';
+
+  // Collecte label → indices (normalisation : strip ×N, group Connexion K1-K4)
+  const map = new Map(); // clé normalisée → {display, indices[]}
+  for (let i = 0; i < originalMats.length; i++) {
+    const raw = originalMats[i]?.label;
+    if (!raw || raw.startsWith('Groupe ') || raw === 'Echangeur') continue;
+    const base = raw.replace(/\s*×\d+$/, ''); // "Tirant M12 ×3" → "Tirant M12"
+    // Regroupe Connexion K1/K2/K3/K4 sous une seule clé
+    const key = base.replace(/\bConnexion K\d+$/, 'Connexion K');
+    if (!map.has(key)) map.set(key, {display: key, indices: []});
+    map.get(key).indices.push(i);
+  }
+
+  for (const [key, {display, indices}] of map) {
+    const btn = document.createElement('button');
+    btn.className = 'lbl-chip';
+    btn.dataset.filterKey = key;
+    btn.textContent = indices.length > 1 ? `${display} ×${indices.length}` : display;
+    btn.title = `Isoler les ${indices.length} groupe(s) « ${display} »`;
+    btn.addEventListener('click', () => {
+      if (infoPanelActive) { showInfoForLabel(key); return; }
+      toggleLabelFilter(key, indices, btn);
+    });
+    bar.appendChild(btn);
+  }
+}
+
+// Clic chip : solo de tous les groupes portant cette étiquette (2ème clic → désélectionne)
+function toggleLabelFilter(key, indices, btn) {
+  if (activeLabelFilter === key) {
+    // Désélectionne → retour vue complète
+    activeLabelFilter = null;
+    document.querySelectorAll('.lbl-chip').forEach(b => b.classList.remove('active'));
+    soloSet = new Set();
+    for (let i = 0; i < originalMats.length; i++) {
+      const cb = document.getElementById('solo' + i);
+      if (cb) cb.checked = false;
+    }
+    applySolo();
+  } else {
+    activeLabelFilter = key;
+    document.querySelectorAll('.lbl-chip').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    soloSet = new Set(indices);
+    for (let i = 0; i < originalMats.length; i++) {
+      const cb = document.getElementById('solo' + i);
+      if (cb) cb.checked = soloSet.has(i);
+    }
+    applySolo();
+    // Fait défiler jusqu'au premier groupe du filtre
+    document.getElementById('solo' + indices[0])?.closest('.grp-row')
+      ?.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+  }
+}
+
+function toggleGroup(index, visible) {
+  if (!originalMats[index]) return;
+  // En mode solo : le carré gauche mémorise la préférence mais n'affecte pas la 3D (solo domine)
+  if (soloSet.size === 0) {
+    originalMats[index].mesh.visible = visible;
+    const iv = currentOVViewer?.GetViewer();
+    if (iv?.Render) iv.Render(); else if (iv?.NeedRender) iv.NeedRender();
+  }
+  updateSaveBtnVisibility();
+}
+
+function toggleSolo(index, checked) {
+  if (checked) soloSet.add(index);
+  else soloSet.delete(index);
+  applySolo();
+}
+
+function applySolo() {
+  const sidebar = document.getElementById('groupSidebar');
+  const inSolo = soloSet.size > 0;
+  sidebar.classList.toggle('solo-active', inSolo);
+  for (let i = 0; i < originalMats.length; i++) {
+    if (!originalMats[i]) continue;
+    const row = document.getElementById('solo' + i)?.closest('.grp-row');
+    if (row) row.classList.toggle('solo-on', soloSet.has(i));
+    if (inSolo) {
+      originalMats[i].mesh.visible = soloSet.has(i);
+    } else {
+      const cb = document.getElementById('grp' + i);
+      originalMats[i].mesh.visible = cb ? cb.checked : true;
+    }
+  }
+  const iv = currentOVViewer?.GetViewer();
+  if (iv?.Render) iv.Render(); else if (iv?.NeedRender) iv.NeedRender();
+}
+
+function readModelColors() {
+  if (!currentOVViewer) return;
+  const iv = currentOVViewer.GetViewer();
+  if (!iv) return;
+
+  if (iv.renderer?.setClearColor) {
+    iv.renderer.setClearColor(0x161b22, 1);
+  }
+
+  originalMats = [];
+  const names = new Set();
+
+  // Traverse via mainModel.GetRootObject() — c'est là que OV stocke les meshes
+  const root = iv.mainModel?.GetRootObject?.();
+  const traverseTarget = root || iv.scene;
+
+  traverseTarget.traverse(obj => {
+    if (obj.type !== 'Mesh' && !obj.isMesh) return;
+    // Cherche le nom sur l'objet lui-même, puis sur le parent (Group)
+    const name = obj.name || obj.parent?.name || obj.parent?.parent?.name || '';
+    if (name) names.add(name);
+    const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
+    mats.forEach(m => {
+      if (!m?.color) return;
+      originalMats.push({
+        mesh:      obj,
+        name,
+        color:     { r: m.color.r, g: m.color.g, b: m.color.b },
+        metalness: m.metalness ?? 0,
+        roughness: m.roughness ?? 1,
+        shininess: m.shininess ?? 30,
+        specular:  m.specular ? { r: m.specular.r, g: m.specular.g, b: m.specular.b } : null,
+      });
+    });
+  });
+
+  buildGroupSidebar();
+  window._originalMats = originalMats; // expose pour scripts de diagnostic
+  document.getElementById('colorSection').classList.add('ready');
+  document.getElementById('mat1Section').classList.add('ready');
+  document.getElementById('lightSection').classList.add('ready');
+  document.getElementById('ambientSection').classList.add('ready');
+  document.getElementById('mirrorSection').classList.add('ready');
+  document.getElementById('btnPick').classList.add('ready');
+  document.getElementById('btnWand').classList.add('ready');
+  setupCustomLights(iv);
+  applyLighting(+document.getElementById('lightSlider').value);
+  applyAmbient(+document.getElementById('ambientSlider').value);
+  if (viewerCat === 'pj' || viewerCat === 'tubulaires') {
+    applyMetallicBase();
+    if (viewerCat === 'pj') applyFaisceauTexture(iv);
+  } else {
+    applyDefaultColors();
+  }
+  applyMirror(+document.getElementById('mirrorSlider').value);
+}
+
+/* ── Texture corrugée faisceau PHE (plaques et joints) ── */
+function applyFaisceauTexture(iv) {
+  if (viewerCat !== 'pj') return;
+  let changed = false;
+  originalMats.forEach(om => {
+    if (om.label !== 'Faisceau') return;
+    const mesh = om.mesh;
+    if (mesh.userData._faisceauPatternApplied) return;
+    const dims = pjMeshBBox(mesh.geometry);
+    const pitch = dims ? Math.max(2, dims[1] / 40) : 8;
+    if (!mesh.userData._matCloned) {
+      mesh.material = Array.isArray(mesh.material)
+        ? mesh.material.map(m => m.clone()) : mesh.material.clone();
+      mesh.userData._matCloned = true;
+    }
+    const p = pitch.toFixed(3);
+    const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+    mats.forEach(m => {
+      if (!m) return;
+      m.onBeforeCompile = shader => {
+        shader.vertexShader = shader.vertexShader
+          .replace('void main() {', 'varying vec3 vPHEPos;\nvoid main() {')
+          .replace('#include <begin_vertex>', '#include <begin_vertex>\nvPHEPos = position;');
+        shader.fragmentShader = shader.fragmentShader
+          .replace('void main() {', 'varying vec3 vPHEPos;\nvoid main() {')
+          .replace('#include <tonemapping_fragment>',
+            `#include <tonemapping_fragment>
+            {
+              float _p = ${p};
+              float _ph = mod(vPHEPos.y, _p) / max(_p, 0.001);
+              float _ridge = pow(max(0.0, sin(_ph * 3.14159265)), 6.0);
+              float _hb = sin((vPHEPos.x + vPHEPos.y * 0.5) * 6.28318 / _p) * 0.04
+                        + sin((vPHEPos.z + vPHEPos.y * 0.5) * 6.28318 / _p) * 0.03;
+              float _b = clamp(0.08 + _ridge * 0.65 + _hb * 2.0, 0.05, 0.75);
+              gl_FragColor = vec4(_b, _b, _b, gl_FragColor.a);
+            }`
+          );
+      };
+      m.needsUpdate = true;
+    });
+    mesh.userData._faisceauPatternApplied = true;
+    changed = true;
+  });
+  if (changed) { if (iv.Render) iv.Render(); else if (iv.NeedRender) iv.NeedRender(); }
+}
+
+function applyDefaultColors() {
+  // Si un seul groupe : tout en inox
+  if (originalMats.length === 1) {
+    applyPreset('inox');
+    return;
+  }
+  // Standard : [0]=Corps(cuivre), [1]=Plaque de fond(inox), [2]=Plaque avant(inox), [3+]=chrome
+  // -2-      : [0]=Plaque de fond(inox), [1]=Corps(cuivre), [2+]=chrome
+  const assignment = viewerModele.includes('-2-')
+    ? ['inox', 'cuivre']
+    : ['cuivre', 'inox', 'inox'];
+  originalMats.forEach((om, i) => {
+    const presetName = assignment[i] ?? 'chrome';
+    const preset = PRESETS[presetName];
+    if (!preset) return;
+    const mesh = om.mesh;
+    // Clone material pour isoler ce mesh
+    if (!mesh.userData._matCloned) {
+      if (Array.isArray(mesh.material)) {
+        mesh.material = mesh.material.map(m => m.clone());
+      } else {
+        mesh.material = mesh.material.clone();
+      }
+      mesh.userData._matCloned = true;
+    }
+    const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+    mats.forEach(m => {
+      if (!m) return;
+      if (m.color) m.color.set(preset.color);
+      if ('metalness' in m) m.metalness = preset.metalness;
+      if ('roughness' in m) m.roughness = preset.roughness;
+      if ('shininess' in m) m.shininess = preset.shininess;
+      if (m.specular && preset.specular) m.specular.set(preset.specular);
+      // Réinitialise les bases miroir pour que le slider repart des nouvelles valeurs
+      delete m.userData._baseRoughness;
+      delete m.userData._baseMetalness;
+      delete m.userData._baseShininess;
+      delete m.userData._baseMirrorSaved;
+      m.needsUpdate = true;
+    });
+  });
+  const iv = currentOVViewer?.GetViewer();
+  if (iv?.Render) iv.Render(); else if (iv?.NeedRender) iv.NeedRender();
+}
+
+/* ── Viewer lifecycle ── */
+function openViewer(stepUrl, modele, code) {
+  viewerCat    = currentCat;
+  viewerFamily = (modele || '').match(/^([A-Z]{3})/)?.[1] || '';
+  viewerModele = modele || '';
+  document.getElementById('modalTitle').textContent = modele || '';
+  document.getElementById('modalCode').textContent  = code ? 'Code : ' + code : '';
+  const loading = document.getElementById('viewerLoading');
+  loading.innerHTML = '<div class="viewer-loading-bg"></div><div class="viewer-spinner"></div><span>Chargement du modèle 3D…</span>';
+  loading.classList.remove('hidden');
+  document.getElementById('modalOverlay').classList.add('open');
+  requestAnimationFrame(sizeSpinner);
+
+  const container = document.getElementById('viewerContainer');
+  container.innerHTML = '';
+  currentOVViewer = null;
+  originalMats = [];
+  clearMeasure();
+  measureActive = false;
+  document.getElementById('btnMeasure').classList.remove('active');
+  document.getElementById('measureOverlay').classList.remove('active');
+  document.getElementById('colorSection').classList.remove('ready');
+  document.getElementById('mat1Section').classList.remove('ready');
+  document.getElementById('lightSection').classList.remove('ready');
+  document.getElementById('ambientSection').classList.remove('ready');
+  document.getElementById('mirrorSection').classList.remove('ready');
+  document.getElementById('btnPick').classList.remove('ready','active');
+  document.getElementById('pickPopup').classList.remove('open');
+  document.getElementById('colorInfo').textContent = '';
+  document.getElementById('colorPicker').value = '#c8c8c8';
+  document.getElementById('mat1Color').value = '#cfb296';
+  const lightDef = currentCat === 'pj' ? 3.1 : 1.1;
+  document.getElementById('lightSlider').value = lightDef;
+  document.getElementById('lightVal').textContent = lightDef.toFixed(2);
+  document.getElementById('ambientSlider').value = '1.8';
+  document.getElementById('ambientVal').textContent = '1.8';
+  document.getElementById('mirrorSlider').value = '3';
+  document.getElementById('mirrorVal').textContent = '3.0';
+  mirrorEnvReady = false;
+  customLightsAdded = false;
+  pickMode = false; pickedMesh = null;
+
+  if (typeof OV === 'undefined') {
+    loading.innerHTML = '<span style="color:#f87171;font-size:.85em">Bibliothèque 3D non chargée — vérifiez la connexion internet.</span>';
+    return;
+  }
+
+  // Avertissement si le chargement dépasse 90 secondes (CDN lent ou fichier lourd)
+  const _loadWarn = setTimeout(() => {
+    if (!loading.classList.contains('hidden'))
+      loading.innerHTML += '<br><span style="color:#fbbf24;font-size:.8em">Chargement long… le fichier STEP est peut-être volumineux ou le CDN temporairement lent.</span>';
+  }, 90000);
+
+  try {
+    currentOVViewer = OV.Init3DViewerFromUrlList(container, [stepUrl], {
+      onModelLoaded: () => {
+        clearTimeout(_loadWarn);
+        loading.classList.add('hidden');
+        readModelColors();
+      },
+      onModelLoadFailed: () => {
+        clearTimeout(_loadWarn);
+        loading.innerHTML = '<span style="color:#f87171;font-size:.85em">Erreur de chargement du modèle.</span>';
+      }
+    });
+  } catch (err) {
+    clearTimeout(_loadWarn);
+    loading.innerHTML = `<span style="color:#f87171;font-size:.85em">Erreur : ${err.message}</span>`;
+  }
+}
+
+function closeViewer() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.getElementById('viewerContainer').innerHTML = '';
+  document.getElementById('groupSidebar').classList.remove('visible');
+  document.getElementById('toolPanel').classList.remove('open');
+  document.getElementById('btnTools').classList.remove('active');
+  currentOVViewer = null;
+  originalMats = [];
+  clearMeasure();
+  measureActive = false;
+  document.getElementById('btnMeasure').classList.remove('active');
+  document.getElementById('measureOverlay').classList.remove('active');
+  document.getElementById('colorSection').classList.remove('ready');
+  document.getElementById('mat1Section').classList.remove('ready');
+  document.getElementById('lightSection').classList.remove('ready');
+  document.getElementById('ambientSection').classList.remove('ready');
+  document.getElementById('mirrorSection').classList.remove('ready');
+  document.getElementById('btnPick').classList.remove('ready','active');
+  document.getElementById('pickPopup').classList.remove('open');
+  document.getElementById('mat1Color').value = '#cfb296';
+  document.getElementById('ambientSlider').value = '1.2';
+  document.getElementById('ambientVal').textContent = '1.2';
+  document.getElementById('mirrorSlider').value = '3';
+  document.getElementById('mirrorVal').textContent = '3.0';
+  mirrorEnvReady = false;
+  customLightsAdded = false;
+  pickMode = false; pickedMesh = null;
+}
+
+document.getElementById('modalOverlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('modalOverlay')) closeViewer();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeViewer(); });
+
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;'); }
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
